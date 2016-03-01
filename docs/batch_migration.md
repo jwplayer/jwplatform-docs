@@ -1,0 +1,1 @@
+migrate content from: [HERE](https://support.jwplayer.com/customer/portal/articles/1758770-batch-video-migration-in-jw-platform)

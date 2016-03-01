@@ -1,0 +1,1 @@
+migrate content from: [HERE](https://support.jwplayer.com/customer/portal/articles/1435973-embed-players-with-the-platform-api)

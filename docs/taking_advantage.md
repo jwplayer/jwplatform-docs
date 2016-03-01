@@ -1,0 +1,1 @@
+transfer content from: [HERE](https://support.jwplayer.com/customer/portal/articles/1435970-upload-videos-with-the-platform-api)
