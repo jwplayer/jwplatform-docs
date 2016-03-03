@@ -7,7 +7,7 @@ markdown_extensions:
 title: "THIS IS A CUSTOM TOC"
 pages:
 - Introduction: 'index.md'
-- Taking Advantage of the Platform API: 'taking_advantage.md'
-- Embed Players with the Platform API: 'embed_players.md'
-- Batch Video Migration with the Platform API: 'batch_migration.md'
+# - Taking Advantage of the Platform API: 'taking_advantage.md'
+# - Embed Players with the Platform API: 'embed_players.md'
+# - Batch Video Migration with the Platform API: 'batch_migration.md'
 - Release Notes: 'release-notes.md'

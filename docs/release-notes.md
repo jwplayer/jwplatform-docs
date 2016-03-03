@@ -1,20 +1,31 @@
 # JW Platform Release Notes
 
-## Date (Version)
+<!--
+Template for future releases, copypasta me below
+
+## 2016-XX-XX
 
 ### New Features
-- A
-- B
-- C
+- foo
+- Bar
+- Cat
 ### Updated Features
-- A
-- B
-- C
+- foo
+- Bar
+- Cat
 ### Bug Fixes
-- A
-- B
-- C
-### Known Features
-- A
-- B
-- C
+- foo
+- Bar
+- Cat
+### Known Issues
+- foo
+- Bar
+- Cat
+
+-->
+
+
+## 2016-03-03 Upload to s3
+
+### New Features
+- **Upload videos directly to the cloud!** JW Platform now supports video uploads (up to 5GB) directly to s3. s3 uploads take advantage of global cloud infrastructure including edge services to achieve the fastest and most reliable uploads globally. Details at: http://http://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html
