@@ -24,6 +24,23 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-03-31
+
+### New Features
+- Support for VP9 transcoding and adaptive streaming of VP9 conversions using DASH. This feature requires a separate account entitlement and is only open to users in a limited pilot at this time.
+### Updated Features
+- JW7 single-line embed performance enhancement. Embeds of JW Player version 7 now include media links. This means faster player setup and time to first frame. It also means that free edition player will be able to take advantage of the various quality transcodes created by JW Platform.
+### Bug Fixes
+- Custom skins with JW7. This release allows the inclusion of the skin name with custom css skins for JW7 players. Using custom skins for JW7 requires matching the skin name with the jw-skin-<skin_name> string in the css.
+- Fixed an issue with URL tokenization where iframe single-line embeds that were correctly signed were failing signature validation.
+
+
+## 2016-03-21
+
+### Updated Features
+- Updated JW7 iframe embeds to listen for play and pause events on the iframe and pass them to the contained player.
+
+
 
 ## 2016-03-03 Upload to s3
 
