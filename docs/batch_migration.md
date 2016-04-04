@@ -7,10 +7,10 @@ Preparing a CSV ingest sheet
 Your csv should have columns A-F in the header. For the sake of organization, **download\_url**, **title**, **description**, **tags**, **date**, and **link** are highly recommended to be present in your csv. We will still be able to ingest your files if your video records have an empty value for some of the fields, so it is worth utilizing these whenever possible.
 An example of a properly formatted CSV can be downloaded [here](http://support-static.jwplayer.com/API/jwplatform_manifest_template.csv).
 
-### ![](/customer/portal/attachments/371629)
+
 **Required Value**
 
--   **download\_url -** EVERY video record should have a download\_url. This refers to the remote URL of your video file.
+-   **download\_url -** EVERY video record MUST have a download\_url. This refers to the remote URL of your video file.
 
 Note that our platform will only ingest files served over http. Both RTMP and HLS (m3u8) sources will not work. We recommend that your videos adhere to the guidelines [here](http://support.jwplayer.com/customer/portal/articles/1433634-preparing-videos-for-upload) to ensure our platform can transcode them.
 
@@ -36,7 +36,7 @@ Special characters should not be HTML encoded. A number of publishers and servic
 
 ### **Processing your csv sheet programmatically**
 
-As mentioned earlier, the csv is simply a cohesive method for preparing your legacy videos to be ‘ingested’ by the JW Platform. The real work is done programmatically through our API. Learn more about the API [here](http://support.jwplayer.com/customer/portal/articles/1489902-jw-platform-api-reference). The only endpoint you will be using for uploading is the ‘[/videos/create](http://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html)’ call.
+As mentioned earlier, the csv is simply a cohesive method for preparing your legacy videos to be ‘ingested’ by the JW Platform. The real work is done programmatically through our API. Learn more about the API [here](https://developer.jwplayer.com/jw-platform/reference/v1/index.html). The only endpoint you will be using for uploading is the ‘[/videos/create](http://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html)’ call.
 
 ### **Basic Workflow**
 

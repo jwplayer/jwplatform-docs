@@ -5,7 +5,7 @@ repo_url: https://github.com/jwplayer/jwplatform-docs
 site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico
 pages:
     - Introduction: 'index.md'
-    - Embedding Players On Your Site: 'embed_players.md'
+    - Embedding Players: 'embed_players.md'
     - Uploading Videos: 'uploading_videos.md'
     - Batch Migrations: 'batch_migration.md'
     - Release Notes: 'release-notes.md'
