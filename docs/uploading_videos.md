@@ -1,3 +1,6 @@
+Uploading Videos
+================
+
 Using the Platform API, you can allow your users to upload videos to your account directly from your website. This is a useful if you have your own CMS and wish to enable your users to upload videos, or if you wish to allow for user generated content for e.g. a competition.
 
 To ensure fair access for all, usage of api.jwplatform.com is limited to **10 calls per minute**. We reserve the right to block API access to accounts that exceed this rate. If you need a higher API rate, please contact [sales@jwplayer.com](mailto:sales@jwplayer.com). Note that calls to content.jwplatform.com do not count towards the API rate limit.

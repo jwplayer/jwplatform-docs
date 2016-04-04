@@ -1,3 +1,6 @@
+Embedding Players
+=================
+
 When building JW Platform into your own website or CMS, one of the most important functionalities is the generation of player embed codes for programmatic publishing.
 
 To ensure fair access for all, usage of api.jwplatform.com is limited to **10 calls per minute**. We reserve the right to block API access to accounts that exceed this rate. If you need a higher API rate, please contact [sales@jwplayer.com](mailto:sales@jwplayer.com). Note that calls to content.jwplatform.com do not count towards the API rate limit.

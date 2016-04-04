@@ -1,3 +1,5 @@
+Batch Migrations
+================
 
 Though it is possible to do individual video uploads to your platform account, it is also possible to perform batch video uploading programmatically using the JW Platform API. In order to perform this process, a record of relevant data will need to be created as a CSV(comma-separated value) file. Data in the file will then be processed, resulting in the upload of video files. In addition to a video file, it is also possible to associate title, description, organizational tags, and even custom data. This creates a new video object in JW Platform for each row of data in the csv file. This process is implemented by leveraging the [JW API SDK](http://support.jwplayer.com/customer/portal/articles/1489902-jw-platform-api-reference), which is available in both PHP and Python.
 
