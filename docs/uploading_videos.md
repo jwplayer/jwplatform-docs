@@ -1,5 +1,4 @@
-Uploading Videos
-================
+# Uploading Videos
 
 Using the Platform API, you can allow your users to upload videos to your account directly from your website. This is a useful if you have your own CMS and wish to enable your users to upload videos, or if you wish to allow for user generated content for e.g. a competition.
 
@@ -7,8 +6,7 @@ To ensure fair access for all, usage of api.jwplatform.com is limited to **10 ca
 
 This document applies to **JW Platform** hosting and streaming. Every account comes with some hosting and streaming included :-)
 
-Introduction
-------------
+## Introduction
 
 A video upload to JW Platform consists of a few steps. These are described in detail in the [API documentation](http://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html). Here's a high-level overview:
 
@@ -17,8 +15,7 @@ A video upload to JW Platform consists of a few steps. These are described in de
 -   Third, the client POSTs/PUTs the video to the upload URL. 
 -   Fourth, after the upload has completed the video will go into a processing state while JW Platform creates streaming optimized transcodes of the source file. Once some streaming transcodes are finished, the video's state will automatically transition to ready and the video can be served.
 
-Setting Up
-----------
+## Setting Up
 
 It is quite straightforward to implement this on your own web server. For this example you will need a server with a fairly up to date version of PHP and CURL installed. Then download the [PHP API Examples](http://support-static.jwplayer.com/API/php-api-examples-20151013.zip) zip file.
 

@@ -1,5 +1,4 @@
-Embedding Players
-=================
+# Embedding Players
 
 When building JW Platform into your own website or CMS, one of the most important functionalities is the generation of player embed codes for programmatic publishing.
 
@@ -7,8 +6,7 @@ To ensure fair access for all, usage of api.jwplatform.com is limited to **10 ca
 
 This document applies to **JW Platform** hosting and streaming. Every account comes with some hosting and streaming included :-)
 
-Introduction
-------------
+## Introduction
 
 Let's look at the typical player embed code:
 
@@ -27,8 +25,7 @@ Only the **key** and **id** part of the embed code change depending on the video
 -   [/videos/list](http://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/list.html): retrieves a list of videos from your account (including their **key**).
 -   [/players/list](http://developer.jwplayer.com/jw-platform/reference/v1/methods/players/list.html): retrieves all players from your account (including their **id**).
 
-Demo
-----
+## Demo
 
 The script we're going to build in this tutorial mimicks the embed code form in the JW Platform dashboard. You can download this embed-code script as part of the [PHP API Examples ZIP](http://support-static.jwplayer.com/API/php-api-examples-20151013.zip).
 
@@ -50,8 +47,7 @@ Last, we construct the embed code. If any $\_GET data is available (in other wor
 
 Once again note the full embed-code script can be downloaded as part of the [PHP API Examples ZIP](http://support-static.jwplayer.com/API/php-api-examples.zip).
 
-Next Steps
-----------
+## Next Steps
 
 There is a variety of ways in which this script can be extended. The most useful is likely to construct the link to a [simple preview page](http://developer.jwplayer.com/jw-platform/reference/v1/urls/previews.html). That can be done with the same variables.
 
