@@ -2,7 +2,7 @@
 
 Though it is possible to do individual video uploads to your platform account, it is also possible to perform batch video uploading programmatically using the JW Platform API. In order to perform this process, a record of relevant data will need to be created as a CSV(comma-separated value) file. Data in the file will then be processed, resulting in the upload of video files. In addition to a video file, it is also possible to associate title, description, organizational tags, and even custom data. This creates a new video object in JW Platform for each row of data in the csv file. This process is implemented by leveraging the [JW API SDK](http://support.jwplayer.com/customer/portal/articles/1489902-jw-platform-api-reference), which is available in both PHP and Python.
 
-## Preparing a CSV ingest sheet
+## Preparing a CSV Ingest Sheet
 
 Your csv should have columns A-F in the header. For the sake of organization, **download\_url**, **title**, **description**, **tags**, **date**, and **link** are highly recommended to be present in your csv. We will still be able to ingest your files if your video records have an empty value for some of the fields, so it is worth utilizing these whenever possible.
 An example of a properly formatted CSV can be downloaded [here](http://support-static.jwplayer.com/API/jwplatform_manifest_template.csv).
@@ -29,11 +29,11 @@ The following values are optional, but can be imported into our platform. While 
 
 Custom fields can be useful for saving additional metadata to your video object records. In this example, both the id and the thumbnail url from the legacy system are saved to the video object. A custom field is always formed as follows: custom.\[myfieldname\]
 
-### Note on HTML encoding
+### Note on HTML Encoding
 
 Special characters should not be HTML encoded. A number of publishers and services use HTML encoded characters within their video metadata. HTML encoded characters in the **title**, **description**, and **tags** fields should be decoded before pushing to the API.
 
-## Processing your csv sheet programmatically
+## Processing Your CSV Sheet Programmatically
 
 As mentioned earlier, the csv is simply a cohesive method for preparing your legacy videos to be ‘ingested’ by the JW Platform. The real work is done programmatically through our API. Learn more about the API [here](https://developer.jwplayer.com/jw-platform/reference/v1/index.html). The only endpoint you will be using for uploading is the ‘[/videos/create](http://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html)’ call.
 
