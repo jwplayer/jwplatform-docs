@@ -28,9 +28,9 @@ Template for future releases, copypasta me below
 
 ### New Features
 - Trending and related feeds *BETA Preview*. With a special account entitlement, JW Platform now supports two new varieties of feeds. Trending feeds are dynamically generated based on recently trending videos. Related feeds allow are dynamically populated with media having similar content. The new functionality is configurable through the [/channels](https://developer.jwplayer.com/jw-platform/reference/v1/methods/channels/index.html) API endpoint and is served through a new [/feed.rss](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) content service endpoint.
-- Video Sunset. Videos can be configured to expire at a predetermined date and time. After their expires_date, videos will no longer show up in playlists and subsequent requests for videos will not be allowed. The expires_date can be specified in the [dashboard](https://support.jwplayer.com/customer/portal/articles/1469776-adding-managing-videos) or through the API during [creation](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html) or as an [update](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/update.html) to a video.
+- Video Sunset. Videos can be configured to expire at a predetermined date and time. After their `expires_date`, videos will no longer show up in playlists and subsequent requests for videos will not be allowed. The `expires_date` can be specified in the [dashboard](https://support.jwplayer.com/customer/portal/articles/1469776-adding-managing-videos) or through the API during [creation](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/create.html) or as an [update](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/update.html) to a video.
 ### Updated Features
-- Dashboard redesign. The JW Player Dashboard has been updated to simplify and give quick access to popular features through an updated left navigation panel, and redesigned account section.
+- Dashboard redesign. The JW Player Dashboard has been updated to simplify and give quick access to popular features through an updated left navigation panel and redesigned account section.
 
 
 ## 2016-03-31
