@@ -24,6 +24,19 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-05-10
+
+### Updated Features
+* It is possible to create `sourcetype: url` videos with `sourceformat: mpd` allowing externally hosted DASH manifests to be served with JW Player single line embeds. 
+* Adjusted cache control headers on the content service to allow an individual browser to use the same download for longer, this should reduce delivery costs on looping videos.
+### Bug Fixes
+* We removed the spaces (now there are only commas) between tags in JW7 single line embeds and json feeds. This allows for using the `__item-tags__` macro directly with DFP for Google IMA Ad Tags.
+
+## 2016-05-04
+
+### New Features
+* Dashboard uploads now take advantage of S3 Accelerated Transfer
+
 ## 2016-04-26
 
 ### New Features
