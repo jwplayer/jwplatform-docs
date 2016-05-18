@@ -5,14 +5,15 @@ module.exports = function (grunt) {
   // configure grunt
   grunt.initConfig({
     'mkdocs-jwplayer': {
-      build: {
-        options: {
-          serve: false
-        }
-      },
+      build: {},
       serve: {
         options: {
           serve: true
+        }
+      },
+      deploy: {
+        options: {
+          deploy: true
         }
       }
     }
@@ -29,6 +30,11 @@ module.exports = function (grunt) {
   // build docs and serve localhost
   grunt.registerTask('serve', [
     'mkdocs-jwplayer:serve'
+  ]);
+
+  // build docs and deploy via jenkins
+  grunt.registerTask('deploy', [
+    'mkdocs-jwplayer:deploy'
   ]);
 
 };
