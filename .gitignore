@@ -1,1 +1,5 @@
-developer-guide/
+.DS_Store
+developer-guide
+node_modules
+npm-debug.log
+.self-update-info

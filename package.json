@@ -1,0 +1,7 @@
+{
+  "name": "jwplatform-docs",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-mkdocs-jwplayer": "github:jwplayer/grunt-mkdocs-jwplayer"
+  }
+}
