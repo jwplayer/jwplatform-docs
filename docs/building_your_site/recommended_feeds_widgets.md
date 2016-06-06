@@ -12,13 +12,15 @@ JOSIE: INSERT feeds-widget img
 
 ##Getting Started
 
-You can [view the feeds widget demos](//developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](https://github.com/jwplayer/jwdeveloper-demos/) from Github. Each widget comes with a readme providing instructions to run it locally.
+You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](https://github.com/jwplayer/jwdeveloper-demos/) from Github. Each widget comes with a readme providing instructions to run it locally.
 
 ##JavaScript Widget
 
 ###The Basics
 
 The JavaScript widget uses Bootstrap, jQuery, and UnderscoreJS. All dependencies are built in. In order to modify the widget for your site, you will need to configure `index.html`, `/js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our CSS skinning reference to modify `/css/style.css`.
+
+[View the JavaScript Feeds Widget.](developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 
 ###Title your Feed
 
@@ -36,13 +38,13 @@ You can also style the feed using class="jw-feed", as defined in the feed div. S
 
 The `/js/feeds_harness.js` file dynamically populates the content for `<div id="feed">`.
 
-First replace the link associated with `var FEED_URL` with a feed URL from your dashboard to specify the content being pulled in to the widget. See the [Platform API Reference](//developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on the `/feed.rss` endpoint.
-
-###Setup your Player
+Replace the link associated with `var FEED_URL` with a feed URL from your dashboard to specify the content being pulled in to the widget. See the [Platform API Reference](developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on the `/feed.rss` endpoint.
 
     var FEED_URL = '//content.jwplatform.com/feed.rss?feed_id=Xw0oaD4q&related_video=';
 
-Next, configure the content that plays on page load by setting up the player with a `mediaid` and corresponding `file` and `image` from your content library. The setup function uses playerdiv and tilediv as variables for player and feed.
+###Setup your Player
+
+Configure the content that plays on page load by setting up the player with a `mediaid` and corresponding `file` and `image` from your content library. The setup function uses playerdiv and tilediv as variables for player and feed.
 
     function setup(playerdiv,tilediv) {
        var mediaid  = "uNXCVIsW";
@@ -82,6 +84,8 @@ Include link to developer guide article and demos page in readme.
 
 The Angular.js widget uses the Angular.js framework. All dependencies are built in. In order to modify the widget for your site, you will need to configure three views: `feedExample.js`, `player.js`, and `feed.js`. You can also use our CSS skinning reference to modify `/css/style.css`.
 
+[View the Angular.js Feeds Widget.](developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample)
+
 ###Setup your Player
 
 `/player/player.js` routes to the player div. Configure the content that plays on page load by setting up the player with a `file`, `image`, and corresponding `mediaid` from your content library.
@@ -108,7 +112,7 @@ INSERT CODE SNIPPET
 
 ###Populate your Feed
 
-The `/feed/feed.js` file routes to the feed div. Replace the link associated with `var url` with a feed URL from your dashboard to specify the content being pulled in to the widget. See the [Platform API Reference](//developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on the `/feed.rss` endpoint.
+The `/feed/feed.js` file routes to the feed div. Replace the link associated with `var url` with a feed URL from your dashboard to specify the content being pulled in to the widget. See the [Platform API Reference](developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on the `/feed.rss` endpoint.
 
     var getFeed = function(id){
       var url = '//content.jwplatform.com/feed.rss?feed_id=Xw0oaD4q&related_video=' + id;
@@ -130,7 +134,3 @@ The `/js/main.js` file builds the page from all of the partials. Simply follow t
 !!!
 NEED TO ADD README. Include link to developer guide article and demos page in readme.
 !!!
-
-
-
-
