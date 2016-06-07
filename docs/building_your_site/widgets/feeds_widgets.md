@@ -122,10 +122,10 @@ The `feed/feed.html` file is the template object for each piece of content in yo
 By default, the widget does not display video description in the feed, but you can uncomment `<p class="jw-media-description">{{item.description}}</p>` to show it. Try commenting/uncommenting different lines to hide/show their corresponding metadata in your feed.
 
   <div class="row jw-option" ng-repeat="item in feed" ng-click="loadVideo(item)">
-        <div class="jw-thumbnail-container">
-          <img src="{{item.image}}" class="jw-thumbnail"/>
-        </div>
-
+    <div class="jw-thumbnail-container">
+      <img src="{{item.image}}" class="jw-thumbnail"/>
+    </div>
+    
     <div class="jw-metadata-container">
       <h3 class="jw-media-title">{{item.title}}</h3>
       <!--<p class="jw-media-description">{{item.description}}</p>-->
