@@ -18,7 +18,7 @@ You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/cus
 
 ###The Basics
 
-The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. All dependencies are built in. In order to modify the widget for your site, you will need to configure `index.html`, `js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our CSS skinning reference to modify `css/style.css`.
+The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will need to configure `index.html`, `js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) to modify `css/style.css`.
 
 [View the JavaScript Feeds Widget.](developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 
@@ -30,7 +30,7 @@ The feed container manually specifies the feed title, which you can change here.
 
     <h2 class="jw-feed-title">My Feed</h2>
 
-You can also style the feed using class="jw-feed", as defined in the feed div. See the CSS Skinning Reference for more information on styling your feed.
+You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on styling your feed.
 
     <div id="feed" class="jw-feed">
 
@@ -40,11 +40,13 @@ The `js/feeds_harness.js` file dynamically populates the content for `<div id="f
 
 Look for `var FEED_URL` and replace the feed_id in the URL with a feed_id from your dashboard. This specifies the content being pulled in to the widget.
 
-    var FEED_URL = '//content.jwplatform.com/feed.rss?feed_id=Xw0oaD4q&related_video=';
+    var FEED_URL = '//content.jwplatform.com/feed.rss?feed_id=Xw0oaD4q&related_media_id=';
 
 !!!
 JOSIE: INSERT dashboard screenshot
 !!!
+
+The widget provides code for either a JSON or RSS feed. It is set to RSS by default, but JW Player provides both JSON and RSS feeds.
 
 See the [Platform API Reference](developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on using the `feed.rss` endpoint programmatically.
 
@@ -76,91 +78,64 @@ By default, the widget does not display video description in the feed, but you c
 		</div>
 	</li>
 
-The feed classes follow the JW Player skinning model. See our CSS Reference for more information on skinning your widget. 
-
-!!!!
-Include link to CSS Reference
-!!!
+The feed classes follow the JW Player skinning model. See our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on skinning your widget. 
 
 ###Run Customized Feed Widget
 
-Simply follow the README to run your widget locally.
-
-!!!
-Link to readme
-!!!
-
-!!!
-Include link to developer guide article and demos page in readme.
-!!!
+Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-js/README.md) to run your widget locally.
 
 ##Angular JS Widget
 
 ###The Basics
 
-In order to modify the Angular JS widget for your site, you will need to configure three views: `feedExample.js`, `player.js`, and `feed.js`. You can also use our CSS skinning reference to modify `css/style.css`.
-
-!!!!
-Include link to CSS Reference
-!!!
+In order to modify the Angular JS widget for your site, you will need to configure three views: `feedExample.js`, `player.js`, and `feed.js`. You can also use our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) to modify `css/style.css`.
 
 [View the Angular.js Feeds Widget.](developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample)
 
 ###Setup your Player
 
-`player/player.js` routes to the player div. Configure the anchor video (the content that plays first on page load) by setting up the player with a `file`, `image`, and corresponding `mediaid` from your content library.
+`landing/landing.js` initializes the configuration of the angular app. We only need to do this once. The runonce function is called when the template first loads by calling `<div ng-init="runonce()"></div>`. Configure the anchor video (the content that plays first on page load) by setting up the player with a `file`, `image`, and corresponding `mediaid` from your content library.
 
-	  $rootScope.player.setup({playlist:[{
-	    file: "//content.jwplatform.com/videos/RltV8MtT-p3ZNjGCa.mp4",
-	    image: "//content.jwplatform.com/thumbs/RltV8MtT-320.jpg",
-	    mediaid: "RltV8MtT"
-	    }],
-	    mute: true
-	});
-
-###Title your Feed
-
-The `feed/feed.html` file parses the feed. It also manually specifies the feed title, which you can change here.
-
-	<h2 class="jw-feed-title">My Feed</h2>
-
-You can also style the feed using class="jw-feed", as defined in the feed div. See the CSS Skinning Reference for more information on styling your feed.
-
-!!!
-INSERT CODE SNIPPET
-!!!
-
-!!!
-Link to CSS Reference
-!!!
+    $scope.runonce = function () {
+      $rootScope.firstPlaylist = [{
+        file: "//content.jwplatform.com/videos/RltV8MtT-p3ZNjGCa.mp4",
+        image: "//content.jwplatform.com/thumbs/RltV8MtT-320.jpg",
+        mediaid: "RltV8MtT"
+      }];
 
 ###Populate your Feed
 
-The `feed/feed.js` file routes to the feed div. Replace the link associated with `var url` with a feed URL from your dashboard to specify the content being pulled in to the widget. See the [Platform API Reference](developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on the `feed.rss` endpoint.
+In the same `landing/landing.js` file, replace the feedId with a feedID from your dashboard to specify the content being pulled in to the widget.
 
-    var getFeed = function(id){
-      var url = '//content.jwplatform.com/feed.rss?feed_id=Xw0oaD4q&related_video=' + id;
-      $http.get(url, {responseType:'document'}).then(function successCallback(response){
-        $scope.feed = jwplayer.utils.rssparser.parse(response.data.childNodes[0]);
-      });
-    };
+	$rootScope.feedId = "Xw0oaD4q"
+
+###Title your Feed
+
+The `landing/landing.html` file establishes the player container on the left and the feed container on the right hand side of the page. It also manually specifies the feed title, which you can change here.
+
+	<h2 class="jw-feed-title">My Feed</h2>
+
+You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS](building_your_site/widgets/feeds_widget_css_reference/) Reference for more information on styling your feed.
 
 ###Render your Feed
 
-The loadVideo function loads all the data from the feed into the view. You can use this file to determine which data displays in the feed. By default, the widget does not display `desc`.
+The `feed/feed.html` file is the template object for each piece of content in your feed. It includes `image`, `title`, `description`, and `duration`. You can use this file to determine which metadata displays in the feed.
 
-!!!
-ADD CODE SNIPPET THAT YOU CAN UNCOMMENT ONCE DESC/DUR ARE AVAILABLE.
-!!!
+By default, the widget does not display video description in the feed, but you can uncomment `<p class="jw-media-description">{{item.description}}</p>` to show it. Try commenting/uncommenting different lines to hide/show their corresponding metadata in your feed.
+
+  <div class="row jw-option" ng-repeat="item in feed" ng-click="loadVideo(item)">
+      <div class="jw-thumbnail-container">
+        <img src="{{item.image}}" class="jw-thumbnail"/>
+      </div>
+
+      <div class="jw-metadata-container">
+        <h3 class="jw-media-title">{{item.title}}</h3>
+        <!--<p class="jw-media-description">{{item.description}}</p>-->
+        <time class="jw-media-duration">{{item.duration}}</time>
+      </div>
+
+The feed classes follow the JW Player skinning model. See our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on skinning your widget. 
 
 ###Run Customized Feed Widget
 
-The `app.js` file builds the page from all of the partials. Simply follow the README to run your widget locally.
-
-!!!
-NEED TO ADD README and link to it
-!!!
-
-!!!
-Include link to developer guide article and demos page in readme.
-!!!
+The `app.js` file builds the page from all of the partials. Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-angular-js/README.md) to run your widget locally.
