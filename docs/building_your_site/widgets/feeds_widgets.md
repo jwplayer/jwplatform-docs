@@ -96,12 +96,14 @@ In order to modify the Angular JS widget for your site, you will need to configu
 
 `landing/landing.js` initializes the configuration of the angular app. We only need to do this once. The runonce function is called when the template first loads by calling `<div ng-init="runonce()"></div>`. Configure the anchor video (the content that plays first on page load) by setting up the player with a `file`, `image`, and corresponding `mediaid` from your content library.
 
-  $scope.runonce = function () {
-      $rootScope.firstPlaylist = [{
-        file: "//content.jwplatform.com/videos/RltV8MtT-p3ZNjGCa.mp4",
-        image: "//content.jwplatform.com/thumbs/RltV8MtT-320.jpg",
-        mediaid: "RltV8MtT"
-      }];
+```javascript
+$scope.runonce = function () {
+     $rootScope.firstPlaylist = [{
+       file: "//content.jwplatform.com/videos/RltV8MtT-p3ZNjGCa.mp4",
+       image: "//content.jwplatform.com/thumbs/RltV8MtT-320.jpg",
+       mediaid: "RltV8MtT"
+     }];
+```
 
 ###Populate your Feed
 
