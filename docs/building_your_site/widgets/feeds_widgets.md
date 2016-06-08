@@ -1,16 +1,18 @@
 #Recommended Feeds Widgets
 
-JW Player’s network of connected players provides a deep pool of data for video recommendations. The recommendations engine uses anonymized audience engagement data to create clusters of content affinity and uncover viewing patterns that would be overlooked by 3rd party recommendations solutions.
+Data Driven Recommendations from JW Platform allow video-focused developers to leverage audience behavior and content traits to drive deeper audience engagement and increase content monetization (all while helping to automate video publishing workflow and curation). 
 
-Putting recommended content in page widgets (ie: outside of players where viewers can see them while watching video) encourages more clicks instead of bounces. To that end, we have designed several feeds widgets for you to use as inspiration for your own design or copy them directly and simply swap out the content.
+Every video producer should activate the in-player related video overlay; however research shows that well positioned page widgets (i.e. outside of players where viewers can see them while watching video) will likely provide even more viewer engagement than in-player recommendations alone. 
 
-This document describes how to customize the feeds widgets with your content and provides guidance for CSS skinning. For more background information on building and managing data-driven feeds, see our [Support Article](support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
+To help drive out-of-player viewer engagement, we have designed several page widgets which can consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our [CSS Reference](/feeds_widget_css_reference.md) or serve as a starting part for more advanced implementations. 
+
+For more information about building and managing data-driven feeds please see our [Platform API Reference](/../../../reference/v1/urls/feed.html) and [customer support article](https://support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
 
 ![Feeds Widget](/images/feeds-widget.png)
 
 ##Getting Started
 
-You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](github.com/jwplayer/jwdeveloper-demos/) from Github. Each widget comes with a readme providing instructions to run it locally.
+You can [view the feeds widget demos](https://developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](https://github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/) from Github. Each widget comes with a readme providing instructions to run it locally.
 
 ##JavaScript Widget
 
@@ -18,7 +20,7 @@ You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/cus
 
 The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will need to configure `index.html`, `js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our [CSS Reference](/feeds_widget_css_reference.md) to modify `css/style.css`.
 
-[View the JavaScript Feeds Widget Demo.](developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
+[View the JavaScript Feeds Widget Demo.](https://developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 
 ###Title your Feed
 
@@ -46,11 +48,11 @@ You can find your Feed ID using the "Feeds" tab under "Lists" in the Dashboard. 
 
 The widget provides code for either a JSON or RSS feed. It is set to RSS by default, but JW Player provides both JSON and RSS feeds.
 
-See the [Platform API Reference](developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) for more information on using the `feed.rss` endpoint programmatically.
+See the [Platform API Reference](/../../../reference/v1/urls/feed.html) for more information on using the `feed.rss` endpoint programmatically.
 
 ###Setup your Player
 
-Configure the anchor video (the content that plays first on page load) by setting up the player with a `mediaid` and corresponding `file` and `image` from your content library. The setup function uses playerdiv and tilediv as variables for player and feed.
+Configure the anchor video (the content that plays first on page load) by setting up the player with a `mediaid` and corresponding `file` and `image` from your content library. The setup function uses `playerdiv` and `tilediv` as variables for player and feed.
 
     function setup(playerdiv,tilediv) {
        var mediaid  = "uNXCVIsW";
@@ -80,7 +82,7 @@ The feed classes follow the JW Player skinning model. See our [CSS Reference](/f
 
 ###Run Customized Feed Widget
 
-Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-js/README.md) to run your widget locally.
+Simply follow the [README](https://github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-js/README.md) to run your widget locally.
 
 ##Angular JS Widget
 
@@ -88,7 +90,7 @@ Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/dem
 
 In order to modify the Angular JS widget for your site, you will need to configure two to three files: `landing.js`, `landing.html`, and (optionally) `feed.html`. You can also use our [CSS Reference](/feeds_widget_css_reference.md) to modify `css/app.css`.
 
-[View the Angular JS Feeds Widget Demo.](developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample)
+[View the Angular JS Feeds Widget Demo.](https://developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample)
 
 ###Setup your Player
 
@@ -138,4 +140,4 @@ The feed classes follow the JW Player skinning model. See our [CSS Reference](/f
 
 ###Run Customized Feed Widget
 
-The `app.js` file builds the page from all of the partials. Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-angular-js/README.md) to run your widget locally.
+The `app.js` file builds the page from all of the partials. Simply follow the [README](https://github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-angular-js/README.md) to run your widget locally.
