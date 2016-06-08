@@ -4,19 +4,19 @@ JW Player’s network of connected players provides a deep pool of data for vide
 
 Putting recommended content in page widgets (ie: outside of players where viewers can see them while watching video) encourages more clicks instead of bounces. To that end, we have designed several feeds widgets for you to use as inspiration for your own design or copy them directly and simply swap out the content.
 
-This document describes how to customize the feeds widgets with your content and provides guidance for CSS skinning. For more background information on building and managing data-driven feeds, see our [Support Article](//support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
+This document describes how to customize the feeds widgets with your content and provides guidance for CSS skinning. For more background information on building and managing data-driven feeds, see our [Support Article](support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
 
 ![Feeds Widget](/images/feeds-widget.png)
 
 ##Getting Started
 
-You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](https://github.com/jwplayer/jwdeveloper-demos/) from Github. Each widget comes with a readme providing instructions to run it locally.
+You can [view the feeds widget demos](developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](github.com/jwplayer/jwdeveloper-demos/) from Github. Each widget comes with a readme providing instructions to run it locally.
 
 ##JavaScript Widget
 
 ###The Basics
 
-The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will need to configure `index.html`, `js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) to modify `css/style.css`.
+The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will need to configure `index.html`, `js/feeds_harness.js`, and `/templates/item.hbs`. You can also use our [CSS Reference](/feeds_widget_css_reference.md) to modify `css/style.css`.
 
 [View the JavaScript Feeds Widget Demo.](developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 
@@ -28,7 +28,7 @@ The feed container manually specifies the feed title, which you can change here.
 
     <h2 class="jw-feed-title">My Feed</h2>
 
-You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on styling your feed.
+You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS Reference](/feeds_widget_css_reference.md) for more information on styling your feed.
 
     <div id="feed" class="jw-feed">
 
@@ -76,7 +76,7 @@ By default, the widget does not display video description in the feed, but you c
 		</div>
 	</li>
 
-The feed classes follow the JW Player skinning model. See our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on skinning your widget. 
+The feed classes follow the JW Player skinning model. See our [CSS Reference](/feeds_widget_css_reference.md) for more information on skinning your widget. 
 
 ###Run Customized Feed Widget
 
@@ -86,7 +86,7 @@ Simply follow the [README](github.com/jwplayer/jwdeveloper-demos/tree/master/dem
 
 ###The Basics
 
-In order to modify the Angular JS widget for your site, you will need to configure two to three files: `landing.js`, `landing.html`, and (optionally) `feed.html`. You can also use our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) to modify `css/app.css`.
+In order to modify the Angular JS widget for your site, you will need to configure two to three files: `landing.js`, `landing.html`, and (optionally) `feed.html`. You can also use our [CSS Reference](/feeds_widget_css_reference.md) to modify `css/app.css`.
 
 [View the Angular JS Feeds Widget Demo.](developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample)
 
@@ -113,7 +113,7 @@ The `landing/landing.html` file establishes the player container on the left and
 
 	<h2 class="jw-feed-title">My Feed</h2>
 
-You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS](building_your_site/widgets/feeds_widget_css_reference/) Reference for more information on styling your feed.
+You can also style the feed using class="jw-feed", as defined in the feed div. See the [CSS Reference](/feeds_widget_css_reference.md) for more information on styling your feed.
 
 ###Render your Feed
 
@@ -121,7 +121,7 @@ The `feed/feed.html` file is the template object for each piece of content in yo
 
 By default, the widget does not display video description in the feed, but you can uncomment `<p class="jw-media-description">{{item.description}}</p>` to show it. Try commenting/uncommenting different lines to hide/show their corresponding metadata in your feed.
 
-```
+```HTML
 <div class="row jw-option" ng-repeat="item in feed" ng-click="loadVideo(item)">
   <div class="jw-thumbnail-container">
     <img src="{{item.image}}" class="jw-thumbnail"/>
@@ -134,7 +134,7 @@ By default, the widget does not display video description in the feed, but you c
   </div>
 ```
 
-The feed classes follow the JW Player skinning model. See our [CSS Reference](building_your_site/widgets/feeds_widget_css_reference/) for more information on skinning your widget. 
+The feed classes follow the JW Player skinning model. See our [CSS Reference](/feeds_widget_css_reference.md) for more information on skinning your widget. 
 
 ###Run Customized Feed Widget
 
