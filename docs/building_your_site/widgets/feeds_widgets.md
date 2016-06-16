@@ -1,10 +1,8 @@
 #Recommended Feeds Widgets
 
-Data Driven Recommendations from JW Platform allow video-focused developers to leverage audience behavior and content traits to drive deeper audience engagement and increase content monetization (all while helping to automate video publishing workflow and curation). 
+Data-Driven Recommendations from JW Platform leverage audience behavior and content traits to drive deeper audience engagement and increase content monetization. 
 
-Every video producer should activate the in-player related video overlay; however research shows that well positioned page widgets (i.e. outside of players where viewers can see them while watching video) will likely provide even more viewer engagement than in-player recommendations alone. 
-
-To help drive out-of-player viewer engagement, we have designed several page widgets which can consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) or serve as a starting part for more advanced implementations. 
+Research shows that well positioned page widgets that viewers can see and interact with while watching video are likely to drive even more viewer engagement than in-player recommendations alone. To promote out-of-player viewer engagement, we have designed several page widgets which consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) or serve as a starting part for more advanced implementations. 
 
 For more information about building and managing data-driven feeds please see our [Platform API Reference](//developer.jwplayer.com/jw-platform/reference/v1/urls/feeds.html) and [customer support article](//support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
 
@@ -12,13 +10,15 @@ For more information about building and managing data-driven feeds please see ou
 
 ##Getting Started
 
-You can [view the feeds widget demos](//developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/) from Github. Each widget comes with a readme providing instructions to run it locally.
+You can [view the feeds widget demos](//developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/) from Github. Each widget comes with a README providing instructions to run it locally.
 
 ##JavaScript Widget
 
 ###The Basics
 
-The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will need to configure `index.html`. You can also use our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) to modify `css/style.css`.
+The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will configure `index.html`. 
+
+The feed classes follow the JW Player skinning model. See our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) for more information on modifying `css/style.css` and skinning your widget. 
 
 [View the JavaScript Feeds Widget Demo.](//developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 
@@ -47,9 +47,9 @@ Look for the following setup function at the bottom of the page:
 </script>
 ```
 
-Replace the last two variables in `var playerDiv` with a media_id and feed_id from your content library. This specifies the content being pulled in to the widget.
+Replace the last two variables in `var playerDiv` with a `media_id` and `feed_id` from your content library. This specifies the content being pulled in to the widget.
 
-You can find your feed_id using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the feed_id and URL.
+You can find your `feed_id` using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the `feed_id` and URL.
 
 ![Dashboard Screenshot](/images/feeds-dashboard.png)
 
@@ -73,8 +73,6 @@ By default, the widget does not display video description in the feed, but you c
 			<time class="jw-media-duration">{{dur}}</time>
 		</div>
 	</li>
-
-The feed classes follow the JW Player skinning model. See our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) for more information on skinning your widget. 
 
 ###Run Customized Feed Widget
 
