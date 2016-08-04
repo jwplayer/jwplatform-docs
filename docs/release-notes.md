@@ -24,6 +24,12 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-08-02
+
+### New Features
+* A new [python API kit](https://github.com/jwplayer/jwplatform-py) is available for JW Platform integration. This API kit supports both python 2 and 3 and is available via `pip install jwplatform`.
+
+
 ## 2016-07-28
 
 ### Updated Features
@@ -83,7 +89,7 @@ Template for future releases, copypasta me below
 ## 2016-05-31
 
 ### New Features
-* Data-driven similar and trending feeds are now available in json format. More details are available [here](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html)
+* Data-driven similar and trending feeds are now available in json format. More details are available [here](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html).
 
 
 ## 2016-05-23
@@ -109,7 +115,7 @@ Template for future releases, copypasta me below
 ## 2016-05-04
 
 ### New Features
-* Dashboard uploads now take advantage of S3 Accelerated Transfer
+* Dashboard uploads now take advantage of S3 Accelerated Transfer.
 
 
 ## 2016-04-26
@@ -156,4 +162,4 @@ Template for future releases, copypasta me below
 ## 2016-03-03 Upload to s3
 
 ### New Features
-* **Upload videos directly to the cloud!** JW Platform now supports video uploads (up to 5GB) directly to s3. s3 uploads take advantage of global cloud infrastructure including edge services to achieve the fastest and most reliable uploads globally. Details at: http://http://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html
+* **Upload videos directly to the cloud!** JW Platform now supports video uploads (up to 5GB) directly to s3. s3 uploads take advantage of global cloud infrastructure including edge services to achieve the fastest and most reliable uploads globally. Details available [here](https://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html).
