@@ -24,6 +24,85 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-08-02
+
+### New Features
+* A new [python API kit](https://github.com/jwplayer/jwplatform-py) is available for JW Platform integration. This API kit supports both python 2 and 3 and is available via `pip install jwplatform`.
+
+
+## 2016-07-28
+
+### Updated Features
+* Improved transcoding support for interlaced originals.
+
+
+## 2016-07-26
+
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.5. This adds DRM compatibility for two additional browsers (Firefox and Safari Desktop) as well as improvements to captions positioning, handling, and styling. Aria integration improves accessibility by adding support for screen readers. Finally, we've exposed additional tracking information via our API, and made VMAP ad scheduling more robust. Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version75).
+
+
+## 2016-07-25
+
+### Updated Features
+* Updated opengraph url tag to use the same player key as the iframe player including it.
+### Bug Fixes
+* Fixed issue in accessing tracks that were uploaded without an extension.
+
+
+## 2016-07-20
+
+### Bug Fixes
+* Data driven feeds properly support OPTIONS requests with CORS headers.
+
+
+## 2016-07-18
+
+### New Features
+* The JW Platform Dashboard now offers new roles for read-only users and content editors more information is available on our [blog post](https://www.jwplayer.com/blog/new-dashboard-user-roles/).
+
+
+## 2016-07-05
+
+### New Features
+* We are pleased to offer a new Platinum Edition of JW Player that includes a basic allotment of advertising impressions and increased hosting and streaming limits over the Premium Edition. Get started [here](https://www.jwplayer.com/get-started/).
+
+
+## 2016-06-30
+
+### Updated Features
+* All content now has a 1920px wide poster image available. It is accessible in the [same way](https://developer.jwplayer.com/jw-platform/reference/v1/urls/thumbs.html) as other poster images. 
+
+
+## 2016-06-14
+
+### New Features
+* Data-driven similar and trending feeds now support content signing using JSON Web Tokens. More details are available [here](https://developer.jwplayer.com/jw-platform/reference/v1/jwt_signing.html).
+
+
+## 2016-06-06
+
+### Updated Features
+* Single line player embeds can now use a trending feed_id as a key to include trending content directly in a player as a playlist.
+
+
+## 2016-05-31
+
+### New Features
+* Data-driven similar and trending feeds are now available in json format. More details are available [here](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html).
+
+
+## 2016-05-23
+
+### New Features
+* Enterprise Edition accounts can now configure and serve advertising schedules.
+* Added API rate limiting information to API responses.
+### Updated Features
+* The no-index metatag has been removed from iframe players to improve search engine indexing.
+### Bug Fixes
+* Fix ensures that deleted ad tags not served even if an ad break is configured to use them.
+
+
 ## 2016-05-10
 
 ### Updated Features
@@ -32,10 +111,12 @@ Template for future releases, copypasta me below
 ### Bug Fixes
 * We removed the spaces (now there are only commas) between tags in JW7 single line embeds and json feeds. This allows for using the `__item-tags__` macro directly with DFP for Google IMA Ad Tags.
 
+
 ## 2016-05-04
 
 ### New Features
-* Dashboard uploads now take advantage of S3 Accelerated Transfer
+* Dashboard uploads now take advantage of S3 Accelerated Transfer.
+
 
 ## 2016-04-26
 
@@ -78,8 +159,7 @@ Template for future releases, copypasta me below
 * Updated JW7 iframe embeds to listen for play and pause events on the iframe and pass them to the contained player.
 
 
-
 ## 2016-03-03 Upload to s3
 
 ### New Features
-* **Upload videos directly to the cloud!** JW Platform now supports video uploads (up to 5GB) directly to s3. s3 uploads take advantage of global cloud infrastructure including edge services to achieve the fastest and most reliable uploads globally. Details at: http://http://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html
+* **Upload videos directly to the cloud!** JW Platform now supports video uploads (up to 5GB) directly to s3. s3 uploads take advantage of global cloud infrastructure including edge services to achieve the fastest and most reliable uploads globally. Details available [here](https://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html).
