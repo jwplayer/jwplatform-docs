@@ -4,28 +4,28 @@ Uploading videos to the platform via the API can be achieved in a number of ways
 
 1. *Fetch Uploads:* If your video is accessible via http(s) on the web. Give us a link and we'll go fetch it. By having our servers talk to your servers, both ends live in well provisioned data centers with good networks so ingest is very fast and reliable. Steps:
     1. Create a video specifying a ``download_url`` from which we will fetch the source video. [Clack](https://github.com/rmnl/clack) example: 
-    ```bash
+    ```Bash
     clack call /videos/create "{'title':'My New Fetch Upload','download_url':'https://mysite.net/videos/myVideo.mp4'}"
     ```
 
 2. *Edge Accelerated uploads to Amazon s3:* For files up to 5GB in size, we have set up cloud infrastructure to allow you to upload directly to the nearest Amazon edge connection. In practice, we have seen these edge accelerated uploads go up to five times faster than non-accelerated uploads. These uploads use a simple HTTPS PUT to a signed link. Steps:
     A demonstration script for uploading with the Python SDK is available [here](https://github.com/jwplayer/jwdeveloper-platformdemos/blob/master/python-api-kit-demos/s3_upload.py).
     1. Create a video with the `upload_method: s3` to get an upload link. [Clack](https://github.com/rmnl/clack) example:
-    ```bash
+    ```Bash
     clack call /videos/create "{'title':'My s3 Accelerated Upload','upload_method':'s3'}"
     ```
     2. Use curl or another tool to make an HTTP PUT to the link returned:
-    ```bash
+    ```Bash
     curl --request PUT --upload-file /file_path/file_name.mp4 "https://jwplatform-upload.s3-accelerate.amazonaws.com/tL17msiU?AWSAccessKeyId=AKIAIRXCJ3TPZA4HVNYZ&Expires=1482770374&Signature=1%2Fl%2BL6%2FyOE05dNEbXHW8sw7TGF4%3D"
     ```
 
 3. *Regular style uploads:* For files greater than 5GB (up to the system limit of 25GB) the regular and resumable style uploads can be used. Steps:
     1. Create a video without specifying an upload_method or specifying resumable. [Clack](https://github.com/rmnl/clack) example:
-    ```bash
+    ```Bash
     clack call /videos/create "{'title':'My 7GB Upload'}"
     ```
     2. Use curl or another tool to submit the file as a form to the link returned:
-    ```bash
+    ```Bash
     curl --form file=@./video.mpeg "http://upload.jwplatform.com/v1/videos/upload?api_format=xml&key=vtQmcboj&token=e2bbad0fd889d5d2e30047596cfe3789778257d2"
     ```
 
