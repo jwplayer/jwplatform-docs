@@ -17,6 +17,7 @@ Uploading videos to the platform via the API can be achieved in a number of ways
 
         ```
         clack call /videos/create "{'title':'My s3 Accelerated Upload','upload_method':'s3'}"
+        
         ```
     
     2. Use curl or another tool to make an HTTP PUT to the link returned:
