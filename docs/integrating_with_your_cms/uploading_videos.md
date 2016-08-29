@@ -6,7 +6,9 @@ Uploading videos to the platform via the API can be achieved in a number of ways
     1. Create a video specifying a ``download_url`` from which we will fetch the source video. [Clack](https://github.com/rmnl/clack) example: 
 
         ```
-        clack call /videos/create "{'title':'My New Fetch Upload','download_url':'https://mysite.net/videos/myVideo.mp4'}"
+        clack call /videos/create \
+        "{'title':'My New Fetch Upload', \
+        'download_url':'https://mysite.net/videos/myVideo.mp4'}"
         ```
 
 2. *Edge Accelerated uploads to Amazon s3:* For files up to 5GB in size, we have set up cloud infrastructure to allow you to upload directly to the nearest Amazon edge connection. In practice, we have seen these edge accelerated uploads go up to five times faster than non-accelerated uploads. These uploads use a simple HTTPS PUT to a signed link. Steps:
