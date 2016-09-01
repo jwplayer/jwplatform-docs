@@ -2,7 +2,7 @@
 
 When building JW Platform into your own website or CMS, one of the most important functionalities is the generation of player embed codes for programmatic publishing.
 
-To ensure fair access for all, usage of api.jwplatform.com is limited to **10 calls per minute**. We reserve the right to block API access to accounts that exceed this rate. If you need a higher API rate, please contact [sales@jwplayer.com](mailto:sales@jwplayer.com). Note that calls to content.jwplatform.com do not count towards the API rate limit.
+To ensure fair access for all, usage of api.jwplatform.com is limited to 10 calls per minute. We reserve the right to block API access to accounts that exceed this rate. If you need a higher API rate, please [contact us](https://www.jwplayer.com/contact-us/) to get your account upgraded. Note that calls to content.jwplatform.com do not count towards the API rate limit.
 
 This document applies to **JW Platform** hosting and streaming. Every account comes with some hosting and streaming included :-)
 
@@ -27,7 +27,7 @@ Only the **key** and **id** part of the embed code change depending on the video
 
 ## Demo
 
-The script we're going to build in this tutorial mimicks the embed code form in the JW Platform dashboard. You can download this embed-code script as part of the [PHP API Examples ZIP](http://support-static.jwplayer.com/API/php-api-examples-20151013.zip).
+The script we're going to build in this tutorial mimicks the embed code form in the JW Platform dashboard. You can download this embed-code script as part of the [PHP API Examples ZIP](https://support-static.jwplayer.com/API/php-api-examples-20151013.zip).
 
 First, as with any script, we include and initialize the API. Replace the *xxxx* and *yyyy* part with your account **key** and **secret**, which can be copy/pasted from the account page of the CMS.
 
@@ -45,10 +45,10 @@ Last, we construct the embed code. If any $\_GET data is available (in other wor
     $player = (isset($_POST['player'])) ? $_POST['player']: $response2['players'][0]['id'];
     $script = 'http://content.jwplatform.com/players/'.$video.'-'.$player.'.js';
 
-Once again note the full embed-code script can be downloaded as part of the [PHP API Examples ZIP](http://support-static.jwplayer.com/API/php-api-examples.zip).
+Once again note the full embed-code script can be downloaded as part of the [PHP API Examples ZIP](https://support-static.jwplayer.com/API/php-api-examples-20151013.zip).
 
 ## Next Steps
 
 There is a variety of ways in which this script can be extended. The most useful is likely to construct the link to a [simple preview page](http://developer.jwplayer.com/jw-platform/reference/v1/urls/previews.html). That can be done with the same variables.
 
-As always, if you have questions or additional code you want to share, please [see our community questions](/customer/portal/topics/635789-platform-api/questions).
+As always, if you have questions or additional code you want to share, please [see our community questions](https://support.jwplayer.com/customer/portal/questions/new).
