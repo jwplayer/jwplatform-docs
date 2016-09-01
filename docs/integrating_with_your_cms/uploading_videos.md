@@ -10,7 +10,7 @@ Uploading videos to the platform via the API can be achieved in a number of ways
         ```
 
 2. **Edge Accelerated uploads to Amazon s3:** For files up to 5GB in size, we have set up cloud infrastructure to allow you to upload directly to the nearest Amazon edge connection. In practice, we have seen these edge accelerated uploads go up to five times faster than non-accelerated uploads. These uploads use a simple HTTPS PUT to a signed link. Steps:
-    A demonstration script for uploading with the Python SDK is available [here](https://github.com/jwplayer/jwdeveloper-platformdemos/blob/master/python-api-kit-demos/s3_upload.py).
+    A demonstration script for uploading with the Python SDK is available [here](https://github.com/jwplayer/jwdeveloper-platformdemos/blob/master/python-api-kit-examples/s3_upload.py).
     1. Create a video with the `upload_method: s3` to get an upload link. [Clack](https://github.com/rmnl/clack) example:
 
         ```
