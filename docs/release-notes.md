@@ -36,6 +36,11 @@ Template for future releases, copypasta me below
 * The related items overlay now populates with recommendations from our data driven feeds feature. The recommendations update with each item playing in the player and can be served on properties with content URL signing enforced.
 
 
+## 2016-09-08
+
+### New Features
+* The JW Live private beta has now launched! You can now broadcast a live stream directly from JW Platform via our new JW Live feature. See the [documentation](https://support.jwplayer.com/customer/portal/articles/2549038-live-streaming) on JW Live to see a detailed description of how to setup a live stream. NOTE: You must be invited to the private beta to get access. Contact sales@jwplayer.com to request access.
+
 ## 2016-08-15
 
 ### Updated Features
