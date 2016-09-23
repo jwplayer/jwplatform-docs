@@ -24,6 +24,24 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-09-21
+
+### New Features
+* Search feeds. You can now [create](https://developer.jwplayer.com/jw-platform/reference/v1/methods/channels/create.html) a search type feed and [serve it](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) like other data driven feeds from our content service.
+
+
+## 2016-09-13
+
+### Updated Features
+* The related items overlay now populates with recommendations from our data driven feeds feature. The recommendations update with each item playing in the player and can be served on properties with content URL signing enforced.
+
+
+## 2016-08-15
+
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.6. This update improves the user experience when displaying related and recommended content. It also includes Google IMA advertising improvements. Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version76).
+
+
 ## 2016-08-02
 
 ### New Features
