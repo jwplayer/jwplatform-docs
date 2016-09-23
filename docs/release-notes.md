@@ -27,19 +27,27 @@ Template for future releases, copypasta me below
 ## 2016-09-21
 
 ### New Features
-* Search feeds. You can now [create](https://developer.jwplayer.com/jw-platform/reference/v1/methods/channels/create.html) a search type feed and [serve it](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) like other data driven feeds from our content service.
+* Search feeds allow you to build widgets or tools on your site where users can use textual search to find videos in your library. You can now [create](https://developer.jwplayer.com/jw-platform/reference/v1/methods/channels/create.html) a search type feed and [serve it](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feed.html) like other data driven feeds from our content service.
 
 
 ## 2016-09-13
 
 ### Updated Features
 * The related items overlay now populates with recommendations from our data driven feeds feature. The recommendations update with each item playing in the player and can be served on properties with content URL signing enforced.
+* Additionally, you can choose which related feed to use for each player. This allows publishers to recommend only videos that match tag based rules.
 
 
 ## 2016-09-08
 
 ### New Features
 * The JW Live private beta has now launched! You can now broadcast a live stream directly from JW Platform via our new JW Live feature. See the [documentation](https://support.jwplayer.com/customer/portal/articles/2549038-live-streaming) on JW Live to see a detailed description of how to setup a live stream. NOTE: You must be invited to the private beta to get access. Contact sales@jwplayer.com to request access.
+
+
+## 2016-08-29
+
+### New Features
+* Analytics segmentation is now available to enterprise users with advanced analytics. This allows for filtering and segmenting analytics based on dimensions like media, player, feed, device, domain, country, and distribution platform. More information is available on our [blog](https://www.jwplayer.com/blog/segmentation/).
+
 
 ## 2016-08-15
 
