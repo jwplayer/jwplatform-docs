@@ -24,6 +24,17 @@ Template for future releases, copypasta me below
 
 -->
 
+## 2016-10-04
+
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.7. This update includes:
+    * New controlbar, playlist and feeds UI
+    * HTML5 HLS in Firefox
+    * Improved performance in Google IMA
+    * Better DASH support and performance with Shaka 2.0
+    * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version77).
+
+
 ## 2016-09-21
 
 ### New Features
@@ -155,9 +166,9 @@ Template for future releases, copypasta me below
 * Trending type feeds are now supported in JW Platform single line embeds.
 ### Updated Features
 * JW Player 7.4.0 was released to the staging channel. Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version74). Of particular interest to platform embeds, the new version includes:
-	* Support for HLS in HTML5. Cloud hosted players can take advantage of this by setting `"primary":"html5"` or omitting the `primary` property of the player.
-	* Updated support for VP9-DASH to check for VP9 support in the browser before chosing the DASH source. This allows browers like Edge to fall back to HLS until they support VP9 rendering.
-	* Google IMA ad tags will automatically get duration and video title added to the request url for more enhanced ad targeting.
+    * Support for HLS in HTML5. Cloud hosted players can take advantage of this by setting `"primary":"html5"` or omitting the `primary` property of the player.
+    * Updated support for VP9-DASH to check for VP9 support in the browser before chosing the DASH source. This allows browers like Edge to fall back to HLS until they support VP9 rendering.
+    * Google IMA ad tags will automatically get duration and video title added to the request url for more enhanced ad targeting.
 * [JSON feeds](https://developer.jwplayer.com/jw-platform/reference/v1/urls/feeds.html#format-of-json-feeds) now include VP9-DASH sources and restructured custom parameters to align with the behavior of single line embeds. 
 ### Bug Fixes
 * Vertical video with a non-zero rotation parameter served by JW Platform now renders properly in all devices without stretching.
