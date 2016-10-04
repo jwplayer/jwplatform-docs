@@ -26,6 +26,8 @@ Template for future releases, copypasta me below
 
 ## 2016-10-04
 
+### New Features
+* Users with non-custom Ad Impressions limits will now receive email notifications as they approach their limits at 50%, 75% and 100% of the allotted impressions served. The email is sent to account admin level users who can unsubscribe if desired.
 ### Updated Features
 * The production channel of cloud hosted players now uses JW Player 7.7. This update includes:
     * New controlbar, playlist and feeds UI
@@ -33,7 +35,6 @@ Template for future releases, copypasta me below
     * Improved performance in Google IMA
     * Better DASH support and performance with Shaka 2.0
     * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version77).
-* Users with non-custom Ad Impressions limits will now receive email notifications as they approach their limits at 50%, 75% and 100% of the allotted impressions served. The email is sent to account admin level users and can be unsubscribed.
 
 ## 2016-09-28
 
