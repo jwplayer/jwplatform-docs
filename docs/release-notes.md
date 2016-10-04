@@ -33,6 +33,7 @@ Template for future releases, copypasta me below
     * Improved performance in Google IMA
     * Better DASH support and performance with Shaka 2.0
     * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version77).
+* Users with non-custom Ad Impressions limits will now receive email notifications as they approach their limits at 50%, 75% and 100% of the allotted impressions served. The email is sent to account admin level users and can be unsubscribed.
 
 ## 2016-09-28
 
