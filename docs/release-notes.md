@@ -34,6 +34,11 @@ Template for future releases, copypasta me below
     * Better DASH support and performance with Shaka 2.0
     * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version77).
 
+## 2016-09-28
+
+### Updated Features
+* Increased API rate limits. The JW Platform API now allows users up to 60 API calls per minute. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. Note that calls to content.jwplatform.com do not count towards the API rate limit.
+
 
 ## 2016-09-21
 
