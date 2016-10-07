@@ -38,6 +38,6 @@ Uploading videos to the platform via the API can be achieved in a number of ways
 
 4. **Resumable style uploads:** Resumable uploads are also available but in practice they tend to be harder to implement and we have seen such good reliability from s3 uploads that we recommend s3 over resumable even for users on poor networks. Documentation on resumable uploads is available [here](https://developer.jwplayer.com/jw-platform/reference/v1/resumable_uploads.html)
 
-5. **FTP:** We recommend against the use of FTP but if you have an enterprise account and existing workflows require ftp, contact us to get it enabled on your account.
+5. **FTP:** We recommend against the use of FTP but if you have an enterprise account and existing workflows require ftp, [contact us](https://www.jwplayer.com/contact-us/?utm_source=developer&utm_medium=CTA&utm_campaign=platform-docs) to get it enabled on your account.
 
 

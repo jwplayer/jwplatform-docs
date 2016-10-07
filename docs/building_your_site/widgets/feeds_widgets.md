@@ -10,6 +10,10 @@ For more information about building and managing data-driven feeds please see ou
 
 ##Getting Started
 
+!!!important
+Recommended feeds must be entitled on your account. Please [contact our team](https://www.jwplayer.com/contact-us/?utm_source=developer&utm_medium=CTA&utm_campaign=platform-docs) to add data-drivien recommendations to your JW Player account.
+!!!
+
 You can [view the feeds widget demos](//developer.jwplayer.com/jw-player/demos/customization/) on our developer site and [fork the source code](//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/) from Github. Each widget comes with a README providing instructions to run it locally.
 
 ##JavaScript Widget

@@ -2,7 +2,7 @@
 
 When building JW Platform into your own website or CMS, one of the most important functionalities is the generation of player embed codes for programmatic publishing.
 
-To ensure fair access for all, usage of api.jwplatform.com is limited to 60 calls per minute. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. If you need a higher API rate, please [contact us](https://www.jwplayer.com/contact-us/) to get your account upgraded. Note that calls to content.jwplatform.com do not count towards the API rate limit.
+To ensure fair access for all, usage of api.jwplatform.com is limited to 60 calls per minute. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. If you need a higher API rate, please [contact us](https://www.jwplayer.com/contact-us/?utm_source=developer&utm_medium=CTA&utm_campaign=platform-docs) to get your account upgraded. Note that calls to content.jwplatform.com do not count towards the API rate limit.
 
 This document applies to **JW Platform** hosting and streaming. Every account comes with some hosting and streaming included :-)
 
