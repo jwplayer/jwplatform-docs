@@ -1,5 +1,7 @@
 site_name: JW Platform Developer Guide
 theme: jwplayer
+extra:
+  product: platform
 site_dir: developer-guide
 repo_url: https://github.com/jwplayer/jwplatform-docs
 site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico
