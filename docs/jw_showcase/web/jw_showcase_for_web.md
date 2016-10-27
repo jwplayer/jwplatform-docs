@@ -59,7 +59,7 @@ Replace the ID in the config.json file with your own, ie:
 
     "player": "DTYxzkKG",
 
-Next, to set your “**featured playlist**” and “**playlists**” for the app, navigate to “**Curated**” under the “**Lists**” section of the dashboard.
+Next, to set your “**featured playlist**” and “**playlists**” for the app, navigate to “**Curated**” under the “**Playlists**” section of the dashboard.
 
 ![JW Dashboard Playlists](/images/dashboard-playlists.png)
 
