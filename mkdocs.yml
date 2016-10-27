@@ -11,7 +11,7 @@ pages:
       - Embedding Players: 'building_your_site/embedding_players.md'
       - Feeds Widgets: 'building_your_site/widgets/feeds_widgets.md'
       - Feeds Widget CSS Reference: 'building_your_site/widgets/feeds_widget_css_reference.md'
-    - Cross Platform Distribution:
+    - Cross-Platform Distribution:
       - JW Showcase for Web: 'jw_showcase/web/jw_showcase_for_web.md'
       - Jw Showcase for Apple TV: 'jw_showcase/apple_tv/jw_showcase_for_apple_tv.md'
     - Integrating with your CMS:
