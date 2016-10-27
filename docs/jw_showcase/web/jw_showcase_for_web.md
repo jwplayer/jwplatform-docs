@@ -25,11 +25,11 @@ Install project dependencies for Bower and Node:
 
 ##Configure Your App
 
-Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “app” folder.
+Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “**app**” folder.
 
 ![JW Showcase Config](/images/text-editor-config-json.png)
 
-Here you’ll need to replace the sample “player”, “featured playlists”, and “playlists” with media ids from your library within the JW Player dashboard.
+Here you’ll need to replace the sample “**player**”, “**featuredPlaylist**”, and “**playlists**” with media ids from your library within the JW Player dashboard.
 
     {
 	    "player": "DTYxzkKG",
@@ -47,11 +47,11 @@ Here you’ll need to replace the sample “player”, “featured playlists”,
 	    ]
     }
 
-To locate your player ID, navigate to “Tools” under the “Players” section of the dashboard.
+To locate your player ID, navigate to “**Tools**” under the “**Players**” section of the dashboard.
 
 ![JW Dashboard Tools](/images/dashboard-tools.png)
 
-Select the player you wish to use for your app under “Cloud Hosted Player Libraries”. The library URL for that player will contain your player ID.
+Select the player you wish to use for your app under “**Cloud Hosted Player Libraries**”. The library URL for that player will contain your player ID.
 
 ![JW Player Library](/images/cloud-hosted-player-library.png)
 
@@ -59,7 +59,7 @@ Replace the ID in the config.json file with your own, ie:
 
     "player": "DTYxzkKG",
 
-Next, to set your “featured playlist” and “playlists” for the app, navigate to “Playlists” under the “Lists” section of the dashboard.
+Next, to set your “**featured playlist**” and “**playlists**” for the app, navigate to “**Curated**” under the “**Lists**” section of the dashboard.
 
 ![JW Dashboard Playlists](/images/dashboard-playlists.png)
 
@@ -67,7 +67,7 @@ Click into any playlist you wish to feature in your app and grab the playlist ID
 
 ![JW Playlists ID](/images/playlist-id.png)
 
-Replace the “featured” and “playlists” IDs in the config.json file, ie:
+Replace the “**featuredPlaylist**” and “**playlists**” IDs in the config.json file, ie:
 
     "featuredPlaylist": "lrYLc95e",
 	    "playlists": [
@@ -78,7 +78,7 @@ Replace the “featured” and “playlists” IDs in the config.json file, ie:
 
 ##Branding Your App
 
-In the config.json file, you can choose between a “light” and “dark” theme option for the app to match your branding. You can also designate a site name, description, and footer text for your app.
+In the config.json file, you can choose between a “**light**” and “**dark**” theme option for the app to match your branding. You can also designate a site name, description, and footer text for your app.
 
     "theme": "light",
     "siteName": "JW Showcase",
