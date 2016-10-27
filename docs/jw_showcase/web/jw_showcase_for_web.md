@@ -1,6 +1,6 @@
 #Getting Started with JW Showcase for Web
 
-JW Showcase is a sample application that leverages feeds from JW Platform to distribute your content across platforms.
+JW Showcase is a sample application that leverages playlists from JW Platform to distribute your content across platforms. This guide will provide instructions for getting set up with our web app.
 
 For advanced configuration and customization, we recommend cloning the JW Showcase source code within Github. Modifying the cloned source gives you greater control over the app framework and allows you to keep your Showcase app in sync with our source repository as we add new features and bug fixes. For instructions on basic configuration of the precompiled static app, see our Support article.
 
