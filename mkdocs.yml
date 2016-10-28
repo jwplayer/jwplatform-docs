@@ -11,6 +11,9 @@ pages:
       - Embedding Players: 'building_your_site/embedding_players.md'
       - Feeds Widgets: 'building_your_site/widgets/feeds_widgets.md'
       - Feeds Widget CSS Reference: 'building_your_site/widgets/feeds_widget_css_reference.md'
+    - Cross-Platform Distribution:
+      - JW Showcase for Web: 'jw_showcase/web/jw_showcase_for_web.md'
+      - JW Showcase for Apple TV: 'jw_showcase/apple_tv/jw_showcase_for_apple_tv.md'
     - Integrating with your CMS:
       - Uploading Videos: 'integrating_with_your_cms/uploading_videos.md'
       - Batch Migrations: 'integrating_with_your_cms/batch_migration.md'
