@@ -87,3 +87,7 @@ We recommend running the app in the Xcode Apple TV emulator to test that everyth
 
 To submit your app to the Apple App Store see [Preparing Your tvOS App for Submission](https://developer.apple.com/tvos/submit/) guidelines.
 
+!!!important
+An Apple Developer license is required to submit your app to the Apple App Store.
+!!!
+
