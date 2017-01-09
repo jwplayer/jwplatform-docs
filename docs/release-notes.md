@@ -28,7 +28,8 @@ Template for future releases, copypasta me below
 ## 2017-01-05
 
 ### Updated Features
-* Ad impressions are now available as a metric in the advanced analytics segmentation page.
+* Ad impressions are now available as a metric in analytics. Users with advanced analytics can segment and filter ad impressions against dimensions of Media, Player, Feed, Device, Domain, Country, and/or Platform.
+
 
 ## 2016-12-14
 
