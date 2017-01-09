@@ -3,7 +3,7 @@
 <!--
 Template for future releases, copypasta me below
 
-## 2016-XX-XX
+## 2017-XX-XX
 
 ### New Features
 * foo
@@ -23,6 +23,92 @@ Template for future releases, copypasta me below
 * Cat
 
 -->
+
+
+## 2017-01-05
+
+### Updated Features
+* Ad impressions are now available as a metric in analytics. Users with advanced analytics can segment and filter ad impressions against dimensions of Media, Player, Feed, Device, Domain, Country, and/or Platform.
+
+
+## 2016-12-14
+
+### Updated Features
+* Added a new video attribute, ```updated``` (a unix timestamp for when the video was last updated), in the JW Platform API. [/videos/list](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/list.html) calls can ```order_by``` (```updated:desc``` or ```updated:asc```) or filtered by the ```updated_after``` parameter.
+    * The attribute is updated whenever:
+        * Media metadata gets changed (title, description, author, etc.)
+        * Tags get added or removed from the media
+        * Custom parameters are added, removed or values are changed.
+        * When a tag is globally deleted (via the dashboard or [/accounts/tags/delete/](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/tags/    delete.html)) all media associated with that tag get a new updated value
+        * Certain back-end processes (ex: transcoding operations) put a new value in the updated attribute although these updates may not have any user noticeable changes     reflected in the API output other than the new updated value.
+    * Known Limitations (on our radar for a future update):
+        * At this time, if you change the name of an existing tag using the dashboard or [/accounts/tags/update](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/tags/update.html); associated media does not get a new updated value.
+        * Adding or updating tracks associated with the media does not yet trigger an update of the associated media.
+
+
+## 2016-12-13
+
+### Updated Features
+* Per item data driven recommendations are now available for content with [URL token signing](https://developer.jwplayer.com/jw-platform/reference/v1/content_signing.html) enforcement enabled.
+
+
+## 2016-12-12
+
+### New Features
+* Video trimming. It is now possible to trim videos to exclude portions from the beginning and/or end of a video. This can be done on the video details page of the dashboard or via the API.
+* Autoplay ads muted. Cloud hosted JW7 players can now include the configuration option to enable autoplay of muted ads on mobile. This can be done on the players details page under playback options.
+* Additional simulcast of live streams. Users can now enter in server key and stream URLs on the live stream creation page, to simulcast their live streams to Youtube, Facebook and Twitch. Configuring simulcast targets must be done at live stream creation time.
+
+
+## 2016-12-09
+
+### Updated Features
+* Updated [AMP](https://www.ampproject.org/) behavior to handle explicit play/pause events.
+* Updated the content API [robots.txt](https://content.jwplatform.com/robots.txt) to disallow only links to /previews/* this enables strong SEO of hosted content. Users desiring to avoid indexing can use the [/previews/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/previews.html) players on their site whereas most users will want to use [/players/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/players.html) single line embeds.
+### Bug Fixes
+* Fixed rare but incorrect not allowed responses to geo-restricted content being accessed from users in allowed counties.
+
+
+
+## 2016-11-30
+
+### New Features
+* Designate videos as 360 content. You can now designate a video as 360 including the stereoscopic mode from the video detail page or by adding the custom parameter ```custom.stereomode``` with a value of ```monoscopic```, ```stereoscopicTopBottom``` or```stereoscopicLeftRight```. This will tell the player to use 360 rendering with the appropriate 3D mode. 360 formatted videos can be uploaded, transcoded and served just like standard videos.
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.8. This update includes:
+    * Adds failover support to load the player via HTML5 when Flash is chosen as the primary setting but is blocked or not available.
+    * Added support for inline autoplay while muted on iOS and Android
+    * Built in FreeWheel Ad Manager for HTML5
+    * Updated player design responsiveness for improved usability at smaller player sizes
+    * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version78).
+* Sharing embed codes in JW Platform single line embeds use protocol relative URLS for sharing over http or https with the same code.
+
+
+## 2016-11-15
+
+### Updated Features
+* Updated Facebook OpenGraph sharing mechanism to avoid the use of Flash.
+
+
+## 2016-11-01
+
+### New Features
+* Streaming limit emails to account admins. Premium, platinum, and ads/enterprise accounts without custom streaming limits now receive email notifications when they have reached 50%, 75% and 100% of their monthly GB streaming. The email is sent to all admin users associated with the account.
+### Updated Features
+* Live streaming has exited limited beta and is now in general availability for entitled accounts.
+* Live streaming is available on both http and https.
+
+
+## 2016-10-18
+
+### New Features
+* Search feeds can now be created in the dashboard under the recommended playlists section.
+### Updated Features
+* A new video details page design:
+    * Includes the video preview on the detail page
+    * Allows for editing of external URL duration
+    * Linking to the video's analytics details
+
 
 ## 2016-10-04
 
