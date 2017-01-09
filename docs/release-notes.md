@@ -3,7 +3,7 @@
 <!--
 Template for future releases, copypasta me below
 
-## 2016-XX-XX
+## 2017-XX-XX
 
 ### New Features
 * foo
@@ -23,6 +23,12 @@ Template for future releases, copypasta me below
 * Cat
 
 -->
+
+
+## 2017-01-05
+
+### Updated Features
+* Ad impressions are now available as a metric in the advanced analytics segmentation page.
 
 ## 2016-12-14
 
