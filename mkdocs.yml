@@ -7,7 +7,7 @@ repo_url: https://github.com/jwplayer/jwplatform-docs
 site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico
 pages:
     - Introduction: 'index.md'
-    - Building Your Site:
+    - Building Your Site: 'building_your_site/index.md'
       - Embedding Players: 'building_your_site/embedding_players.md'
       - Feeds Widgets: 'building_your_site/widgets/feeds_widgets.md'
       - Feeds Widget CSS Reference: 'building_your_site/widgets/feeds_widget_css_reference.md'
