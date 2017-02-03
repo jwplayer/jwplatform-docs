@@ -1,0 +1,3 @@
+# Using the JW Platform Distribution API for Embedding on Your Site
+
+The JW Platform Delivery API at content.jwplatform.com offers endpoints from which you can request content and players configured in JW Platform. Embedding JW Platform hosted content and players in your sites and applications is achieved with the Content API through a standard URL scheme giving access to pre-packaged single line embeds, feeds, sources and other assets. These endpoints are the correct mechanism for making high volume calls from your webpage or application and are optimized for quick responses. Requests to the content service can be protected with URL token signing.
