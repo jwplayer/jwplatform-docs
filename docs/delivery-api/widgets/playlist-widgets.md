@@ -2,11 +2,11 @@
 
 Data-Driven Recommendations from JW Platform leverage audience behavior and content traits to drive deeper audience engagement and increase content monetization. 
 
-Research shows that well positioned page widgets that viewers can see and interact with while watching video are likely to drive even more viewer engagement than in-player recommendations alone. To promote out-of-player viewer engagement, we have designed several page widgets which consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) or serve as a starting part for more advanced implementations. 
+Research shows that well positioned page widgets that viewers can see and interact with while watching video are likely to drive even more viewer engagement than in-player recommendations alone. To promote out-of-player viewer engagement, we have designed several page widgets which consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our [CSS Reference](/delivery-api/widgets/playlist-widget-css-reference.md) or serve as a starting part for more advanced implementations. 
 
 For more information about building and managing data-driven feeds please see our [Platform API Reference](//developer.jwplayer.com/jw-platform/reference/v1/urls/feeds.html) and [customer support article](//support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds).
 
-![Feeds Widget](/images/feeds-widget.png)
+![Feeds Widget](/images/playlist-widget.png)
 
 ##Getting Started
 
@@ -22,7 +22,7 @@ You can [view the feeds widget demos](//developer.jwplayer.com/jw-player/demos/c
 
 The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will configure `index.html` and (optionally) `templates/item.hbs`. 
 
-The feed classes follow the JW Player skinning model. See our [CSS Reference](/building_your_site/widgets/feeds_widget_css_reference.md) for more information on modifying `css/style.css` and skinning your widget. 
+The feed classes follow the JW Player skinning model. See our [CSS Reference](/delivery-api/widgets/playlist-widget-css-reference.md) for more information on modifying `css/style.css` and skinning your widget. 
 
 [View the JavaScript Feeds Widget Demo.](//developer.jwplayer.com/jw-player/demos/customization/feeds-js/)
 

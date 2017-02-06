@@ -11,8 +11,8 @@ pages:
       - Overview: 'delivery-api/index.md'
       - Embedding Players: 'delivery-api/embedding-players.md'
       - Protecting Content with URL Token Signing: 'delivery-api/url-token-signing'
-      - Feeds Widgets: 'delivery-api/widgets/feeds-widgets.md'
-      - Feeds Widget CSS Reference: 'delivery-api/widgets/feeds-widget-css-reference.md'
+      - Feeds Widgets: 'delivery-api/widgets/playlist-widgets.md'
+      - Feeds Widget CSS Reference: 'delivery-api/widgets/playlist-widget-css-reference.md'
     - Management API:
       - Overview: 'management-api/index.md'
       - Uploading Videos: 'management-api/uploading-videos.md'
