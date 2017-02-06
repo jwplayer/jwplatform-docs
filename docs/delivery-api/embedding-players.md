@@ -14,8 +14,8 @@ Let's look at the typical player embed code:
 
 The URL of the player itself is what's most interesting here; the wrapping JavaScript tag is always the same. It consists of five parts:
 
--   The contentserver root. This is usually *content.jwplatform.com*, but it is another domain if you use [DNS Masking](/customer/portal/articles/1433702-dns-masking-the-jw-platform).
--   The path to players, */players/*. Note the [URL scheme](http://developer.longtailvideo.com/botr/#url-scheme) serves other stuff you can access too, like videos, thumbs and feeds.
+-   The contentserver root. This is usually *content.jwplatform.com*, but it is another domain if you use [DNS Masking](https://support.jwplayer.com/customer/portal/articles/1433702-dns-masking).
+-   The path to players, */players/*. Note the URL scheme serves other stuff you can access too, like videos, thumbs and feeds.
 -   The **key** of the video you want to embed, *nPripu9l*. This is an 8 character string that can be found in the videos overview and details pages in the CMS. It can also be retrieved through the API, which is what we'll do in this tutorial.
 -   The **key** of the player you want to embed the video with, *ALJ3XQCI*. This is an 8 character string that can be found in the players overview and details pages in the CMS. It too can be retrieved through the API (see below).
 -   The extension of the player, *.js*. For preview pages (see below), this should be *.html*.

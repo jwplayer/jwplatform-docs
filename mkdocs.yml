@@ -7,14 +7,17 @@ repo_url: https://github.com/jwplayer/jwplatform-docs
 site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico
 pages:
     - Introduction: 'index.md'
-    - Building Your Site:
-      - Embedding Players: 'building-your-site/embedding-players.md'
-      - Feeds Widgets: 'building-your-site/widgets/feeds-widgets.md'
-      - Feeds Widget CSS Reference: 'building-your-site/widgets/feeds-widget-css-reference.md'
-    - Cross-Platform Distribution:
+    - Delivery API:
+      - Overview: 'delivery-api/index.md'
+      - Embedding Players: 'delivery-api/embedding-players.md'
+      - Protecting Content with URL Token Signing: 'delivery-api/url-token-signing'
+      - Feeds Widgets: 'delivery-api/widgets/feeds-widgets.md'
+      - Feeds Widget CSS Reference: 'delivery-api/widgets/feeds-widget-css-reference.md'
+    - Management API:
+      - Overview: 'management-api/index.md'
+      - Uploading Videos: 'management-api/uploading-videos.md'
+      - Batch Migrations: 'management-api/batch-migration.md'
+    - JW Showcase Applications:
       - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
       - JW Showcase for Apple TV: 'jw-showcase/apple-tv/jw-showcase-for-apple-tv.md'
-    - Integrating with your CMS:
-      - Uploading Videos: 'integrating-with-your-cms/uploading-videos.md'
-      - Batch Migrations: 'integrating-with-your-cms/batch-migration.md'
     - Release Notes: 'release-notes.md'
