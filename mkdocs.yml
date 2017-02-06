@@ -8,13 +8,13 @@ site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/image
 pages:
     - Introduction: 'index.md'
     - Building Your Site:
-      - Embedding Players: 'building_your_site/embedding_players.md'
-      - Feeds Widgets: 'building_your_site/widgets/feeds_widgets.md'
-      - Feeds Widget CSS Reference: 'building_your_site/widgets/feeds_widget_css_reference.md'
+      - Embedding Players: 'building-your-site/embedding-players.md'
+      - Feeds Widgets: 'building-your-site/widgets/feeds-widgets.md'
+      - Feeds Widget CSS Reference: 'building-your-site/widgets/feeds-widget-css-reference.md'
     - Cross-Platform Distribution:
-      - JW Showcase for Web: 'jw_showcase/web/jw_showcase_for_web.md'
-      - JW Showcase for Apple TV: 'jw_showcase/apple_tv/jw_showcase_for_apple_tv.md'
+      - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
+      - JW Showcase for Apple TV: 'jw-showcase/apple-tv/jw-showcase-for-apple-tv.md'
     - Integrating with your CMS:
-      - Uploading Videos: 'integrating_with_your_cms/uploading_videos.md'
-      - Batch Migrations: 'integrating_with_your_cms/batch_migration.md'
+      - Uploading Videos: 'integrating-with-your-cms/uploading-videos.md'
+      - Batch Migrations: 'integrating-with-your-cms/batch-migration.md'
     - Release Notes: 'release-notes.md'
