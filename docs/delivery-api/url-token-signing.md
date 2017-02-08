@@ -12,6 +12,10 @@ Please make sure you start to use signing on your site before changing this secu
 
 ## JWT Tokenized Links
 
+!!!note
+Delivery API v1 endpoints use a legacy url signing mechanism described [here](https://developer.jwplayer.com/jw-platform/reference/v1/content_signing.html)
+!!!
+
 Delivery API /v2/ endpoints take advantage of standardized token signing using JSON Web Tokens (JWTs). You can learn more about the specific construction, formatting and security of these tokens via [RFC 7519](https://tools.ietf.org/html/rfc7519). Discussion, tools and links to open source libraries are available at [jwt.io](https://jwt.io)
 
 JWTs consist of three sections:
@@ -32,27 +36,28 @@ At this time, JW Platform only supports a single algorithm and token type thus a
 
 ### JWT Payload for Delivery API Requests
 
-The payload consists of claims that specify a resource being requested, an expiration time, and any parameters the endpoint accepts.
+The payload consists of claims that specify a `resource` being requested, an expiration time (`exp`), and any parameters the endpoint accepts (in this example we also include `related_media_id`).
 
 ```javascript
 {
-  "resource": "/v2/playlists/bmBpP4x4",
-  "exp": 1481580000
+  "resource": "/v2/playlists/Xw0oaD4q",
+  "exp": 1893456000,
+  "related_media_id": "RltV8MtT"
 }```
 
 **Required Claims:** All JW Platform JWTs MUST include the following claims.
 
 ```resource```
 
-* The resource that is being requested. (e.g. /v2/playlists/K2oeSn8M) this ensures that generated tokens cannot be applied to unintended resources.
+* The resource that is being requested. (e.g. /v2/playlists/Xw0oaD4q) this ensures that generated tokens cannot be applied to unintended resources.
 
 ```exp```
 
-* The expiration date of the token, as a UNIX timestamp (e.g. *1577836800*). Typically, generated URLs should be valid between a minute and a few hours.
+* The expiration date of the token, as a UNIX timestamp (e.g. *1893456000*). Typically, generated URLs should be valid between a minute and a few hours.
   * The shorter you make the expiration dates, the more you lock down your content. If a link has expired, even download tools will not be able to grab the content. However, overly quick expirations can result in bad user experience dues to small discrepancies in server time or delays in clients requesting resources at the expiring links.
   * If you have a high-volume website, the extra signature generation step might be a performance issue. In that case, you could cache signed URLs with an interval of e.g. 5 minutes. Signed requests do not have to be unique.
 
-**Additional Claims:** JWTs can also contain additional claims to specify additional query parameters that are applicable to that resource. Specific query parameters can be found in the Delivery API reference.
+**Additional Claims:** JWTs can also contain additional claims to specify additional query parameters that are applicable to that resource. Specific query parameters can be found in the [Delivery API v2 reference](https://app.swaggerhub.com/api/jwplayer/Delivery-API/v2.0).
 
 ### JWT Signature for JW Platform Requests
 
@@ -65,15 +70,15 @@ Because URL tokens use the property's API secret, it is inappropriate to generat
 ## Constructing URLs with tokens
 
 To construct a URL with the JWT you created, simply include it as a single query parameter named `token` for the resource you are requesting.
-For example, this [link](https://cdn.jwplayer.com/v2/playlists/K2oeSn8M?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvSzJvZVNuOE0iLCJleHAiOjE1Nzc4MzY4MDAsInJlbGF0ZWRfbWVkaWFfaWQiOiI4WVpvSFI3VCJ9.bauVrH5MC-qFZHrpLtK5j5nAGW7wJ0l1XA0qclTuS8o) corresponds to the parameters described above.
+For example, this [link](https://cdn.jwplayer.com/v2/playlists/Xw0oaD4q?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) corresponds to the parameters described above.
 
-If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. [This link](https://jwt.io/#debugger?&id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvSzJvZVNuOE0iLCJleHAiOjE1Nzc4MzY4MDAsInJlbGF0ZWRfbWVkaWFfaWQiOiI4WVpvSFI3VCJ9.bauVrH5MC-qFZHrpLtK5j5nAGW7wJ0l1XA0qclTuS8o) will get you started with the token above; you will need to change the payload and secret to reflect a assets and the secret of your property.
+If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. [This link](https://jwt.io/#debugger?&id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) will get you started with the token above; you will need to change the payload and secret to reflect a assets and the secret of your property.
 
 
 ## Error handling
 
 When unsigned content is requested while signing is enabled, the Delivery API will return a **403 Forbidden** HTTP Status.
 
-When incorrectly signed content is requested, the content service will also return a **403 Forbidden** HTTP Status. Signed URLs can be incorrect due to a wrong signature or due to an already expired timestamp.
+When incorrectly or expired signed content is requested, the content service will also return a **403 Forbidden** HTTP Status. Signed URLs can be incorrect due to a wrong signature or due to an already expired timestamp.
 
 Note that incorrectly signed URLs will always return a 403. Correctly signed, unexpired URLs will always work. Use this to test your signing mechanism and start using it across your site before enabling the security enforcement in the dashboard.
