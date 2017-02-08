@@ -28,7 +28,7 @@ JWTs consist of three sections:
 
 At this time, JW Platform only supports a single algorithm and token type thus all headers should be based on:
 
-```javascript
+```java
     {
       "alg": "HS256",
       "typ": "JWT"
@@ -38,7 +38,7 @@ At this time, JW Platform only supports a single algorithm and token type thus a
 
 The payload consists of claims that specify a `resource` being requested, an expiration time (`exp`), and any parameters the endpoint accepts (in this example we also include `related_media_id`).
 
-```javascript
+```java
 {
   "resource": "/v2/playlists/Xw0oaD4q",
   "exp": 1893456000,
