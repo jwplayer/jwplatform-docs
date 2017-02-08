@@ -3,7 +3,7 @@
 The JW Platform Developer guide provides guidance, recommendations and examples for how you can integrate programmatically with JW Platform.
 
 ## Getting Started - A Tale of Two APIs
-<img align="right" src=/images/JWPlatformDiagram.png>
+<img align="right" src=docs/developer-guide/images/JWPlatformDiagram.png>
 
 When choosing how to integrate with JW Platform is it important to select the right API for the right objectives.
 
