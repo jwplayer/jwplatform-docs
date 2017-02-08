@@ -55,7 +55,7 @@ The payload consists of claims that specify a `resource` being requested, an exp
   * The shorter you make the expiration dates, the more you lock down your content. If a link has expired, even download tools will not be able to grab the content. However, overly quick expirations can result in bad user experience dues to small discrepancies in server time or delays in clients requesting resources at the expiring links.
   * If you have a high-volume website, the extra signature generation step might be a performance issue. In that case, you could cache signed URLs with an interval of e.g. 5 minutes. Signed requests do not have to be unique.
 
-**Additional Claims:** JWTs can also contain additional claims to specify additional query parameters that are applicable to that resource. Specific query parameters can be found in the [Delivery API v2 reference](https://app.swaggerhub.com/api/jwplayer/Delivery-API/v2.0).
+**Additional Claims:** JWTs can optionally contain additional claims to specify additional query parameters that are applicable to that resource, the example above includes `related_media_id` because the resource is a Similar Playlist. Specific query parameters available for each resource can be found in the [Delivery API v2 reference](https://app.swaggerhub.com/api/jwplayer/Delivery-API/v2.0).
 
 ### JWT Signature for JW Platform Requests
 
@@ -68,9 +68,9 @@ Because URL tokens use the property's API secret, it is inappropriate to generat
 ## Constructing URLs with tokens
 
 To construct a URL with the JWT you created, simply include it as a single query parameter named `token` for the resource you are requesting.
-For example, this [link](https://cdn.jwplayer.com/v2/playlists/Xw0oaD4q?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) corresponds to the parameters described above.
+For example, https://cdn.jwplayer.com/v2/playlists/Xw0oaD4q?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4 corresponds to the parameters described above.
 
-If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. [This link](https://jwt.io/#debugger?&id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) will get you started with the token above; you will need to change the payload and secret to reflect a assets and the secret of your property.
+If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. [This link](https://jwt.io/#debugger?&id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) will get you started with the token above; you will need to change the payload and secret to reflect content and the secret of your property.
 
 
 ## Error handling
