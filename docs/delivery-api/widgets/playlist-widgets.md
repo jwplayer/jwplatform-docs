@@ -38,7 +38,7 @@ Replace the content library URL at the top of the page with one of your own to s
 
 You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking into any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.
 
-![Dashboard Screenshot](/images/feeds-content-url.png)
+![Dashboard Screenshot](/images/library-url.png)
 
 ### Populate your Feed
 
@@ -55,7 +55,7 @@ Replace the last two variables in `var playerDiv` with a `media_id` and `feed_id
 
 You can find your `feed_id` using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the `feed_id` and URL.
 
-![Dashboard Screenshot](/images/feeds-dashboard.png)
+![Dashboard Screenshot](/images/playlist-dashboard.png)
 
 !!!
 The widget is set to injest JSON by default, but both JSON and RSS feeds are supported. The `js/feeds_harness.js` file contains commented code to implement an RSS parser.
@@ -106,7 +106,7 @@ The `index.html` file runs all of the scripts for the page. Replace the content 
 
 You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking in to any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.
 
-![Dashboard Screenshot](/images/feeds-content-url.png)
+![Dashboard Screenshot](/images/library-url.png)
 
 ### Populate your Feed
 
@@ -123,7 +123,7 @@ Replace the two variables in `$scope.runonce` with a `feed_id` and `media_id` fr
 
 You can find your `feed_id` using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the `feed_id` and URL.
 
-![Dashboard Screenshot](/images/feeds-dashboard.png)
+![Dashboard Screenshot](/images/playlist-dashboard.png)
 
 !!!
 The widget is set to injest JSON by default, but both JSON and RSS feeds are supported. You can customize `feed.js` to implement an RSS parser.
