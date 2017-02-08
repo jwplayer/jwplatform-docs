@@ -17,7 +17,7 @@ We are in the process of building out a second version of the Delivery API. The 
 
 ## Delivery API v1 endpoints:
 
-* ~~/feeds/~~ *deprecated in favor of /v2/media/{media_id} and /v2/playlists/{playlist_id}*
+* /feeds/ *deprecated in favor of /v2/media/{media_id} and /v2/playlists/{playlist_id}*
 * [/libraries/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/libraries.html) provides access to single line embeddable cloud-hosted players with no media.
 * [/manifests/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/manifests.html) provides access to adaptive bitrate streaming manifests for videos hosted with JW Platform.
 * [/players/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/players.html) provides access to single line embeddable cloud-hosted players with media included in the embed.
