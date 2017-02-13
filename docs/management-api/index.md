@@ -20,17 +20,17 @@ If you maintain a JW Platform integration tool, please email devrelations@jwplay
 * **Ruby:** The [jwplayer-api-client Ruby gem](https://rubygems.org/gems/jwplayer-api-client) integrates with the platform API and can perform URL Token signing on the content service. ([source code](https://github.com/raphi/jwplayer-api-client))
 
 ## Management API Class Structure
-* [/videos/](/jw-platform/reference/v1/methods/videos/index.html) The video classes define methods for uploading, editing and listing videos, thumbnails and tags.
+* [/videos/](https://developer.jwplayer.com/jw-platform/reference/v1/methods/videos/index.html) The video classes define methods for uploading, editing and listing videos, thumbnails and tags.
 
 ## Management API v1 Syntax and Upload Formats
 
 Detailed documentation of the v1 syntax and upload formats can be found in the [API reference](https://developer.jwplayer.com/jw-platform/reference/v1).
 
-* [Call Syntax](/jw-platform/reference/v1/call_syntax.html)
-* [Authentication](/jw-platform/reference/v1/authentication.html)
-* [Output Formats](/jw-platform/reference/v1/output_formats.html)
-* [Error Handling](/jw-platform/reference/v1/errors.html)
-* [General Upload Guidance and Examples](../uploading-videos.md)
-    * [S3 Upload Specifics](/jw-platform/reference/v1/s3_uploads.html)
-    * [Single Part Uploads](/jw-platform/reference/v1/uploads.html)
+* [Call Syntax](https://developer.jwplayer.com/jw-platform/reference/v1/call_syntax.html)
+* [Authentication](https://developer.jwplayer.com/jw-platform/reference/v1/authentication.html)
+* [Output Formats](https://developer.jwplayer.com/jw-platform/reference/v1/output_formats.html)
+* [Error Handling](https://developer.jwplayer.com/jw-platform/reference/v1/errors.html)
+* [General Upload Guidance and Examples](../management-api/uploading-videos.md)
+    * [S3 Upload Specifics](https://developer.jwplayer.com/jw-platform/reference/v1/s3_uploads.html)
+    * [Single Part Uploads](https://developer.jwplayer.com/jw-platform/reference/v1/uploads.html)
 

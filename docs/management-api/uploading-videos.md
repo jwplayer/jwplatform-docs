@@ -11,6 +11,63 @@ Uploading videos to the platform via the API can be achieved in a number of ways
 
 2. **Edge Accelerated uploads to Amazon s3:** For files up to 5GB in size, we have set up cloud infrastructure to allow you to upload directly to the nearest Amazon edge connection. In practice, we have seen these edge accelerated uploads go up to five times faster than non-accelerated uploads. These uploads use a simple HTTPS PUT to a signed link. Steps:
     A demonstration script for uploading with the Python SDK is available [here](https://github.com/jwplayer/jwplatform-py/blob/master/examples/video_s3_create.py).
+
+        ```python
+        #!/usr/bin/env python
+        # -*- coding: utf-8 -*-
+        
+        import os
+        import logging
+        import sys
+        
+        import jwplatform
+        import requests
+        
+        logging.basicConfig(level=logging.INFO)
+        
+        
+        def create_video(api_key, api_secret, local_video_path, **kwargs):
+            """
+            Function which creates new video object via s3 upload method.
+            :param api_key: <string> JWPlatform api-key
+            :param api_secret: <string> JWPlatform shared-secret
+            :param local_video_path: <string> Path to media on local machine.
+            :param kwargs: Arguments conforming to standards found @ https://developer.jwplayer.com/    jw-platform /reference/v1/methods/videos/create.html
+            :return:
+            """
+            filename = os.path.basename(local_video_path)
+        
+            # Setup API client
+            jwplatform_client = jwplatform.Client(api_key, api_secret)
+        
+            # Make /videos/create API call
+            logging.info("creating video")
+            try:
+                response = jwplatform_client.videos.create(upload_method='s3', **kwargs)
+            except jwplatform.errors.JWPlatformError as e:
+                logging.error("Encountered an error creating a video\n{}".format(e))
+                sys.exit(e.message)
+            logging.info(response)
+        
+            # Construct base url for upload
+            upload_url = '{}://{}{}'.format(
+                response['link']['protocol'],
+                response['link']['address'],
+                response['link']['path']
+            )
+        
+            # Query parameters for the upload
+            query_parameters = response['link']['query']
+        
+            # HTTP PUT upload using requests
+            headers = {'Content-Disposition': 'attachment; filename="{}"'.format(filename)}
+            with open(local_video_path, 'rb') as f:
+                r = requests.put(upload_url, params=query_parameters, headers=headers, data=f)
+                logging.info('uploading file {} to url {}'.format(local_video_path, r.url))
+                logging.info('upload response: {}'.format(r.text))
+                logging.info(r)
+        ```
+
     1. Create a video with the `upload_method: s3` to get an upload link. [Clack](https://github.com/rmnl/clack) example:
 
         ```
