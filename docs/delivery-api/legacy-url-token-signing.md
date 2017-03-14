@@ -1,6 +1,6 @@
-# Legacy URL Token signing for non-v2 Delivery API endpoints
+# Legacy URL Token Signing for v1 Delivery API Endpoints
 
-The legacy Delivery API endpoints include a similar a security feature to [v2 URL token signing](https://developer.jwplayer.com/jw-platform/docs/developer-guide/delivery-api/url-token-signing/) that allows you to restrict public access to videos or to videos plus players. This feature is enabled in the dashboard. When enabled, content can only be requested by constructing so-called signed links. These links will expire after a short time, preventing unauthorized sharing or leeching of your content.
+The legacy (v1) Delivery API endpoints include a similar a security feature to [v2 URL token signing](https://developer.jwplayer.com/jw-platform/docs/developer-guide/delivery-api/url-token-signing/) that allows you to restrict public access to videos or to videos plus players. This feature is enabled in the dashboard. When enabled, content can only be requested by constructing so-called signed links. These links will expire after a short time, preventing unauthorized sharing or leeching of your content.
 
 ## Enabling Signing Enforcement
 
