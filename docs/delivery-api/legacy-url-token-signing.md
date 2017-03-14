@@ -29,15 +29,15 @@ A video or player URL can be signed by appending two querystring parameters to t
 
 `sig` is a signature that is used to authorize the request. This signature is an MD5 digest of the  path, the expiration date and the account secret:
 
-    `md5(CONTENT_PATH:EXPIRATION_STAMP:ACCOUNT_SECRET)`
+    md5(CONTENT_PATH:EXPIRATION_STAMP:ACCOUNT_SECRET)
 
 Here's a small explanation of the three signature parameters:
 
-    `CONTENT_PATH` - This is only the path portion of the URL (e.g. *videos/nPripu9l.mp4*). No domain and no leading slash.
+`CONTENT_PATH` - This is only the path portion of the URL (e.g. *videos/nPripu9l.mp4*). No domain and no leading slash.
 
-    `EXPIRATION_STAMP` - This is the expiration date again (e.g. *1271338236*).
+`EXPIRATION_STAMP` - This is the expiration date again (e.g. *1271338236*).
 
-    `ACCOUNT_SECRET` - This is the shared secret of your JW Platform account (e.g. *Ksi93hsy38sjKfha9JaheEMp*). It can be found in the *account* tab of the dashboard.
+`ACCOUNT_SECRET` - This is the shared secret of your JW Platform account (e.g. *Ksi93hsy38sjKfha9JaheEMp*). It can be found in the *account* tab of the dashboard.
 
 
 ## Using signing
