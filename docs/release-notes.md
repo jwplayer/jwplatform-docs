@@ -64,7 +64,7 @@ Template for future releases, copypasta me below
 
 ### Updated Features
 * Updated [AMP](https://www.ampproject.org/) behavior to handle explicit play/pause events.
-* Updated the content API [robots.txt](https://content.jwplatform.com/robots.txt) to disallow only links to /previews/* this enables strong SEO of hosted content. Users desiring to avoid indexing can use the [/previews/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/previews.html) players on their site whereas most users will want to use [/players/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/players.html) single line embeds.
+* Updated the content API [robots.txt](https://cdn.jwplayer.com/robots.txt) to disallow only links to /previews/* this enables strong SEO of hosted content. Users desiring to avoid indexing can use the [/previews/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/previews.html) players on their site whereas most users will want to use [/players/](https://developer.jwplayer.com/jw-platform/reference/v1/urls/players.html) single line embeds.
 ### Bug Fixes
 * Fixed rare but incorrect not allowed responses to geo-restricted content being accessed from users in allowed counties.
 
@@ -125,7 +125,7 @@ Template for future releases, copypasta me below
 ## 2016-09-28
 
 ### Updated Features
-* Increased API rate limits. The JW Platform API now allows users up to 60 API calls per minute. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. Note that calls to content.jwplatform.com do not count towards the API rate limit.
+* Increased API rate limits. The JW Platform API now allows users up to 60 API calls per minute. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. Note that calls to cdn.jwplayer.com do not count towards the API rate limit.
 
 
 ## 2016-09-21
