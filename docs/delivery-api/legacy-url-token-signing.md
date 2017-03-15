@@ -53,7 +53,7 @@ function get_signed_player($videokey,$playerkey) {
   $expires = round((time()+3600)/300)*300;
   $secret = "Ksi93hsy38sjKfha9JaheEMp";
   $signature = md5($path.':'.$expires.':'.$secret);
-  $url = 'http://content.jwplatform.com/'.$path.'?exp='.$expires.'&sig='.$signature;
+  $url = 'http://cdn.jwplayer.com/'.$path.'?exp='.$expires.'&sig='.$signature;
   return $url;
 };
 

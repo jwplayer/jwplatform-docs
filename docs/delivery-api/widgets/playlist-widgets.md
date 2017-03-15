@@ -33,7 +33,7 @@ The `index.html` file dynamically populates the content for `<div id="player">` 
 Replace the content library URL at the top of the page with one of your own to setup the player:
 
 ```javascript
-<script src="//content.jwplatform.com/libraries/DbXZPMBQ.js"></script>
+<script src="//cdn.jwplayer.com/libraries/DbXZPMBQ.js"></script>
 ```
 
 You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking into any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.
@@ -101,7 +101,7 @@ The feed classes follow the JW Player skinning model. See our [CSS Reference](/b
 The `index.html` file runs all of the scripts for the page. Replace the content library URL with one of your own:
 
 ```javascript
-<script src="//content.jwplatform.com/libraries/DbXZPMBQ.js"></script>
+<script src="//cdn.jwplayer.com/libraries/DbXZPMBQ.js"></script>
 ```
 
 You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking in to any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.
