@@ -9,7 +9,7 @@ To ensure fair access for all, usage of the JW Platform Management API (api.jwpl
 ## JW Player Provided API Kits and Tools
 
 * **Python:** [Python API Client and Examples](https://github.com/jwplayer/jwplatform-py)
-* **PHP:** [PHP API Kit](http://support-static.jwplayer.com/API/php-api-kit-20151013.zip>), [PHP API Examples](https://support-static.jwplayer.com/API/php-api-examples-20151013.zip)
+* **PHP:** [PHP API Kit](http://support-static.jwplayer.com/API/php-api-kit-20151013.zip), [PHP API Examples](https://support-static.jwplayer.com/API/php-api-examples-20151013.zip)
 * **WordPress:** We provide a fully functional JW Platform [WordPress Plugin](http://wordpress.org/plugins/jw-player/), which is capable of uploading, searching and publishing videos within the WordPress admin.
 
 ## Community Maintained Tools
