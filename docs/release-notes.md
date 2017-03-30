@@ -23,6 +23,60 @@ Template for future releases, copypasta me below
 * Cat
 
 -->
+## 2017-03-29
+
+### Updated Features
+* The default ```max_videos``` on creation for Similar playlists is now 25. This fully populates three pages of video recommendations on the player.
+### Bug Fixes
+* The Management API now returns a 400 response for videos/conversions/create requests when the original is not available.
+
+
+## 2017-03-28
+
+### New Features
+* Improved analytics segmentation with new metrics and dimensions. Full details are available [here](https://support.jwplayer.com/customer/portal/articles/2546957-analytics-segmentation).
+    * New metrics including: Ad Requests (beta), Ad Clicks (beta), Ad Skips (beta), Ad Completes (beta), Fill Rate (impressions / requests) (beta), Unique viewers, Quartile 1 plays (25% complete), Quartile 2 plays (50% complete), Quartile 3 plays (75% complete), Complete rate (completes / plays), Time watched per viewer (time watched / unique viewers), Ad Impressions per viewer (ad impressions / unique viewers), Video plays per viewer (plays / unique viewers)
+    * New Dimensions including: Ad Schedule ID, Page URL (query strings are trimmed), Region, City
+    * Note: The new (beta) advertising metrics require using platform hosted ad schedules with single line embed platform players
+
+
+## 2017-03-20
+
+### New Features
+* Bulk segmentation queries in the dashboard. Users can now select a subset of videos from the Video List page and launch a segmentation query to view detailed analytics for the videos of interest (for customers with the Advanced Analytics entitlement). This is surfaced through the “Explore Analytics” bulk action button that appears at the top when more than one video is selected. 
+### Updated Features
+* Improved token signing user experience. For properties with content signing turned on we’ve added a countdown and additional messaging to prevent confusion and allow technical users to test and experiment with links in the dashboard with the right expectations.
+### Bug Fixes
+* Added parameter to platform hosted HLS manifests to avoid unknown captions notice on Safari.
+
+
+## 2017-03-02
+
+### New Features
+* [Delivery API](https://developer.jwplayer.com/jw-platform/docs/developer-guide/delivery-api/) v2 is now available on for ```/v2/media/``` and ```/v2/playlists/```. These endpoints provide JSON or RSS responses for individual media items and playlists including all media items.
+    * These endpoints have additional request-time parameters including poster image width and pagination. More parameters will be available soon. An interactive API reference is available [here](https://developer.jwplayer.com/jw-platform/docs/delivery-api-reference/).
+    * /v2/ endpoints use [standards based](https://tools.ietf.org/html/rfc7519) JWT [url signing](https://developer.jwplayer.com/jw-platform/docs/developer-guide/delivery-api/url-token-signing/) if content protection is enabled.
+    * JSON playlist responses include a pagination ```"links":``` parameter to iterate through videos beyond the first set returned.
+
+
+## 2017-02-02
+
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.9. This update includes:
+    * Improved usability of controls at small player sizes and on touch devices
+    * Added a configuration - "timeSliderAbove"
+    * Updated Casting to connect to the default receiver application hosted by Google
+    * Added AirPlay support
+    * Added configuration option "vpaidcontrols: true"
+    * Added support for Azure's PlayReady AES functionality
+    * Several bug fixes
+    * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version79).
+
+
+## 2017-02-01
+
+### Bug Fixes
+* Fixed horizontal alignment for preview players using a fixed width player setting.
 
 
 ## 2017-01-05
