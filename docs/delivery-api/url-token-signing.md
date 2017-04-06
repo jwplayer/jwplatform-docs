@@ -72,6 +72,29 @@ For example, https://cdn.jwplayer.com/v2/playlists/Xw0oaD4q?token=eyJhbGciOiJIUz
 
 If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. [This link](https://jwt.io/#debugger?&id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4) will get you started with the token above; you will need to change the payload and secret to reflect content and the secret of your property.
 
+### Example
+
+```php
+<?php
+require_once('JWT.php');	
+use \JWT\JWT;
+
+$playlist_id = "myListID"; // Replace with your playlist ID
+$token_secret = "myAPIsecret"; // Replace this value with the API secret for the property
+
+$resource = "/v2/playlists/".$playlist_id;
+$exp = ceil((time() + 3600)/180) * 180; // Link is valid for 1hr but normalized to 3 minutes to promote better caching
+$token_body = array(
+    "resource" => "/v2/playlists/".$playlist_id,
+    // Other request parameters can be added here if desired.
+    "exp" => $exp
+);
+
+$jwt = JWT::encode($token_body, $token_sercet);
+
+print "<a href=\"'https://cdn.jwplayer.com/$resource?token=$jwt'\">This is a signed link.</a>";
+```
+
 
 ## Error handling
 
