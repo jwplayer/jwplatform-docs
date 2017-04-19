@@ -14,6 +14,7 @@ pages:
       - Legacy Token Signing: 'delivery-api/legacy-url-token-signing.md'
       - Feeds Widgets: 'delivery-api/widgets/playlist-widgets.md'
       - Feeds Widget CSS Reference: 'delivery-api/widgets/playlist-widget-css-reference.md'
+      - Multi-Feed Playlist Widgets: 'delivery-api/widgets/multi-feed-playlist-widgets.md'
     - Management API:
       - Overview: 'management-api/index.md'
       - Uploading Videos: 'management-api/uploading-videos.md'
