@@ -23,6 +23,31 @@ Template for future releases, copypasta me below
 * Cat
 
 -->
+## 2017-05-01
+
+### New Features
+* JW Live is now included for all high volume hosting and streaming enterprise accounts
+### Updated Features
+* Player pre-roll ad tags have been automatically migrated to advertising schedules which provide additional analytics capabilities.
+### Bug Fixes
+* Safari users can now upload tracks via the dashboard
+* Fixed an issue related to uploading videos with 4-byte Unicode in the filename.
+
+
+## 2017-04-27
+
+### New Features
+* It is now possible to upload text tracks for externally hosted media.
+### Updated Features
+* Bulk segmentation queries. Uers can now select one or multiple players from the Players List page to explore analytics for their selected player(s). This enables comparing performance across multiple players for customers with the Advanced Analytics entitlement
+
+
+## 2017-04-13
+
+### New Features
+* Static RTMP endpoints for JW Live. JW live streams are now restartable (aka "static RTMP entry point URL"), which means that you can restart your live stream without having to reconfigure your encoder or re-embed a new player embed code each time you broadcast. 
+
+
 ## 2017-03-29
 
 ### Updated Features
@@ -38,6 +63,32 @@ Template for future releases, copypasta me below
     * New metrics including: Ad Requests (beta), Ad Clicks (beta), Ad Skips (beta), Ad Completes (beta), Fill Rate (impressions / requests) (beta), Unique viewers, Quartile 1 plays (25% complete), Quartile 2 plays (50% complete), Quartile 3 plays (75% complete), Complete rate (completes / plays), Time watched per viewer (time watched / unique viewers), Ad Impressions per viewer (ad impressions / unique viewers), Video plays per viewer (plays / unique viewers)
     * New Dimensions including: Ad Schedule ID, Page URL (query strings are trimmed), Region, City
     * Note: The new (beta) advertising metrics require using platform hosted ad schedules with single line embed platform players
+
+
+## 2017-03-22
+
+### Updated Features
+* The production channel of cloud hosted players now uses JW Player 7.10.1. This update includes:
+    * DASH Updates
+        * Added support for DVR, multiple audio tracks and custom quality labels
+        * Added bitrate to quality labels to differentiate between levels with the same height but different bitrate
+        * Added ability to display language with captions and audio tracks
+    * Live Streaming
+        * Improved handling of Live stream completion by showing the end state
+        * General improvements to HLS and Dash streaming
+    * Viewability
+        * Added viewability data to player API events
+        * Added a getViewable() method which returns 1 when 50% or more of the player is visible and 0 otherwise
+        * Added a config option - "autostart": "viewable" - for starting playback on desktop devices when the player is viewable
+    * UI
+        * Added a config option - “nextUpDisplay”: false - to disable the “Next Up” tooltip
+        * Added support for timeslider thumbstrips on mobile
+        * Improved default styling of captions
+    * General Updates
+        * Improved handling of VMAP breakstart/breakend events
+        * Added support for muted autoplay on Chrome in iOS
+        * Several Bug Fixes
+    * Full release notes are available [here](https://developer.jwplayer.com/jw-player/docs/developer-guide/release_notes/release_notes_7/#version710).
 
 
 ## 2017-03-20
