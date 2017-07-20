@@ -18,7 +18,7 @@ pages:
       - Overview: 'management-api/index.md'
       - Uploading Videos: 'management-api/uploading-videos.md'
       - Batch Migrations: 'management-api/batch-migration.md'
-      - Analytics API: 'management-api/analytics-api.md'
+      - Analytics: 'management-api/analytics.md'
     - JW Showcase Applications:
       - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
       - JW Showcase for Apple TV: 'jw-showcase/apple-tv/jw-showcase-for-apple-tv.md'
