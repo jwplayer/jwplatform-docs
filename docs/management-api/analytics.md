@@ -27,7 +27,7 @@ The following rules apply to all JW Player users.  Users with access to our Ente
 * **Rate Limiting** - 60 requests/minute per API Token or IP
 * **Max number of dimensions** - 1
 * **Max number of metrics** - 5
-* **Max page size** - 100 rows per page maximum
+* **Max page length** - 100 rows per page maximum
 * **Max # of filters** - 1 filter value (for 1 dimension)
 
 ## Metrics, Dimensions, and Filters
@@ -130,8 +130,8 @@ Body:
 		dimensions (array[string]),
 		end_date (string),
 		metrics (array),
-		page[offset] (integer),
-		page[limit] (integer),
+		page (integer),
+		page_length (integer),
 		start_date (string)
 	}
 ```
@@ -211,7 +211,7 @@ curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/
 **Summary:** Total Embeds for each country code for a given date range (for the top two countries)
 
 ```json
-POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/?page%5Boffset%5D=0&page%5Blimit%5D=2 \
+POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 -H 'Authorization: {site token secret}' \
 -d {
 	"start_date": "2017-06-01",
@@ -221,6 +221,8 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/?page%5
 		"operation": "sum",
 		"field": "plays"
 	}],
+	"page" : 0
+	"page_length" : 2
 	"sort": [{
 		"field": "plays",
 		"order": "DESCENDING"
@@ -269,7 +271,7 @@ page[offset] and page[limit] query params can be used for paginating through res
 **Summary:** Total Plays and Embeds by device, for a given date range (title and tag metadata included)
 
 ```json
-POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/?page%5Boffset%5D=0&page%5Blimit%5D=2 \
+POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 -H 'Authorization: {site token secret}' \
 -d
 {
