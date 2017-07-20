@@ -28,7 +28,8 @@ The following rules apply to all JW Player users.  Users with access to our Ente
 * **Max number of dimensions** - 1
 * **Max number of metrics** - 5
 * **Max page length** - 100 rows per page maximum
-* **Max # of filters** - 1 filter value (for 1 dimension)
+* **Max # of filters** - 1 filter (for 1 dimension)
+* **All dates are Eastern**
 
 ## Metrics, Dimensions, and Filters
 
@@ -53,7 +54,7 @@ A dimension is an attribute of your metric(s).  For example, each Play event has
 
 Dimension | dimension_id | Format
 ------------ | ------------- | -------------
-Date | date | 'yyyy-mm-dd'
+Eastern Date | eastern_date | 'yyyy-mm-dd'
 Media | media_id | media_id
 Device | device_id | custom - string
 Country | country_code | ISO 3166-1
@@ -101,7 +102,7 @@ Time watched per viewer | time_watched_per_viewer | seconds / viewer
 Complete Rate | complete_rate | percent
 
 
-Enterprise customers also have the option to enrich their response with additional metadata (instead of just obtaining JW Platform IDs).  This is available for the dimensions listed below, and can be enabled by adding `"include_metadata": "1"` to the request
+Enterprise customers also have the option to enrich their response with additional metadata (instead of just obtaining JW Platform IDs).  This is available for the dimensions listed below, and can be enabled by adding `"include_metadata": "1"` to the request.
 
 dimension_id | Metadata | Metadata description | Response block
 ------------ | -------------
@@ -260,10 +261,6 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 	}
 }
 ```
-
-!!!
-page[offset] and page[limit] query params can be used for paginating through results. [ and ] characters must be encoded as %5B and %5D respectively.
-!!!
 
 
 ###Example 3 (Post) Request: 
