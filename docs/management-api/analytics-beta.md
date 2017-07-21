@@ -1,4 +1,8 @@
-# Analytics
+# Analytics - Beta
+
+!!!important
+This API is currently in public beta.  We will update this doc if any breaking changes are planned.
+!!!
 
 The JW Player Analytics endpoint allows you to access your Video and Advertising data programmatically.  This way, JW Player users are able to pull JW Player data into their own application, data warehouse, or analytics tools.  If you're looking for reports and visualizations to analyze your data, you can use the JW Player Dashboard.
 
@@ -126,42 +130,65 @@ Route: `https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/`
 Body:
 ```json
 	{
-		sort (array, optional, only available for metrics),
-		filter (array, optional, only available for dimensions),
-		dimensions (array[string]),
-		end_date (string),
-		metrics (array),
-		page (integer),
-		page_length (integer),
-		start_date (string)
+	"start_date": "yyyy-mm-dd",
+	"end_date": "yyyy-mm-dd",
+	"dimensions": ["dimension_id"],
+	"metrics": [{
+		"operation": "=/!=",
+		"field": "metric_id"
+	}],
+	"filter": [{
+		"field": "dimension_id",
+		"operator": "operation",
+		"value": ["dimension_value"]
+	}],
+	"page": "page index",
+	"page_length": "page length",
+	"sort": [{
+		"field": "metric_id",
+		"order": "ASCENDING/DESCENDING"
+	}]
 	}
 ```
-### Overall response format:
+### Response format:
 ```json
 	{
-		meta (MetaFields),
-		includes (array, optional)
-	}
-```
-
-### MetaFields format
-```json
-	MetaFields {
-		row_offset (integer, optional),
-		rows (array, optional),
-		column_headers (ColumnHeaders, optional)
-	}
-	ColumnHeaders {
-		metrics (array[ColumnHeadersMetrics], optional),
-		dimensions (array[ColumnHeadersDimensions], optional)
-	}
-	ColumnHeadersMetrics {
-		units (string, optional),
-		field (string, optional)
-	}
-	ColumnHeadersDimensions {
-		field (string, optional),
-		type (string, optional)
+		"data": {
+			"rows": [
+				[
+					"column1value",
+					"column2value",
+					...
+				],
+				...
+			]
+		},
+		"metadata": {
+			"column_headers": {
+				"dimensions": [
+					{
+						"field": "dimension_id",
+						"type": "datatype"
+					},
+					...
+				]
+				"metrics": [
+					{
+						"field": "plays",
+						"units": "dataype"
+					},
+					...
+				]
+			}
+		},
+		"page": "page number",
+		"page_length": "page length",
+		"type": "query_results",
+		"includes": {
+			"object_id": {
+				"metadata varies"
+			}
+		}
 	}
 ```
 
@@ -169,7 +196,7 @@ Body:
 
 ###Example 1 (Curl) request:
 
-**Summary:** Total Plays for each media id for a given date range
+**Summary:** Total Plays for each media id for a given date range.
 
 ```curl
 curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
@@ -209,7 +236,7 @@ curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/
 
 ###Example 2 (Post) request: 
 
-**Summary:** Total Embeds for each country code for a given date range (for the top two countries)
+**Summary:** Embeds for each country code for a given date range (for the top two countries).  Filter: only for Desktop.
 
 ```json
 POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
@@ -222,8 +249,13 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 		"operation": "sum",
 		"field": "plays"
 	}],
-	"page" : 0
-	"page_length" : 2
+	"filter": [{
+		"field": "device_id",
+		"operator": "=",
+		"value": ["Desktop"]
+	}],
+	"page": 0,
+	"page_length": 2,
 	"sort": [{
 		"field": "plays",
 		"order": "DESCENDING"
