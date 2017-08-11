@@ -60,7 +60,7 @@ Device | device_id | custom - string
 Country | country_code | ISO 3166-1
 Playlist | playlist_id | playlist_id
 Platform | platform_id | custom - string
-player | player_id | player_id
+Player | player_id | player_id
 Ad Schedule | ad_schedule_id | ad_schedule_id
 Page Domain | page_domain | N/A
 
