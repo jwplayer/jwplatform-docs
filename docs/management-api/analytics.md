@@ -1,8 +1,4 @@
-# Analytics - Beta
-
-!!!important
-This API is currently in public beta.  We will update this doc if any breaking changes are planned.
-!!!
+# Analytics
 
 The JW Player Analytics endpoint allows you to access your Video and Advertising data programmatically.  This way, JW Player users are able to pull JW Player data into their own application, data warehouse, or analytics tools.  If you're looking for reports and visualizations to analyze your data, you can use the JW Player Dashboard.
 
@@ -65,7 +61,7 @@ Country | country_code | ISO 3166-1
 Playlist | playlist_id | playlist_id
 Platform | platform_id | custom - string
 player | player_id | player_id
-Ad Schedule | ad_schedule_id | ad_schedule_id 
+Ad Schedule | ad_schedule_id | ad_schedule_id
 Page Domain | page_domain | N/A
 
 ### Filters (optional)
@@ -234,7 +230,7 @@ curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/
 }
 ```
 
-###Example 2 (Post) request: 
+###Example 2 (Post) request:
 
 **Summary:** Embeds for each country code for a given date range (for the top two countries).  Filter: only for Desktop.
 
@@ -263,7 +259,7 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 }
 ```
 
-###Example 2 (Post) response: 
+###Example 2 (Post) response:
 
 ```json
 {
@@ -295,7 +291,7 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 ```
 
 
-###Example 3 (Post) Request: 
+###Example 3 (Post) Request:
 
 **Summary:** Total Plays and Embeds by device, for a given date range (title and tag metadata included)
 
@@ -372,4 +368,3 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 	}
 }
 ```
-
