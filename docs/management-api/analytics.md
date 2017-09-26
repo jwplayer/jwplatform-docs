@@ -105,7 +105,7 @@ Complete Rate | complete_rate | percent
 Enterprise customers also have the option to enrich their response with additional metadata (instead of just obtaining JW Platform IDs).  This is available for the dimensions listed below, and can be enabled by adding `"include_metadata": "1"` to the request.
 
 dimension_id | Metadata | Metadata description | Response block
------------- | -------------
+------------ | ------------- | ------------- | -------------
 media_id | title, tags | media title and tags | includes
 device_id | name | device ids to names | meta
 country_code | name | country codes(ISO 3166-1) to names | meta
