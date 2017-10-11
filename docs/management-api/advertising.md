@@ -16,4 +16,6 @@ The property API secret will not work for this endpoint - you must use the secre
 
 ### API Reference
 
-[API Reference Documentation](advertising-api-docs/advertising-api-ref.html)
+<div class="main">
+  <iframe width="100%" height="100%" src="../advertising-api-docs/advertising-api-ref.html" frameborder="0"></iframe>
+</div>
