@@ -26,7 +26,7 @@ Creates a new advertising schedule
 
 Param Name | Units | Description | Required
 ------------ | ------------ | ------------- | -------------
-site_id | stirng | The unique 8 character identifier for the site. | YES
+site_id | string | The unique 8 character identifier for the site. | YES
 
 **Request body**
 
@@ -160,7 +160,7 @@ Fetches a list of advertising schedules
 
 Param Name | Units | Description | Required
 ------------ | ------------ | ------------- | -------------
-site_id | stirng | The unique 8 character identifier for the site. | YES
+site_id | string | The unique 8 character identifier for the site. | YES
 
 **Path parameters**
 
@@ -260,7 +260,8 @@ total | string | NO |
 Retrieves an advertising schedule
 
 **Parameters**
-Name | Units | Rquired | Notes
+
+Name | Units | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
@@ -378,12 +379,14 @@ error.description | string
 Patches an advertising schedule
 
 **Parameters**
-Name | Units | Rquired | Notes
+
+Name | Units | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
 
 **Request body**
+
 Param Name | Units  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 metadata | ad_schedule_post_patch_metadata | YES
@@ -561,7 +564,8 @@ error.description | string
 Deletes an advertising schedule
 
 **Path Parameters**
-Name | Units | Rquired | Notes
+
+Name | Units | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
