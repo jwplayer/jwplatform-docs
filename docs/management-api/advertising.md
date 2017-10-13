@@ -36,14 +36,14 @@ Param Name | Units  | Required
 ------------ | ------------- | -------------
 metadata | ad_schedule_post_patch_metadata | YES
 metadata.name | string | YES | 
-metadata.client | string | NO | Valid values 'vast', 'googima' 
+metadata.client | string | YES | Valid values 'vast', 'googima' 
 metadata.is_vmap | boolean | NO | 
 metadata.vpaidmode | string | NO | 
 metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES
 metadata.breaks.offset | string | YES
 metadata.breaks.skipoffset | integer | NO
-metadata.breaks.type | string | NO
+metadata.breaks.type | string | YES
 
 
 
@@ -84,14 +84,14 @@ created | string | NO |
 last_modified | string | NO |
 metadata | ad_schedule_post_patch_metadata | YES |
 metadata.name | string | YES | 
-metadata.client | string | NO | Valid values 'vast', 'googima'
+metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
 metadata.vpaidmode | string | NO |
 metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
-metadata.breaks.type | string | NO
+metadata.breaks.type | string | YES
 
 ### Response samples:
 
@@ -182,14 +182,14 @@ created | string | NO |
 last_modified | string | NO |
 metadata | ad_schedule_post_patch_metadata | YES |
 metadata.name | string | YES | 
-metadata.client | string | NO | Valid values 'vast', 'googima'
+metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
 metadata.vpaidmode | string | NO |
 metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
-metadata.breaks.type | string | NO |
+metadata.breaks.type | string | YES |
 
 ## Response samples:
 ### 200 OK
@@ -240,7 +240,7 @@ schedules.created | string | NO |
 schedules.last_modified | string | NO |
 schedules.metadata | ad_schedule_post_patch_metadata | YES |
 schedules.metadata.name | string | YES | 
-schedules.metadata.client | string | NO | Valid values 'vast', 'googima'
+schedules.metadata.client | string | YES | Valid values 'vast', 'googima'
 schedules.metadata.is_vmap | boolean | NO |
 schedules.metadata.vpaidmode | string | NO |
 schedules.metadata.version | string | NO |
@@ -248,7 +248,7 @@ schedules.metadata.breaks | Array of object | YES |
 schedules.metadata.breaks.tags | Array of string | YES |
 schedules.metadata.breaks.offset | string | YES |
 schedules.metadata.breaks.skipoffset | integer | NO |
-schedules.metadata.breaks.type | string | NO |
+schedules.metadata.breaks.type | string | YES |
 page_length | string | NO |
 page | string | NO |
 total | string | NO |
@@ -308,7 +308,7 @@ schedules.created | string | NO |
 schedules.last_modified | string | NO |
 schedules.metadata | ad_schedule_post_patch_metadata | YES |
 schedules.metadata.name | string | YES | 
-schedules.metadata.client | string | NO | Valid values 'vast', 'googima'
+schedules.metadata.client | string | YES | Valid values 'vast', 'googima'
 schedules.metadata.is_vmap | boolean | NO |
 schedules.metadata.vpaidmode | string | NO |
 schedules.metadata.version | string | NO |
@@ -316,7 +316,7 @@ schedules.metadata.breaks | Array of object | YES |
 schedules.metadata.breaks.tags | Array of string | YES |
 schedules.metadata.breaks.offset | string | YES |
 schedules.metadata.breaks.skipoffset | integer | NO |
-schedules.metadata.breaks.type | string | NO |
+schedules.metadata.breaks.type | string | YES |
 
 #### 403 Forbidden
 
@@ -391,14 +391,14 @@ Param Name | Units  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 metadata | ad_schedule_post_patch_metadata | YES
 metadata.name | string | YES |
-metadata.client | string | NO | Valid values 'vast', 'googima' 
+metadata.client | string | YES | Valid values 'vast', 'googima' 
 metadata.is_vmap | boolean | NO | 
 metadata.vpaidmode | string | NO | 
 metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES
 metadata.breaks.offset | string | YES
 metadata.breaks.skipoffset | integer | NO
-metadata.breaks.type | string | NO
+metadata.breaks.type | string | YES
 
 ## Request samples:
 
@@ -438,14 +438,14 @@ created | string | NO |
 last_modified | string | NO |
 metadata | ad_schedule_post_patch_metadata | YES |
 metadata.name | string | YES | 
-metadata.client | string | NO | Valid values 'vast', 'googima'
+metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
 metadata.vpaidmode | string | NO |
 metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
-metadata.breaks.type | string | NO
+metadata.breaks.type | string | YES
 
 **Response sample**
 
