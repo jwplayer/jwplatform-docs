@@ -19,6 +19,7 @@ The property API secret will not work for this endpoint - you must use the secre
 ## Create a new advertising schedule
 ### POST
 `/sites/{site_id}/advertising/schedules/`
+
 Creates a new advertising schedule
 
 **Parameters**
@@ -255,6 +256,7 @@ total | string | NO |
 ## Retrieve an advertising schedule
 ### GET
 `/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+
 Retrieves an advertising schedule
 
 **Parameters**
@@ -372,6 +374,7 @@ error.description | string
 ## Patch an advertising schedule
 ### PATCH
 `/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+
 Patches an advertising schedule
 
 **Parameters**
@@ -554,6 +557,7 @@ error.description | string
 ## Delete an advertising schedule
 ### DELETE
 `/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+
 Deletes an advertising schedule
 
 **Path Parameters**
