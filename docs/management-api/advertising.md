@@ -259,7 +259,7 @@ Retrieves an advertising schedule
 
 **Parameters**
 Name | Units | Rquired | Notes
---- | ---- | ---- | ---
+------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
 
@@ -376,15 +376,15 @@ Patches an advertising schedule
 
 **Parameters**
 Name | Units | Rquired | Notes
---- | ---- | ---- | ---
+------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
 
 **Request body**
-Param Name | Units  | Required
------------- | ------------- | -------------
+Param Name | Units  | Required | Notes
+------------ | ------------ | ------------- | -------------
 metadata | ad_schedule_post_patch_metadata | YES
-metadata.name | string | YES | 
+metadata.name | string | YES |
 metadata.client | string | NO | Valid values 'vast', 'googima' 
 metadata.is_vmap | boolean | NO | 
 metadata.vpaidmode | string | NO | 
@@ -558,7 +558,7 @@ Deletes an advertising schedule
 
 **Path Parameters**
 Name | Units | Rquired | Notes
---- | ---- | ---- | ---
+------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
 
