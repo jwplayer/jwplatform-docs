@@ -16,10 +16,11 @@ The property API Secret will not work for this endpoint - you must use the secre
 
 ### Example requests
 
-Using the `site_id` and `api_secret` obtained in the 
+Using the `site_id` and `api_secret` obtained in the previous steps a request for all schedules for a site would look like:
 
 ```bash
-curl -X GET https://api.jwplayer.com/v2/sites/<site_id>/advertising/schedules/  -H 'Authorization: <api_secret>'  -H 'Content-Type: application/json'
+curl -X GET https://api.jwplayer.com/v2/sites/<site_id>/advertising/schedules/  \
+-H 'Authorization: <api_secret>'  -H 'Content-Type: application/json'
 ```
 
 # API Structure
