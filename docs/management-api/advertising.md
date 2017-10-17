@@ -2,17 +2,25 @@
 
 The JW Player Advertising endpoints allow you to manage advertising schedules programmatically.
 
-### Obtaining your Site API Key & Secret
+### Obtaining your Site ID and API Secret
 
-Each request to the Advertising API is for a specific JW Player site (or property) within your account.  To query data for one of your JW Player sites, you will need to obtain your site API key.
+Each request to the Advertising API is for a specific JW Player site (or property) within your account.  To query data for one of your JW Player sites, you will need to obtain your Site ID and API Secret.
 
-You can find each property’s API Key in the JW Player Dashboard by navigating to Account > API Credentials and clicking "Show Credentials" for the relevant site.
+You can find each property’s Site ID in the JW Player Dashboard by navigating to Account > API Credentials and clicking "Show Credentials" for the relevant site.  The key displayed is your Site ID.
 
-To find your secret, you'll find JW Reporting API Credentials at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.
+To find your API Secret, you'll find JW Reporting API Credentials at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.  Clicking "Show Credentials" will display your API Secret.
 
 !!!warning
-The property API secret will not work for this endpoint - you must use the secret specific to the Reporting API
+The property API Secret will not work for this endpoint - you must use the secret specific to the Reporting API
 !!!
+
+### Example requests
+
+Using the `site_id` and `api_secret` obtained in the 
+
+```bash
+curl -X GET https://api.jwplayer.com/v2/sites/<site_id>/advertising/schedules/  -H 'Authorization: <api_secret>'  -H 'Content-Type: application/json'
+```
 
 # API Structure
 
@@ -24,7 +32,7 @@ Creates a new advertising schedule
 
 **Parameters**
 
-Param Name | Units | Description | Required
+Param Name | Type | Description | Required
 ------------ | ------------ | ------------- | -------------
 site_id | string | The unique 8 character identifier for the site. | YES
 
@@ -32,9 +40,9 @@ site_id | string | The unique 8 character identifier for the site. | YES
 
 A resource object describing an ad schedule.
 
-Param Name | Units  | Required
+Param Name | Type  | Required
 ------------ | ------------- | -------------
-metadata | ad_schedule_post_patch_metadata | YES
+metadata | JSON | YES
 metadata.name | string | YES | 
 metadata.client | string | YES | Valid values 'vast', 'googima' 
 metadata.is_vmap | boolean | NO | 
@@ -75,14 +83,14 @@ metadata.breaks.type | string | YES
 
 **Response body**
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 id | string | NO |
 type | string | NO |
 schema | string | NO |
 created | string | NO | 
 last_modified | string | NO |
-metadata | ad_schedule_post_patch_metadata | YES |
+metadata | JSON | YES |
 metadata.name | string | YES | 
 metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
@@ -127,7 +135,7 @@ metadata.breaks.type | string | YES
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -135,7 +143,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -158,7 +166,7 @@ Fetches a list of advertising schedules
 
 **Parameters**
 
-Param Name | Units | Description | Required
+Param Name | Type | Description | Required
 ------------ | ------------ | ------------- | -------------
 site_id | string | The unique 8 character identifier for the site. | YES
 
@@ -166,21 +174,21 @@ site_id | string | The unique 8 character identifier for the site. | YES
 
 A resource object describing an ad schedule.
 
-Param Name | Units  | Notes
+Param Name | Type  | Notes
 ------------ | ------------- | -------------
 page_length | integer <=1000 | This parameter specifies the page size to return. Default behavior is 10 items.
 page | integer | This parameter specifies the offset for the page to return.
 
 **Response body**
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 id | string | NO |
 type | string | NO |
 schema | string | NO |
 created | string | NO | 
 last_modified | string | NO |
-metadata | ad_schedule_post_patch_metadata | YES |
+metadata | JSON | YES |
 metadata.name | string | YES | 
 metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
@@ -230,7 +238,7 @@ metadata.breaks.type | string | YES |
 
 ### Response schema
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 schedules | Array of ad_schedule_resource | |
 schedules.id | string | NO |
@@ -238,7 +246,7 @@ schedules.type | string | NO |
 schedules.schema | string | NO |
 schedules.created | string | NO | 
 schedules.last_modified | string | NO |
-schedules.metadata | ad_schedule_post_patch_metadata | YES |
+schedules.metadata | JSON | YES |
 schedules.metadata.name | string | YES | 
 schedules.metadata.client | string | YES | Valid values 'vast', 'googima'
 schedules.metadata.is_vmap | boolean | NO |
@@ -261,7 +269,7 @@ Retrieves an advertising schedule
 
 **Parameters**
 
-Name | Units | Required | Notes
+Name | Type | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
@@ -298,7 +306,7 @@ ad_schedule_id | string | YES | The unique 8 character identifier for the ad sch
 
 ### Response schema
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 schedules | Array of ad_schedule_resource | |
 schedules.id | string | NO |
@@ -306,7 +314,7 @@ schedules.type | string | NO |
 schedules.schema | string | NO |
 schedules.created | string | NO | 
 schedules.last_modified | string | NO |
-schedules.metadata | ad_schedule_post_patch_metadata | YES |
+schedules.metadata | JSON | YES |
 schedules.metadata.name | string | YES | 
 schedules.metadata.client | string | YES | Valid values 'vast', 'googima'
 schedules.metadata.is_vmap | boolean | NO |
@@ -322,7 +330,7 @@ schedules.metadata.breaks.type | string | YES |
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -330,7 +338,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -349,7 +357,7 @@ error.description | string
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -357,7 +365,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -380,16 +388,16 @@ Patches an advertising schedule
 
 **Parameters**
 
-Name | Units | Required | Notes
+Name | Type | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
 
 **Request body**
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
-metadata | ad_schedule_post_patch_metadata | YES
+metadata | JSON | YES
 metadata.name | string | YES |
 metadata.client | string | YES | Valid values 'vast', 'googima' 
 metadata.is_vmap | boolean | NO | 
@@ -429,14 +437,14 @@ metadata.breaks.type | string | YES
 
 **Response body**
 
-Param Name | Units  | Required | Notes
+Param Name | Type  | Required | Notes
 ------------ | ------------ | ------------- | -------------
 id | string | NO |
 type | string | NO |
 schema | string | NO |
 created | string | NO | 
 last_modified | string | NO |
-metadata | ad_schedule_post_patch_metadata | YES |
+metadata | JSON | YES |
 metadata.name | string | YES | 
 metadata.client | string | YES | Valid values 'vast', 'googima'
 metadata.is_vmap | boolean | NO |
@@ -480,7 +488,7 @@ metadata.breaks.type | string | YES
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -488,7 +496,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -507,7 +515,7 @@ error.description | string
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -515,7 +523,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -534,7 +542,7 @@ error.description | string
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -542,7 +550,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -565,7 +573,7 @@ Deletes an advertising schedule
 
 **Path Parameters**
 
-Name | Units | Required | Notes
+Name | Type | Required | Notes
 ------------ | ------------ | ------------- | -------------
 site_id	| string | YES | The unique 8 character identifier for the site.
 ad_schedule_id | string | YES | The unique 8 character identifier for the ad schedule.
@@ -578,7 +586,7 @@ ad_schedule_id | string | YES | The unique 8 character identifier for the ad sch
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -586,7 +594,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -605,7 +613,7 @@ error.description | string
 
 #### HEADERS
 
-Name | Units | Notes
+Name | Type | Notes
 ------------ | ------------ | ---------
 X-Rate-Limit-Limit | integer | The number of allowed requests in the current period
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
@@ -613,7 +621,7 @@ X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
 ### Response schema
 
-Name | Units
+Name | Type
 ----- | ----
 error | error
 error.code | string
@@ -627,6 +635,3 @@ error.description | string
   }
 }
 ```
-
-
-
