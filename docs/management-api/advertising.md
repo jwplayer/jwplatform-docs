@@ -593,6 +593,7 @@ X-Rate-Limit-Limit | integer | The number of allowed requests in the current per
 X-Rate-Limit-Remaining | integer | The number of remaining requests in the current period
 X-Rate-Limit-Reset | integer | The number of seconds left in the current period
 
+
 ### Response schema
 
 Name | Type
@@ -636,3 +637,4 @@ error.description | string
   }
 }
 ```
+
