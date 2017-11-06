@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="mkdocs-jwplayer ">
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>URL Token Signing - JW Platform Developer Guide</title>
+
+    
+
+    
+      <meta name="description" content="JW Developers provides tools and resources for developers using JW Player, JW Platform and the Android and iOS SDKs." />
+    
+
+    
+      <link rel="shortcut icon" href="../../http:/www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="../../css/mkdocs-jwplayer.min.css">
+
+    
+
+    
+    
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+
+  </head>
+  <body>
+    <div class="site">
+
+				<div class="site-top">
+					<div class="site-header">
+  <div class="site-header-container">
+    <a class="logo" href="/">
+      <img src="/img/jw-logo-mark-white.svg">
+      <img src="/img/jw-logo-text-white.svg">
+      <span class="developer">Developer</span>
+    </a>
+    <a class="menu-toggle" href="#">Menu</a>
+    <ul class="menu">
+      <li><a class="link" href="https://www.jwplayer.com">Company</a></li>
+      <li><a class="link" href="https://www.jwplayer.com/blog">Blog</a></li>
+      <li><a class="link" href="https://support.jwplayer.com">Support</a></li>
+      <li><a class="link" href="https://dashboard.jwplayer.com">Sign-In</a></li>
+      <li><a class="link" href="/search/"><img class="search-icon" src="//icons.jwplayer.com/icons/white/search.svg" width="15" /></a></li>
+      <li><a class="btn md red" href="https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade">Upgrade</a></li>
+    </ul>
+  </div>
+</div>
+	        <div class="site-secondary-header">
+  <div class="site-secondary-header-container">
+    <div class="site-secondary-header-group">
+      <div class="site-secondary-header-dropdown">
+				<a class="site-secondary-header-dropdown-arrow" href="#"></a>
+				<a href="/jw-player/" class="site-secondary-header-dropdown-link ">JW Player</a>
+        <a href="/jw-platform/" class="site-secondary-header-dropdown-link is-selected">JW Platform</a>
+        <a href="/android-sdk/" class="site-secondary-header-dropdown-link ">Android SDK</a>
+        <a href="/ios-sdk/" class="site-secondary-header-dropdown-link ">iOS SDK</a>
+        <a href="/tools/" class="site-secondary-header-dropdown-link ">Developer Tools</a>
+        <a href="/release-notes/" class="site-secondary-header-dropdown-link">Release Notes</a>
+      </div>
+    </div>
+		
+		
+	      <a href="/jw-platform/docs/delivery-api-reference/">Delivery API</a>      
+	      <a href="/jw-platform/reference/v1/">Management API</a>
+	      <a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
+	      <a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
+		
+		
+		
+		
+  </div>
+</div>
+	        <div class="page-header">
+	<div class="page-label">
+		
+			URL Token Signing
+		
+	</div>
+	<form class="search" action="../../search.html" method="get">
+		<input type="search" name="q" placeholder="Search documentation..." />
+	</form>
+</div>
+				</div>
+
+        <div class="site-bottom">
+
+					<div class="site-body">
+
+	          <div class="page">
+
+	            <div class="page-body">
+
+	              <div class="scroll-to-top">
+	<img src="//icons.jwplayer.com/icons/white/change-arrow-up.svg">
+</div>
+
+	              <div class="aside">
+									
+										<ul>
+											
+		                    
+  <li >
+    <a href="../..">Introduction</a>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Delivery API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../embedding-players/">Embedding Players</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../sources/">Source Selection</a>
+  </li>
+
+      
+        
+  <li class="active">
+    <a href="./">URL Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../legacy-url-token-signing/">Legacy Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../widgets/playlist-widgets/">Feeds Widgets</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../widgets/playlist-widget-css-reference/">Feeds Widget CSS Reference</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Management API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../management-api/">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../management-api/uploading-videos/">Uploading Videos</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../management-api/batch-migration/">Batch Migrations</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../management-api/analytics/">Analytics</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../management-api/advertising/">Advertising</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>JW Showcase Applications</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../jw-showcase/web/jw-showcase-for-web/">JW Showcase for Web</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../jw-showcase/apple-tv/jw-showcase-for-apple-tv/">JW Showcase for Apple TV</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li >
+    <a href="../../release-notes/">Release Notes</a>
+  </li>
+
+		                  
+										</ul>
+							    
+	              </div>
+
+	              <div class="main">
+	                
+	                  <h1 id="protecting-your-content-with-url-token-signing">Protecting your content with URL Token Signing</h1>
+<p>Delivery API includes a security feature that allows you to restrict public access to videos or to videos plus players. This feature is enabled in the dashboard. When enabled, content can only be requested by constructing so-called signed links. These links will expire after a short time, preventing unauthorized sharing or leeching of your content.</p>
+<h2 id="enabling-signing-enforcement">Enabling Signing Enforcement</h2>
+<p>You can require URL token signing for assets related to your account through the Management API <a href="https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/update.html">/accounts/update</a> call using the <code>allow_downloads</code> and <code>allow_embeds</code> parameters or via the dashboard as documented in the <a href="https://support.jwplayer.com/customer/en/portal/articles/1433647-jw-player-url-signing">support article</a>.</p>
+<div class="alert warning">Please make sure you start to use signing on your site before changing this security setting! Unsigned videos and/or players will <strong>drop dead</strong> the instant you change this setting.</div>
+<h2 id="jwt-tokenized-links">JWT Tokenized Links</h2>
+<div class="alert note">Delivery API v1 endpoints use a legacy url signing mechanism described <a href="https://developer.jwplayer.com/jw-platform/reference/v1/content_signing.html">here</a></div>
+<p>Delivery API /v2/ endpoints take advantage of standardized token signing using JSON Web Tokens (JWTs). You can learn more about the specific construction, formatting and security of these tokens via <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a>. Discussion, tools and links to open source libraries are available at <a href="https://jwt.io">jwt.io</a></p>
+<p>JWTs consist of three sections:</p>
+<ul>
+<li>A <em>header</em> specifying the cryptographic algorithm and token type.</li>
+<li>A <em>payload</em> containing <em>claims</em> in JSON format</li>
+<li>A <em>signature</em> that can be used to verify the token</li>
+</ul>
+<h3 id="jwt-header-for-jw-platform-requests">JWT Header for JW Platform Requests</h3>
+<p>At this time, JW Platform only supports a single algorithm and token type thus all headers should be based on:</p>
+<pre><code>{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+</code></pre>
+<h3 id="jwt-payload-for-delivery-api-requests">JWT Payload for Delivery API Requests</h3>
+<p>The payload consists of claims that specify a <code>resource</code> being requested, an expiration time (<code>exp</code>), and any parameters the endpoint accepts (in this example we also include <code>related_media_id</code>).</p>
+<pre><code>{
+  "resource": "/v2/playlists/Xw0oaD4q",
+  "exp": 1893456000,
+  "related_media_id": "RltV8MtT"
+}
+</code></pre>
+<p><strong>Required Claims:</strong> All JW Platform JWTs MUST include the following claims.</p>
+<p><code>resource</code></p>
+<ul>
+<li>The resource that is being requested. (e.g. /v2/playlists/Xw0oaD4q) this ensures that generated tokens cannot be applied to unintended resources.</li>
+</ul>
+<p><code>exp</code></p>
+<ul>
+<li>The expiration date of the token, as a UNIX timestamp (e.g. <em>1893456000</em>). Typically, generated URLs should be valid between a minute and a few hours.</li>
+<li>The shorter you make the expiration dates, the more you lock down your content. If a link has expired, even download tools will not be able to grab the content. However, overly quick expirations can result in bad user experience dues to small discrepancies in server time or delays in clients requesting resources at the expiring links.</li>
+<li>If you have a high-volume website, the extra signature generation step might be a performance issue. In that case, you could cache signed URLs with an interval of e.g. 5 minutes. Signed requests do not have to be unique.</li>
+</ul>
+<p><strong>Additional Claims:</strong> JWTs can optionally contain additional claims to specify additional query parameters that are applicable to that resource, the example above includes <code>related_media_id</code> because the resource is a Similar Playlist. Specific query parameters available for each resource can be found in the <a href="https://app.swaggerhub.com/api/jwplayer/Delivery-API/v2.0">Delivery API v2 reference</a>.</p>
+<h3 id="jwt-signature-for-jw-platform-requests">JWT Signature for JW Platform Requests</h3>
+<p>The signature portion is generated using an HMAC 256 hash of the preceding sections and the API Secret of the property for the content you are requesting. The specific details can be found in <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> but we recommend using a well supported <a href="https://jwt.io/#libraries">open source library</a> in the language of your choice.</p>
+<div class="alert warning">Because URL tokens use the property's API secret, it is inappropriate to generate them client-side as you would be exposing your secret to end users.</div>
+<h2 id="constructing-urls-with-tokens">Constructing URLs with tokens</h2>
+<p>To construct a URL with the JWT you created, simply include it as a single query parameter named <code>token</code> for the resource you are requesting.
+For example, https://cdn.jwplayer.com/v2/playlists/Xw0oaD4q?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4 corresponds to the parameters described above.</p>
+<p>If you would like to get started playing with JWTs manually, jwt.io offers nice debugging tool. <a href="https://jwt.io/#debugger?&amp;id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6Ii92Mi9wbGF5bGlzdHMvWHcwb2FENHEiLCJleHAiOjE4OTM0NTYwMDAsInJlbGF0ZWRfbWVkaWFfaWQiOiJSbHRWOE10VCJ9.Y5N7qUUXUUCmh-M8HHkc4Akveu294S69wSe2l1QMBl4">This link</a> will get you started with the token above; you will need to change the payload and secret to reflect content and the secret of your property.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="php">PHP</h4>
+<p>This script uses <a href="https://github.com/firebase/php-jwt/blob/master/src/JWT.php">firebase/php-jwt</a> (other libraries are available at <a href="https://jwt.io/">jwt.io</a>)</p>
+<pre><code class="php">&lt;?php
+require_once('JWT.php'); // Available from https://github.com/firebase/php-jwt/blob/master/src/JWT.php  
+use \Firebase\JWT\JWT;
+
+$playlist_id = &quot;myListID&quot;; // Replace with your playlist ID
+$token_secret = &quot;myAPIsecret&quot;; // Replace this value with the API secret for the property
+
+$resource = &quot;/v2/playlists/&quot;.$playlist_id;
+$exp = ceil((time() + 3600)/180) * 180; // Link is valid for 1hr but normalized to 3 minutes to promote better caching
+$token_body = array(
+    &quot;resource&quot; =&gt; $resource,
+    // Other request parameters can be added here if desired.
+    &quot;exp&quot; =&gt; $exp
+);
+
+$jwt = JWT::encode($token_body, $token_secret);
+
+print &quot;&lt;a href=\&quot;https://cdn.jwplayer.com/$resource?token=$jwt\&quot;&gt;This is a signed link.&lt;/a&gt;&quot;;
+
+</code></pre>
+
+<h4 id="python">Python</h4>
+<p>This example uses PyJWT <code>pip install pyjwt</code> (other libraries are available at <a href="https://jwt.io/">jwt.io</a>)</p>
+<pre><code class="python">import jwt
+import math
+import time
+
+playlist_id = &quot;myListID&quot; # Replace with your playlist ID
+token_secret = &quot;myAPIsecret&quot; # Replace this value with the API secret for the property
+
+resource = &quot;/v2/playlists/&quot; + playlist_id
+exp = math.ceil((time.time() + 3600)/180) * 180 # Link is valid for 1hr but normalized to 3 minutes to promote better caching
+token_body = {
+    &quot;resource&quot;: resource,
+    # Other request parameters can be added here if desired.
+    &quot;exp&quot;: exp
+}
+
+encoded = jwt.encode(token_body, token_secret, algorithm='HS256')
+
+print(encoded)
+
+</code></pre>
+
+<h2 id="error-handling">Error handling</h2>
+<p>When unsigned content is requested while signing is enabled, the Delivery API will return a <strong>403 Forbidden</strong> HTTP Status.</p>
+<p>When incorrectly or expired signed content is requested, the content service will also return a <strong>403 Forbidden</strong> HTTP Status. Signed URLs can be incorrect due to a wrong signature or due to an already expired timestamp.</p>
+<p>Note that incorrectly signed URLs will always return a 403. Correctly signed, unexpired URLs will always work. Use this to test your signing mechanism and start using it across your site before enabling the security enforcement in the dashboard.</p>
+	                
+	                
+	                  <div class="pagination prev-next">
+	                    
+	                      <a class="btn md" href="../sources/" title="Source Selection">Previous Page</a>
+	                    
+	                    
+	                      <a class="btn md" href="../legacy-url-token-signing/" title="Legacy Token Signing"/>Next Page</a>
+	                    
+	                  </div>
+	                
+	              </div>
+
+	            </div>
+
+	          </div>
+	        </div>
+
+	        <footer class="global-site-footer">
+  <div class="global-site-footer-container">
+    <ul class="global-site-footer-row">
+      <li>
+        <a href="//www.jwplayer.com">
+          <strong>JW Player</strong>
+          <span>Browse our products, company,<br> resources, and pricing</span>
+        </a>
+      </li>
+      <li>
+        <a href="//dashboard.jwplayer.com">
+          <strong>Dashboard</strong>
+          <span>Content, players, analytics,<br> and account management</span>
+        </a>
+      </li>
+      <li>
+        <a class="selected" href="//developer.jwplayer.com">
+          <strong>Developer</strong>
+          <span>Join the community, demos,<br> references, dev guides, and tools.</span>
+        </a>
+      </li>
+      <li>
+        <a href="//support.jwplayer.com">
+          <strong>Support</strong>
+          <span>Search the articles, ask the<br> community, or give feedback</span>
+        </a>
+      </li>
+    </ul>
+    <div class="global-site-footer-row">
+      <p>&copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved.<br>
+        JW Player is a registered trademark.</p>
+      <ul>
+        <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
+        <li><a href="//www.jwplayer.com/privacy/">Privacy Policy</a></li>
+        <li><a href="//www.jwplayer.com/dmca/">DMCA</a></li>
+        <li><a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../js/mkdocs-jwplayer.min.js"></script>
+
+    
+
+  </body>
+</html>

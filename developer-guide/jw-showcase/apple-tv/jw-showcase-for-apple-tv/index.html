@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="mkdocs-jwplayer ">
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>JW Showcase for Apple TV - JW Platform Developer Guide</title>
+
+    
+
+    
+      <meta name="description" content="JW Developers provides tools and resources for developers using JW Player, JW Platform and the Android and iOS SDKs." />
+    
+
+    
+      <link rel="shortcut icon" href="../../../http:/www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="../../../css/mkdocs-jwplayer.min.css">
+
+    
+
+    
+    
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+
+  </head>
+  <body>
+    <div class="site">
+
+				<div class="site-top">
+					<div class="site-header">
+  <div class="site-header-container">
+    <a class="logo" href="/">
+      <img src="/img/jw-logo-mark-white.svg">
+      <img src="/img/jw-logo-text-white.svg">
+      <span class="developer">Developer</span>
+    </a>
+    <a class="menu-toggle" href="#">Menu</a>
+    <ul class="menu">
+      <li><a class="link" href="https://www.jwplayer.com">Company</a></li>
+      <li><a class="link" href="https://www.jwplayer.com/blog">Blog</a></li>
+      <li><a class="link" href="https://support.jwplayer.com">Support</a></li>
+      <li><a class="link" href="https://dashboard.jwplayer.com">Sign-In</a></li>
+      <li><a class="link" href="/search/"><img class="search-icon" src="//icons.jwplayer.com/icons/white/search.svg" width="15" /></a></li>
+      <li><a class="btn md red" href="https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade">Upgrade</a></li>
+    </ul>
+  </div>
+</div>
+	        <div class="site-secondary-header">
+  <div class="site-secondary-header-container">
+    <div class="site-secondary-header-group">
+      <div class="site-secondary-header-dropdown">
+				<a class="site-secondary-header-dropdown-arrow" href="#"></a>
+				<a href="/jw-player/" class="site-secondary-header-dropdown-link ">JW Player</a>
+        <a href="/jw-platform/" class="site-secondary-header-dropdown-link is-selected">JW Platform</a>
+        <a href="/android-sdk/" class="site-secondary-header-dropdown-link ">Android SDK</a>
+        <a href="/ios-sdk/" class="site-secondary-header-dropdown-link ">iOS SDK</a>
+        <a href="/tools/" class="site-secondary-header-dropdown-link ">Developer Tools</a>
+        <a href="/release-notes/" class="site-secondary-header-dropdown-link">Release Notes</a>
+      </div>
+    </div>
+		
+		
+	      <a href="/jw-platform/docs/delivery-api-reference/">Delivery API</a>      
+	      <a href="/jw-platform/reference/v1/">Management API</a>
+	      <a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
+	      <a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
+		
+		
+		
+		
+  </div>
+</div>
+	        <div class="page-header">
+	<div class="page-label">
+		
+			JW Showcase for Apple TV
+		
+	</div>
+	<form class="search" action="../../../search.html" method="get">
+		<input type="search" name="q" placeholder="Search documentation..." />
+	</form>
+</div>
+				</div>
+
+        <div class="site-bottom">
+
+					<div class="site-body">
+
+	          <div class="page">
+
+	            <div class="page-body">
+
+	              <div class="scroll-to-top">
+	<img src="//icons.jwplayer.com/icons/white/change-arrow-up.svg">
+</div>
+
+	              <div class="aside">
+									
+										<ul>
+											
+		                    
+  <li >
+    <a href="../../..">Introduction</a>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Delivery API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../../delivery-api/">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/embedding-players/">Embedding Players</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/sources/">Source Selection</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/url-token-signing/">URL Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/legacy-url-token-signing/">Legacy Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/widgets/playlist-widgets/">Feeds Widgets</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../delivery-api/widgets/playlist-widget-css-reference/">Feeds Widget CSS Reference</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Management API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../../management-api/">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/uploading-videos/">Uploading Videos</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/batch-migration/">Batch Migrations</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/analytics/">Analytics</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/advertising/">Advertising</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>JW Showcase Applications</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../web/jw-showcase-for-web/">JW Showcase for Web</a>
+  </li>
+
+      
+        
+  <li class="active">
+    <a href="./">JW Showcase for Apple TV</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li >
+    <a href="../../../release-notes/">Release Notes</a>
+  </li>
+
+		                  
+										</ul>
+							    
+	              </div>
+
+	              <div class="main">
+	                
+	                  <h1 id="getting-started-with-jw-showcase-for-apple-tv">Getting Started with JW Showcase for Apple TV</h1>
+<p>JW Showcase is a sample application that leverages playlists from JW Platform to distribute your content across platforms. This guide will provide instructions for getting set up with our Apple TV app.</p>
+<p>To get started, we recommend cloning the JW Showcase for Apple TV source code within Github. Modifying the cloned source gives you greater control over the app framework and allows you to keep your Showcase app in sync with our source repository as we add new features and bug fixes.</p>
+<div class="alert important">The JW Showcase for Apple TV app is only supported on 4th Generation (2015) Apple TV devices.</div>
+<h2 id="download-the-latest-version">Download the latest version</h2>
+<p>Clone the source code from: <code>https://github.com/jwplayer/jw-showcase-appletv</code></p>
+<h2 id="configure-your-app">Configure Your App</h2>
+<p>Within the <code>jwplayer-appletv-web-app/resources/configs</code> folder, you'll need to rename the <code>VCyJXbpY</code> directory with your account API key.</p>
+<p><img alt="JW Showcase Config" src="../../../images/appletv-configs.png" /></p>
+<p>To locate your account API key <a href="https://dashboard.jwplayer.com/">in the Dashboard</a>, navigate to "Properties" under "Account. Your API key can be copied from the "<strong>API Credentials</strong>" section.</p>
+<p><img alt="JW Dashboard API Key" src="../../../images/account-api-key.png" /></p>
+<p>Next, open the config.json file in any text editor and replace the default playlist IDs with your own playlist IDs from your content library hosted in JW Platform.</p>
+<pre><code>{
+  "playlists": [
+    "K6Sl8yPJ",
+    "BXatQw7p",
+    "E12RS6r7"
+  ],
+  "featuredPlaylist": "1AxTdxJn",
+</code></pre>
+<p>Navigate to “<strong>Curated</strong>” under the “<strong>Playlists</strong>” section of the dashboard.</p>
+<p><img alt="JW Dashboard Playlists" src="../../../images/dashboard-playlists.png" /></p>
+<p>Click into any playlist you wish to feature in your app and grab the playlist ID from the top of the playlist detail page.</p>
+<p><img alt="JW Playlists ID" src="../../../images/playlist-id.png" /></p>
+<h2 id="branding-your-app">Branding Your App</h2>
+<p>In the config.json file, you can set the background color of the app, using a hex value, to match your branding. </p>
+<pre><code>&quot;backgroundColor&quot;: &quot;#7e0023&quot;,
+</code></pre>
+
+<p>The config.json also looks for a "<strong>splashScreen</strong>" and "<strong>bannerImage</strong>" that can be replaced with your own images in the same directory.</p>
+<pre><code>&quot;splashScreen&quot;: &quot;images/jw-main.png&quot;,
+&quot;bannerImage&quot;: &quot;images/jw-header.png&quot;,
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+<th>Recommended Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>splashScreen</strong></td>
+<td>Shown while app is loading</td>
+<td>1920x1080</td>
+</tr>
+<tr>
+<td><strong>bannerImage</strong></td>
+<td>Header image shown on app home screen</td>
+<td>1920x400</td>
+</tr>
+</tbody>
+</table>
+<h2 id="xcode-configuration">Xcode Configuration</h2>
+<div class="alert important">Apple's developer tool, Xcode is required to configure JW Showcase for Apple TV</div>
+<p>Open the <code>jwplayer-appletv-tvos-app/jwplayer-for-tv.xcodeproj</code> project in Xcode.</p>
+<p>Open the <code>AppDelegate.swift</code> file and change the "<strong>baseURL</strong>" variable to your web app server location.</p>
+<p><img alt="Xcode Configuration Swift File" src="../../../images/xcode-swift-file.png" /></p>
+<p>Next, open the Info.plist file and change the "<strong>jwplayer.account_key</strong>" value to your account API key and the "<strong>bundle name</strong>" to your desired app name.</p>
+<p><img alt="Xcode Configuration Info file" src="../../../images/xcode-info-file.png" /></p>
+<p>Lastly, open the "Assets.xcassets" bundle and replace the top shelf and default app icon assets with your own images. For image specs, see our <a href="https://github.com/jwplayer/jw-showcase-appletv/blob/master/jwplayer-appletv-app-branding.pdf">AppleTV Branding Guidelines</a>.</p>
+<p><img alt="Xcode Configuration Assets bundle" src="../../../images/xcode-assets-bundle.png" /></p>
+<h2 id="building-your-app">Building Your App</h2>
+<p>We recommend running the app in the Xcode Apple TV emulator to test that everything is configured properly. After you've ensured that your app is configued properly, build your app.</p>
+<p>To submit your app to the Apple App Store see <a href="https://developer.apple.com/tvos/submit/">Preparing Your tvOS App for Submission</a> guidelines.</p>
+<div class="alert important">An Apple Developer license is required to submit your app to the Apple App Store.</div>
+	                
+	                
+	                  <div class="pagination prev-next">
+	                    
+	                      <a class="btn md" href="../../web/jw-showcase-for-web/" title="JW Showcase for Web">Previous Page</a>
+	                    
+	                    
+	                      <a class="btn md" href="../../../release-notes/" title="Release Notes"/>Next Page</a>
+	                    
+	                  </div>
+	                
+	              </div>
+
+	            </div>
+
+	          </div>
+	        </div>
+
+	        <footer class="global-site-footer">
+  <div class="global-site-footer-container">
+    <ul class="global-site-footer-row">
+      <li>
+        <a href="//www.jwplayer.com">
+          <strong>JW Player</strong>
+          <span>Browse our products, company,<br> resources, and pricing</span>
+        </a>
+      </li>
+      <li>
+        <a href="//dashboard.jwplayer.com">
+          <strong>Dashboard</strong>
+          <span>Content, players, analytics,<br> and account management</span>
+        </a>
+      </li>
+      <li>
+        <a class="selected" href="//developer.jwplayer.com">
+          <strong>Developer</strong>
+          <span>Join the community, demos,<br> references, dev guides, and tools.</span>
+        </a>
+      </li>
+      <li>
+        <a href="//support.jwplayer.com">
+          <strong>Support</strong>
+          <span>Search the articles, ask the<br> community, or give feedback</span>
+        </a>
+      </li>
+    </ul>
+    <div class="global-site-footer-row">
+      <p>&copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved.<br>
+        JW Player is a registered trademark.</p>
+      <ul>
+        <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
+        <li><a href="//www.jwplayer.com/privacy/">Privacy Policy</a></li>
+        <li><a href="//www.jwplayer.com/dmca/">DMCA</a></li>
+        <li><a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../../js/mkdocs-jwplayer.min.js"></script>
+
+    
+
+  </body>
+</html>
