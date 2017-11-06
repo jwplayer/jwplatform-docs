@@ -26,13 +26,13 @@ When the `sources` parameter is used, the Delivery API uses strict filtering to 
 
 ## Examples
 A 2 item manual playlist without sources specified (includes all JW Player recommended sources ordered for best playback):
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb
+[https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb](https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb)
 
 The same playlist with only the HLS source included:
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls
+[https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls](https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls)
 
 The same playlist specifying 406p progressive mp4 video (note only one video is included because of strict source selection based on height):
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p
+[https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p](https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p)
 
 Again specifying 406p but now allowing for default source fallback to ensure the inclusion of both videos:
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&default_source_fallback=true
+[https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&default_source_fallback=true](https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&default_source_fallback=true)
