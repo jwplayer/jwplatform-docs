@@ -10,7 +10,7 @@ pages:
     - Delivery API:
       - Overview: 'delivery-api/index.md'
       - Embedding Players: 'delivery-api/embedding-players.md'
-      - Source Seletion: 'delivery-api/sources.md'
+      - Source Selection: 'delivery-api/sources.md'
       - URL Token Signing: 'delivery-api/url-token-signing.md'
       - Legacy Token Signing: 'delivery-api/legacy-url-token-signing.md'
       - Feeds Widgets: 'delivery-api/widgets/playlist-widgets.md'
