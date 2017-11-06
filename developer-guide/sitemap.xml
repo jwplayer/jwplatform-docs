@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/delivery-api/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/embedding-players/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/sources/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/url-token-signing/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/legacy-url-token-signing/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/widgets/playlist-widgets/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/delivery-api/widgets/playlist-widget-css-reference/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/management-api/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/management-api/uploading-videos/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/management-api/batch-migration/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/management-api/analytics/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/management-api/advertising/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/jw-showcase/web/jw-showcase-for-web/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/jw-showcase/apple-tv/jw-showcase-for-apple-tv/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>None/release-notes/</loc>
+     <lastmod>2017-11-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html class="mkdocs-jwplayer ">
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Advertising - JW Platform Developer Guide</title>
+
+    
+
+    
+      <meta name="description" content="JW Developers provides tools and resources for developers using JW Player, JW Platform and the Android and iOS SDKs." />
+    
+
+    
+      <link rel="shortcut icon" href="../../http:/www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="../../css/mkdocs-jwplayer.min.css">
+
+    
+
+    
+    
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+
+  </head>
+  <body>
+    <div class="site">
+
+				<div class="site-top">
+					<div class="site-header">
+  <div class="site-header-container">
+    <a class="logo" href="/">
+      <img src="/img/jw-logo-mark-white.svg">
+      <img src="/img/jw-logo-text-white.svg">
+      <span class="developer">Developer</span>
+    </a>
+    <a class="menu-toggle" href="#">Menu</a>
+    <ul class="menu">
+      <li><a class="link" href="https://www.jwplayer.com">Company</a></li>
+      <li><a class="link" href="https://www.jwplayer.com/blog">Blog</a></li>
+      <li><a class="link" href="https://support.jwplayer.com">Support</a></li>
+      <li><a class="link" href="https://dashboard.jwplayer.com">Sign-In</a></li>
+      <li><a class="link" href="/search/"><img class="search-icon" src="//icons.jwplayer.com/icons/white/search.svg" width="15" /></a></li>
+      <li><a class="btn md red" href="https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade">Upgrade</a></li>
+    </ul>
+  </div>
+</div>
+	        <div class="site-secondary-header">
+  <div class="site-secondary-header-container">
+    <div class="site-secondary-header-group">
+      <div class="site-secondary-header-dropdown">
+				<a class="site-secondary-header-dropdown-arrow" href="#"></a>
+				<a href="/jw-player/" class="site-secondary-header-dropdown-link ">JW Player</a>
+        <a href="/jw-platform/" class="site-secondary-header-dropdown-link is-selected">JW Platform</a>
+        <a href="/android-sdk/" class="site-secondary-header-dropdown-link ">Android SDK</a>
+        <a href="/ios-sdk/" class="site-secondary-header-dropdown-link ">iOS SDK</a>
+        <a href="/tools/" class="site-secondary-header-dropdown-link ">Developer Tools</a>
+        <a href="/release-notes/" class="site-secondary-header-dropdown-link">Release Notes</a>
+      </div>
+    </div>
+		
+		
+	      <a href="/jw-platform/docs/delivery-api-reference/">Delivery API</a>      
+	      <a href="/jw-platform/reference/v1/">Management API</a>
+	      <a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
+	      <a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
+		
+		
+		
+		
+  </div>
+</div>
+	        <div class="page-header">
+	<div class="page-label">
+		
+			Advertising
+		
+	</div>
+	<form class="search" action="../../search.html" method="get">
+		<input type="search" name="q" placeholder="Search documentation..." />
+	</form>
+</div>
+				</div>
+
+        <div class="site-bottom">
+
+					<div class="site-body">
+
+	          <div class="page">
+
+	            <div class="page-body">
+
+	              <div class="scroll-to-top">
+	<img src="//icons.jwplayer.com/icons/white/change-arrow-up.svg">
+</div>
+
+	              <div class="aside">
+									
+										<ul>
+											
+		                    
+  <li >
+    <a href="../..">Introduction</a>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Delivery API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../delivery-api/">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/embedding-players/">Embedding Players</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/sources/">Source Selection</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/url-token-signing/">URL Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/legacy-url-token-signing/">Legacy Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/widgets/playlist-widgets/">Feeds Widgets</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../delivery-api/widgets/playlist-widget-css-reference/">Feeds Widget CSS Reference</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Management API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../uploading-videos/">Uploading Videos</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../batch-migration/">Batch Migrations</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../analytics/">Analytics</a>
+  </li>
+
+      
+        
+  <li class="active">
+    <a href="./">Advertising</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>JW Showcase Applications</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../jw-showcase/web/jw-showcase-for-web/">JW Showcase for Web</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../jw-showcase/apple-tv/jw-showcase-for-apple-tv/">JW Showcase for Apple TV</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li >
+    <a href="../../release-notes/">Release Notes</a>
+  </li>
+
+		                  
+										</ul>
+							    
+	              </div>
+
+	              <div class="main">
+	                
+	                  <h1 id="advertising">Advertising</h1>
+<p>The JW Player Advertising endpoints allow you to manage advertising schedules programmatically.</p>
+<h3 id="obtaining-your-site-id-and-api-secret">Obtaining your Site ID and API Secret</h3>
+<p>Each request to the Advertising API is for a specific JW Player site (or property) within your account.  To query data for one of your JW Player sites, you will need to obtain your Site ID and API Secret.</p>
+<p>You can find each property’s Site ID in the JW Player Dashboard by navigating to Account &gt; API Credentials and clicking "Show Credentials" for the relevant site.  The key displayed is your Site ID.</p>
+<p>To find your API Secret, you'll find JW Reporting API Credentials at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.  Clicking "Show Credentials" will display your API Secret.</p>
+<div class="alert warning">The property API Secret will not work for this endpoint - you must use the secret specific to the Reporting API</div>
+<h3 id="example-requests">Example requests</h3>
+<p>Using the <code>site_id</code> and <code>api_secret</code> obtained in the previous steps a request for all schedules for a site would look like:</p>
+<pre><code class="bash">curl -X GET https://api.jwplayer.com/v2/sites/&lt;site_id&gt;/advertising/schedules/  \
+-H 'Authorization: &lt;api_secret&gt;'  -H 'Content-Type: application/json'
+</code></pre>
+
+<h1 id="api-structure">API Structure</h1>
+<h2 id="create-a-new-advertising-schedule">Create a new advertising schedule</h2>
+<h3 id="post">POST</h3>
+<p><code>/sites/{site_id}/advertising/schedules/</code></p>
+<p>Creates a new advertising schedule</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site_id</td>
+<td>string</td>
+<td>The unique 8 character identifier for the site.</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request body</strong></p>
+<p>A resource object describing an ad schedule.</p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td>JSON</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.name</td>
+<td>string</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.client</td>
+<td>string</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-samples">Request samples:</h3>
+<pre><code class="json">{
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+    &quot;breaks&quot;: [
+      {
+        &quot;tags&quot;: [
+          &quot;http://doubleclick.com/tag1.xml&quot;
+        ],
+        &quot;offset&quot;: 180.123,
+        &quot;skipoffset&quot;: 5,
+        &quot;type&quot;: &quot;linear&quot;
+      }
+    ],
+    &quot;client&quot;: &quot;vast&quot;,
+    &quot;is_vmap&quot;: false,
+    &quot;vpaidmode&quot;: &quot;secure&quot;
+  }
+}
+</code></pre>
+
+<h3 id="response-schema">Response schema</h3>
+<p><strong>Response body</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schema</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>created</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>last_modified</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-samples">Response samples:</h3>
+<h4 id="201-created">201 Created:</h4>
+<pre><code class="json">{
+  &quot;id&quot;: &quot;aBcdEf12&quot;,
+  &quot;type&quot;: &quot;adschedule&quot;,
+  &quot;schema&quot;: &quot;https://schema.jwplayer.com/types/adschedule.json&quot;,
+  &quot;created&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;last_modified&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+    &quot;breaks&quot;: [
+      {
+        &quot;tags&quot;: [
+          &quot;http://doubleclick.com/tag1.xml&quot;
+        ],
+        &quot;offset&quot;: 180.123,
+        &quot;skipoffset&quot;: 5,
+        &quot;type&quot;: &quot;linear&quot;
+      }
+    ],
+    &quot;client&quot;: &quot;vast&quot;,
+    &quot;is_vmap&quot;: false,
+    &quot;vpaidmode&quot;: &quot;secure&quot;,
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+}
+</code></pre>
+
+<h4 id="400-bad-request">400 Bad request</h4>
+<h4 id="headers">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_1">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 400,
+    &quot;description&quot;: &quot;Bad request&quot;
+  }
+}
+</code></pre>
+
+<h2 id="fetch-a-list-of-advertising-schedules">Fetch a list of advertising schedules</h2>
+<h3 id="get">GET</h3>
+<p><code>/sites/{site_id}/advertising/schedules/</code></p>
+<p>Fetches a list of advertising schedules</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site_id</td>
+<td>string</td>
+<td>The unique 8 character identifier for the site.</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Path parameters</strong></p>
+<p>A resource object describing an ad schedule.</p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page_length</td>
+<td>integer &lt;=1000</td>
+<td>This parameter specifies the page size to return. Default behavior is 10 items.</td>
+</tr>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>This parameter specifies the offset for the page to return.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response body</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schema</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>created</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>last_modified</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="response-samples_1">Response samples:</h2>
+<h3 id="200-ok">200 OK</h3>
+<pre><code class="json">{
+  &quot;schedules&quot;: [
+    {
+      &quot;id&quot;: &quot;aBcdEf12&quot;,
+      &quot;type&quot;: &quot;adschedule&quot;,
+      &quot;schema&quot;: &quot;https://schema.jwplayer.com/types/adschedule.json&quot;,
+      &quot;created&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+      &quot;last_modified&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+      &quot;metadata&quot;: {
+        &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+        &quot;breaks&quot;: [
+          {
+            &quot;tags&quot;: [
+              &quot;http://doubleclick.com/tag1.xml&quot;
+            ],
+            &quot;offset&quot;: 180.123,
+            &quot;skipoffset&quot;: 5,
+            &quot;type&quot;: &quot;linear&quot;
+          }
+        ],
+        &quot;client&quot;: &quot;vast&quot;,
+        &quot;is_vmap&quot;: false,
+        &quot;vpaidmode&quot;: &quot;secure&quot;,
+        &quot;version&quot;: &quot;1.0&quot;
+      }
+    }
+  ],
+  &quot;page&quot;: 1,
+  &quot;page_length&quot;: 10,
+  &quot;total&quot;: 4
+}
+</code></pre>
+
+<h3 id="response-schema_2">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>schedules</td>
+<td>Array of ad_schedule_resource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.id</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.type</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.schema</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.created</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.last_modified</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>schedules.metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.version</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>page_length</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>page</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>total</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="retrieve-an-advertising-schedule">Retrieve an advertising schedule</h2>
+<h3 id="get_1">GET</h3>
+<p><code>/sites/{site_id}/advertising/schedules/{ad_schedule_id}</code></p>
+<p>Retrieves an advertising schedule</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the site.</td>
+</tr>
+<tr>
+<td>ad_schedule_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the ad schedule.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="response-samples_2">Response samples:</h2>
+<h3 id="200-ok_1">200 OK</h3>
+<pre><code class="json">{
+  &quot;id&quot;: &quot;aBcdEf12&quot;,
+  &quot;type&quot;: &quot;adschedule&quot;,
+  &quot;schema&quot;: &quot;https://schema.jwplayer.com/types/adschedule.json&quot;,
+  &quot;created&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;last_modified&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+    &quot;breaks&quot;: [
+      {
+        &quot;tags&quot;: [
+          &quot;http://doubleclick.com/tag1.xml&quot;
+        ],
+        &quot;offset&quot;: 180.123,
+        &quot;skipoffset&quot;: 5,
+        &quot;type&quot;: &quot;linear&quot;
+      }
+    ],
+    &quot;client&quot;: &quot;vast&quot;,
+    &quot;is_vmap&quot;: false,
+    &quot;vpaidmode&quot;: &quot;secure&quot;,
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+}
+</code></pre>
+
+<h3 id="response-schema_3">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>schedules</td>
+<td>Array of ad_schedule_resource</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.id</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.type</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.schema</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.created</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.last_modified</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>schedules.metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.version</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schedules.metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="403-forbidden">403 Forbidden</h4>
+<h4 id="headers_1">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_4">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 403,
+    &quot;description&quot;: &quot;Forbidden, this API token is not authorized to make this call&quot;
+  }
+}
+</code></pre>
+
+<h4 id="404-not-found">404 Not found</h4>
+<h4 id="headers_2">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_5">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 404,
+    &quot;description&quot;: &quot;Not Found, this resource was not found&quot;
+  }
+}
+</code></pre>
+
+<h2 id="patch-an-advertising-schedule">Patch an advertising schedule</h2>
+<h3 id="patch">PATCH</h3>
+<p><code>/sites/{site_id}/advertising/schedules/{ad_schedule_id}</code></p>
+<p>Patches an advertising schedule</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the site.</td>
+</tr>
+<tr>
+<td>ad_schedule_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the ad schedule.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Request body</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="request-samples_1">Request samples:</h2>
+<pre><code class="json">{
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+    &quot;breaks&quot;: [
+      {
+        &quot;tags&quot;: [
+          &quot;http://doubleclick.com/tag1.xml&quot;
+        ],
+        &quot;offset&quot;: 180.123,
+        &quot;skipoffset&quot;: 5,
+        &quot;type&quot;: &quot;linear&quot;
+      }
+    ],
+    &quot;client&quot;: &quot;vast&quot;,
+    &quot;is_vmap&quot;: false,
+    &quot;vpaidmode&quot;: &quot;secure&quot;
+  }
+}
+</code></pre>
+
+<h3 id="response-schema_6">Response schema</h3>
+<h3 id="200-ok_2">200 OK</h3>
+<p><strong>Response body</strong></p>
+<table>
+<thead>
+<tr>
+<th>Param Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>schema</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>created</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>last_modified</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.name</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.client</td>
+<td>string</td>
+<td>YES</td>
+<td>Valid values 'vast', 'googima'</td>
+</tr>
+<tr>
+<td>metadata.is_vmap</td>
+<td>boolean</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.vpaidmode</td>
+<td>string</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks</td>
+<td>Array of object</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.tags</td>
+<td>Array of string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.offset</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.skipoffset</td>
+<td>integer</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata.breaks.type</td>
+<td>string</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response sample</strong></p>
+<pre><code class="json">{
+  &quot;id&quot;: &quot;aBcdEf12&quot;,
+  &quot;type&quot;: &quot;adschedule&quot;,
+  &quot;schema&quot;: &quot;https://schema.jwplayer.com/types/adschedule.json&quot;,
+  &quot;created&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;last_modified&quot;: &quot;2017-05-22T15:02:18-4:00&quot;,
+  &quot;metadata&quot;: {
+    &quot;name&quot;: &quot;Example Ad Schedule&quot;,
+    &quot;breaks&quot;: [
+      {
+        &quot;tags&quot;: [
+          &quot;http://doubleclick.com/tag1.xml&quot;
+        ],
+        &quot;offset&quot;: 180.123,
+        &quot;skipoffset&quot;: 5,
+        &quot;type&quot;: &quot;linear&quot;
+      }
+    ],
+    &quot;client&quot;: &quot;vast&quot;,
+    &quot;is_vmap&quot;: false,
+    &quot;vpaidmode&quot;: &quot;secure&quot;,
+    &quot;version&quot;: &quot;1.0&quot;
+  }
+}
+</code></pre>
+
+<h4 id="400-bad-request_1">400 Bad request</h4>
+<h4 id="headers_3">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_7">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 400,
+    &quot;description&quot;: &quot;Bad request&quot;
+  }
+}
+</code></pre>
+
+<h4 id="403-forbidden_1">403 Forbidden</h4>
+<h4 id="headers_4">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_8">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 403,
+    &quot;description&quot;: &quot;Forbidden, this API token is not authorized to make this call&quot;
+  }
+}
+</code></pre>
+
+<h4 id="404-not-found_1">404 Not found</h4>
+<h4 id="headers_5">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_9">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 404,
+    &quot;description&quot;: &quot;Not Found, this resource was not found&quot;
+  }
+}
+</code></pre>
+
+<h2 id="delete-an-advertising-schedule">Delete an advertising schedule</h2>
+<h3 id="delete">DELETE</h3>
+<p><code>/sites/{site_id}/advertising/schedules/{ad_schedule_id}</code></p>
+<p>Deletes an advertising schedule</p>
+<p><strong>Path Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the site.</td>
+</tr>
+<tr>
+<td>ad_schedule_id</td>
+<td>string</td>
+<td>YES</td>
+<td>The unique 8 character identifier for the ad schedule.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responses">Responses</h3>
+<h4 id="200-ok_3">200 OK</h4>
+<h4 id="403-forbidden_2">403 Forbidden</h4>
+<h4 id="headers_6">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_10">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 403,
+    &quot;description&quot;: &quot;Forbidden, this API token is not authorized to make this call&quot;
+  }
+}
+</code></pre>
+
+<h4 id="404-not-found_2">404 Not found</h4>
+<h4 id="headers_7">HEADERS</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X-Rate-Limit-Limit</td>
+<td>integer</td>
+<td>The number of allowed requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Remaining</td>
+<td>integer</td>
+<td>The number of remaining requests in the current period</td>
+</tr>
+<tr>
+<td>X-Rate-Limit-Reset</td>
+<td>integer</td>
+<td>The number of seconds left in the current period</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-schema_11">Response schema</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>error</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>error.description</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: 404,
+    &quot;description&quot;: &quot;Not Found, this resource was not found&quot;
+  }
+}
+</code></pre>
+	                
+	                
+	                  <div class="pagination prev-next">
+	                    
+	                      <a class="btn md" href="../analytics/" title="Analytics">Previous Page</a>
+	                    
+	                    
+	                      <a class="btn md" href="../../jw-showcase/web/jw-showcase-for-web/" title="JW Showcase for Web"/>Next Page</a>
+	                    
+	                  </div>
+	                
+	              </div>
+
+	            </div>
+
+	          </div>
+	        </div>
+
+	        <footer class="global-site-footer">
+  <div class="global-site-footer-container">
+    <ul class="global-site-footer-row">
+      <li>
+        <a href="//www.jwplayer.com">
+          <strong>JW Player</strong>
+          <span>Browse our products, company,<br> resources, and pricing</span>
+        </a>
+      </li>
+      <li>
+        <a href="//dashboard.jwplayer.com">
+          <strong>Dashboard</strong>
+          <span>Content, players, analytics,<br> and account management</span>
+        </a>
+      </li>
+      <li>
+        <a class="selected" href="//developer.jwplayer.com">
+          <strong>Developer</strong>
+          <span>Join the community, demos,<br> references, dev guides, and tools.</span>
+        </a>
+      </li>
+      <li>
+        <a href="//support.jwplayer.com">
+          <strong>Support</strong>
+          <span>Search the articles, ask the<br> community, or give feedback</span>
+        </a>
+      </li>
+    </ul>
+    <div class="global-site-footer-row">
+      <p>&copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved.<br>
+        JW Player is a registered trademark.</p>
+      <ul>
+        <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
+        <li><a href="//www.jwplayer.com/privacy/">Privacy Policy</a></li>
+        <li><a href="//www.jwplayer.com/dmca/">DMCA</a></li>
+        <li><a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../js/mkdocs-jwplayer.min.js"></script>
+
+    
+
+  </body>
+</html>

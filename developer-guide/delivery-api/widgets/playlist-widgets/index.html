@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="mkdocs-jwplayer ">
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Feeds Widgets - JW Platform Developer Guide</title>
+
+    
+
+    
+      <meta name="description" content="JW Developers provides tools and resources for developers using JW Player, JW Platform and the Android and iOS SDKs." />
+    
+
+    
+      <link rel="shortcut icon" href="../../../http:/www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="../../../css/mkdocs-jwplayer.min.css">
+
+    
+
+    
+    
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+
+  </head>
+  <body>
+    <div class="site">
+
+				<div class="site-top">
+					<div class="site-header">
+  <div class="site-header-container">
+    <a class="logo" href="/">
+      <img src="/img/jw-logo-mark-white.svg">
+      <img src="/img/jw-logo-text-white.svg">
+      <span class="developer">Developer</span>
+    </a>
+    <a class="menu-toggle" href="#">Menu</a>
+    <ul class="menu">
+      <li><a class="link" href="https://www.jwplayer.com">Company</a></li>
+      <li><a class="link" href="https://www.jwplayer.com/blog">Blog</a></li>
+      <li><a class="link" href="https://support.jwplayer.com">Support</a></li>
+      <li><a class="link" href="https://dashboard.jwplayer.com">Sign-In</a></li>
+      <li><a class="link" href="/search/"><img class="search-icon" src="//icons.jwplayer.com/icons/white/search.svg" width="15" /></a></li>
+      <li><a class="btn md red" href="https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade">Upgrade</a></li>
+    </ul>
+  </div>
+</div>
+	        <div class="site-secondary-header">
+  <div class="site-secondary-header-container">
+    <div class="site-secondary-header-group">
+      <div class="site-secondary-header-dropdown">
+				<a class="site-secondary-header-dropdown-arrow" href="#"></a>
+				<a href="/jw-player/" class="site-secondary-header-dropdown-link ">JW Player</a>
+        <a href="/jw-platform/" class="site-secondary-header-dropdown-link is-selected">JW Platform</a>
+        <a href="/android-sdk/" class="site-secondary-header-dropdown-link ">Android SDK</a>
+        <a href="/ios-sdk/" class="site-secondary-header-dropdown-link ">iOS SDK</a>
+        <a href="/tools/" class="site-secondary-header-dropdown-link ">Developer Tools</a>
+        <a href="/release-notes/" class="site-secondary-header-dropdown-link">Release Notes</a>
+      </div>
+    </div>
+		
+		
+	      <a href="/jw-platform/docs/delivery-api-reference/">Delivery API</a>      
+	      <a href="/jw-platform/reference/v1/">Management API</a>
+	      <a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
+	      <a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
+		
+		
+		
+		
+  </div>
+</div>
+	        <div class="page-header">
+	<div class="page-label">
+		
+			Feeds Widgets
+		
+	</div>
+	<form class="search" action="../../../search.html" method="get">
+		<input type="search" name="q" placeholder="Search documentation..." />
+	</form>
+</div>
+				</div>
+
+        <div class="site-bottom">
+
+					<div class="site-body">
+
+	          <div class="page">
+
+	            <div class="page-body">
+
+	              <div class="scroll-to-top">
+	<img src="//icons.jwplayer.com/icons/white/change-arrow-up.svg">
+</div>
+
+	              <div class="aside">
+									
+										<ul>
+											
+		                    
+  <li >
+    <a href="../../..">Introduction</a>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Delivery API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../embedding-players/">Embedding Players</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../sources/">Source Selection</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../url-token-signing/">URL Token Signing</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../legacy-url-token-signing/">Legacy Token Signing</a>
+  </li>
+
+      
+        
+  <li class="active">
+    <a href="./">Feeds Widgets</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../playlist-widget-css-reference/">Feeds Widget CSS Reference</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>Management API</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../../management-api/">Overview</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/uploading-videos/">Uploading Videos</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/batch-migration/">Batch Migrations</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/analytics/">Analytics</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../management-api/advertising/">Advertising</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li>
+    
+      <span>JW Showcase Applications</span>
+    
+    <ul>
+      
+        
+  <li >
+    <a href="../../../jw-showcase/web/jw-showcase-for-web/">JW Showcase for Web</a>
+  </li>
+
+      
+        
+  <li >
+    <a href="../../../jw-showcase/apple-tv/jw-showcase-for-apple-tv/">JW Showcase for Apple TV</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+		                  
+		                    
+  <li >
+    <a href="../../../release-notes/">Release Notes</a>
+  </li>
+
+		                  
+										</ul>
+							    
+	              </div>
+
+	              <div class="main">
+	                
+	                  <h1 id="recommended-feeds-widgets">Recommended Feeds Widgets</h1>
+<p>Data-Driven Recommendations from JW Platform leverage audience behavior and content traits to drive deeper audience engagement and increase content monetization. </p>
+<p>Research shows that well positioned page widgets that viewers can see and interact with while watching video are likely to drive even more viewer engagement than in-player recommendations alone. To promote out-of-player viewer engagement, we have designed several page widgets which consume and display data-driven feeds served from JW Platform. The code examples below can be implemented directly and skinned with our <a href="../playlist-widget-css-reference/">CSS Reference</a> or serve as a starting part for more advanced implementations. </p>
+<p>For more information about building and managing data-driven feeds please see our <a href="//developer.jwplayer.com/jw-platform/reference/v1/urls/feeds.html">Platform API Reference</a> and <a href="//support.jwplayer.com/customer/en/portal/articles/2383600-building-managing-data-driven-feeds">customer support article</a>.</p>
+<p><img alt="Feeds Widget" src="../../../images/playlist-widget.png" /></p>
+<h2 id="getting-started">Getting Started</h2>
+<div class="alert important">Recommended feeds must be entitled on your account. Please <a href="https://www.jwplayer.com/contact-us/?utm_source=developer&amp;utm_medium=CTA&amp;utm_campaign=platform-docs">contact our team</a> to add data-drivien recommendations to your JW Player account.</div>
+<p>You can <a href="//developer.jwplayer.com/jw-player/demos/customization/">view the feeds widget demos</a> on our developer site and <a href="//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/">fork the source code</a> from Github. Each widget comes with a README providing instructions to run it locally.</p>
+<h2 id="javascript-widget">JavaScript Widget</h2>
+<h3 id="the-basics">The Basics</h3>
+<p>The JavaScript widget uses jQuery, UnderscoreJS, and Handlebars. In order to modify the widget for your site, you will configure <code>index.html</code> and (optionally) <code>templates/item.hbs</code>. </p>
+<p>The feed classes follow the JW Player skinning model. See our <a href="../playlist-widget-css-reference/">CSS Reference</a> for more information on modifying <code>css/style.css</code> and skinning your widget. </p>
+<p><a href="//developer.jwplayer.com/jw-player/demos/customization/feeds-js/">View the JavaScript Feeds Widget Demo.</a></p>
+<h3 id="setup-your-player">Setup your Player</h3>
+<p>The <code>index.html</code> file dynamically populates the content for <code>&lt;div id="player"&gt;</code> and <code>&lt;div id="feed"&gt;</code>.</p>
+<p>Replace the content library URL at the top of the page with one of your own to setup the player:</p>
+<pre><code class="javascript">&lt;script src=&quot;//cdn.jwplayer.com/libraries/DbXZPMBQ.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking into any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.</p>
+<p><img alt="Dashboard Screenshot" src="../../../images/library-url.png" /></p>
+<h3 id="populate-your-feed">Populate your Feed</h3>
+<p>Look for the following setup function at the bottom of the page:</p>
+<pre><code class="javascript">&lt;script&gt;
+  var playerDiv = &quot;player&quot;, feedDiv = &quot;feed&quot;, feedTitleDiv = &quot;feedtitle&quot;, media_id = &quot;uNXCVIsW&quot;, feed_id = &quot;Xw0oaD4q&quot;;
+  jsWidget.setup(playerDiv, feedDiv, feedTitleDiv, media_id, feed_id);
+&lt;/script&gt;
+</code></pre>
+
+<p>Replace the last two variables in <code>var playerDiv</code> with a <code>media_id</code> and <code>feed_id</code> from your content library. This specifies the content being pulled in to the widget.</p>
+<p>You can find your <code>feed_id</code> using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the <code>feed_id</code> and URL.</p>
+<p><img alt="Dashboard Screenshot" src="../../../images/playlist-dashboard.png" /></p>
+<div class="alert default">The widget is set to injest JSON by default, but both JSON and RSS feeds are supported. The <code>js/feeds_harness.js</code> file contains commented code to implement an RSS parser.</div>
+<p>See the <a href="//developer.jwplayer.com/jw-platform/reference/v1/urls/feeds.html">Platform API Reference</a> for more information on using the <code>feed.rss</code> endpoint programmatically.</p>
+<h3 id="render-your-feed">Render your Feed</h3>
+<p>The <code>templates/item.hbs</code> file is the template object for each piece of content in your feed. It includes <code>id</code>, <code>image</code>, <code>title</code>, <code>desc</code>, and <code>dur</code>. You can use this file to determine which metadata displays in the feed.</p>
+<p>By default, the widget does not display video description in the feed, but you can uncomment <code>&lt;p class="jw-media-description"&gt;{{desc}}&lt;/p&gt;</code> to show it. Try commenting/uncommenting different lines to hide/show their corresponding metadata in your feed.</p>
+<pre><code class="HTML">  &lt;li id={{id}} class=&quot;jw-option&quot;&gt;
+    &lt;div class=&quot;jw-thumbnail-container&quot;&gt;
+      &lt;img class=&quot;jw-thumbnail&quot; src=&quot;{{image}}&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;jw-metadata-container&quot;&gt;
+      &lt;h3 class=&quot;jw-media-title&quot;&gt;{{title}}&lt;/h3&gt;
+      &lt;!--&lt;p class=&quot;jw-media-description&quot;&gt;{{desc}}&lt;/p&gt; --&gt;
+      &lt;time class=&quot;jw-media-duration&quot;&gt;{{dur}}&lt;/time&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+</code></pre>
+
+<h3 id="run-customized-feed-widget">Run Customized Feed Widget</h3>
+<p>Follow the <a href="//github.com/jwplayer/jwdeveloper-demos/tree/master/demos/customization/feeds-js/README.md">README</a> to run your widget locally.</p>
+<h2 id="angular-js-widget">Angular JS Widget</h2>
+<h3 id="the-basics_1">The Basics</h3>
+<p>In order to modify the Angular JS widget for your site, you will configure <code>landing.js</code> and (optionally) <code>feed.html</code>.</p>
+<p>The feed classes follow the JW Player skinning model. See our <a href="/building_your_site/widgets/feeds_widget_css_reference.md">CSS Reference</a> for more information on modifying <code>css/app.css</code> and skinning your widget. </p>
+<p><a href="//developer.jwplayer.com/jw-player/demos/customization/feeds-angular-js/#/feedExample">View the Angular JS Feeds Widget Demo.</a></p>
+<h3 id="setup-your-player_1">Setup your Player</h3>
+<p>The <code>index.html</code> file runs all of the scripts for the page. Replace the content library URL with one of your own:</p>
+<pre><code class="javascript">&lt;script src=&quot;//cdn.jwplayer.com/libraries/DbXZPMBQ.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>You can find your content library URL using the "Manage" tab under "Players" in the Dashboard and clicking in to any player or creating a new player. Our widget player is set up as responsive, 16:9 ratio, autostart, and mute on start.</p>
+<p><img alt="Dashboard Screenshot" src="../../../images/library-url.png" /></p>
+<h3 id="populate-your-feed_1">Populate your Feed</h3>
+<p>The<code>landing/landing.js</code> file initializes the configuration of the Angular app, including feed and player setup. Look for the runonce function at the bottom of the page:</p>
+<pre><code class="javascript">$scope.runonce = function () {
+  $rootScope.feed_id = &quot;Xw0oaD4q&quot;;
+  $rootScope.media_id = &quot;RltV8MtT&quot;;
+  };
+</code></pre>
+
+<p>Replace the two variables in <code>$scope.runonce</code> with a <code>feed_id</code> and <code>media_id</code> from your content library. This specifies the content being pulled into the widget.</p>
+<p>You can find your <code>feed_id</code> using the "Feeds" tab under "Lists" in the Dashboard. When you select a feed title from the list, you can view the <code>feed_id</code> and URL.</p>
+<p><img alt="Dashboard Screenshot" src="../../../images/playlist-dashboard.png" /></p>
+<div class="alert default">The widget is set to injest JSON by default, but both JSON and RSS feeds are supported. You can customize <code>feed.js</code> to implement an RSS parser.</div>
+<h3 id="render-your-feed_1">Render your Feed</h3>
+<p>The <code>feed/feed.html</code> file is the template object for each piece of content in your feed. It includes <code>image</code>, <code>title</code>, <code>description</code>, and <code>duration</code>. You can use this file to determine which metadata displays in the feed.</p>
+<p>By default, the widget does not display video description in the feed, but you can uncomment <code>&lt;p class="jw-media-description"&gt;{{item.description}}&lt;/p&gt;</code> to show it. Try commenting/uncommenting different lines to hide/show their corresponding metadata in your feed.</p>
+<pre><code class="HTML">  &lt;div class=&quot;row jw-option&quot; ng-repeat=&quot;item in feed&quot; ng-click=&quot;loadVideo(item)&quot;&gt;
+      &lt;div class=&quot;jw-thumbnail-container&quot;&gt;
+        &lt;img src=&quot;{{item.image}}&quot; class=&quot;jw-thumbnail&quot;/&gt;
+      &lt;/div&gt;
+
+    &lt;div class=&quot;jw-metadata-container&quot;&gt;
+      &lt;h3 class=&quot;jw-media-title&quot;&gt;{{item.title}}&lt;/h3&gt;
+      &lt;!--&lt;p class=&quot;jw-media-description&quot;&gt;{{item.description}}&lt;/p&gt;--&gt;
+      &lt;p class=&quot;jw-media-duration&quot;&gt;{{toHms(item.sources[0].duration)}}&lt;/p&gt;
+    &lt;/div&gt;
+</code></pre>
+
+<h3 id="run-customized-feed-widget_1">Run Customized Feed Widget</h3>
+<p>The <code>app.js</code> file builds the page from all of the partials. Follow the Developer Demo <a href="//github.com/jwplayer/jwdeveloper-demos/blob/developer-showcase/README.md">README</a> to run your widget locally.</p>
+	                
+	                
+	                  <div class="pagination prev-next">
+	                    
+	                      <a class="btn md" href="../../legacy-url-token-signing/" title="Legacy Token Signing">Previous Page</a>
+	                    
+	                    
+	                      <a class="btn md" href="../playlist-widget-css-reference/" title="Feeds Widget CSS Reference"/>Next Page</a>
+	                    
+	                  </div>
+	                
+	              </div>
+
+	            </div>
+
+	          </div>
+	        </div>
+
+	        <footer class="global-site-footer">
+  <div class="global-site-footer-container">
+    <ul class="global-site-footer-row">
+      <li>
+        <a href="//www.jwplayer.com">
+          <strong>JW Player</strong>
+          <span>Browse our products, company,<br> resources, and pricing</span>
+        </a>
+      </li>
+      <li>
+        <a href="//dashboard.jwplayer.com">
+          <strong>Dashboard</strong>
+          <span>Content, players, analytics,<br> and account management</span>
+        </a>
+      </li>
+      <li>
+        <a class="selected" href="//developer.jwplayer.com">
+          <strong>Developer</strong>
+          <span>Join the community, demos,<br> references, dev guides, and tools.</span>
+        </a>
+      </li>
+      <li>
+        <a href="//support.jwplayer.com">
+          <strong>Support</strong>
+          <span>Search the articles, ask the<br> community, or give feedback</span>
+        </a>
+      </li>
+    </ul>
+    <div class="global-site-footer-row">
+      <p>&copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved.<br>
+        JW Player is a registered trademark.</p>
+      <ul>
+        <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
+        <li><a href="//www.jwplayer.com/privacy/">Privacy Policy</a></li>
+        <li><a href="//www.jwplayer.com/dmca/">DMCA</a></li>
+        <li><a href="//www.jwplayer.com/privacy/#ad-choices">Ad Choices</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../../../js/mkdocs-jwplayer.min.js"></script>
+
+    
+
+  </body>
+</html>
