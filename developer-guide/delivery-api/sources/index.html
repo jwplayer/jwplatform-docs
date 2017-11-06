@@ -274,13 +274,13 @@
 <p>When the <code>sources</code> parameter is used, the Delivery API uses strict filtering to ensure that only requested source(s) are returned. If no sources remain after filtering available sources for those specified in the <code>sources</code> parameter, the entire media item will be removed from the JSON object or RSS feed. If you would prefer to have all ready media items included even if the specified source(s) don't exist, you can use the <code>default_source_fallback</code> parameter with a value of <code>true</code> to instruct the Delivery API to include an available source (all hosted media assets in a <code>ready</code> state have at least one progressive .mp4 source available for streaming).</p>
 <h2 id="examples">Examples</h2>
 <p>A 2 item manual playlist without sources specified (includes all JW Player recommended sources ordered for best playback):
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb</p>
+<a href="https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb">https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb</a></p>
 <p>The same playlist with only the HLS source included:
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls</p>
+<a href="https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls">https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=hls</a></p>
 <p>The same playlist specifying 406p progressive mp4 video (note only one video is included because of strict source selection based on height):
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p</p>
+<a href="https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p">https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p</a></p>
 <p>Again specifying 406p but now allowing for default source fallback to ensure the inclusion of both videos:
-https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&amp;default_source_fallback=true</p>
+<a href="https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&amp;default_source_fallback=true">https://cdn.jwplayer.com/v2/playlists/ZTs6tMfb?sources=406p&amp;default_source_fallback=true</a></p>
 	                
 	                
 	                  <div class="pagination prev-next">
