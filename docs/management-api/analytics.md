@@ -87,7 +87,7 @@ Dimension | dimension_id | Format
 Region | region | custom - string
 City | city | custom - string
 Page URL | page_url | N/A
-Media Tags | tags | N/A
+Media Tags | tag | N/A
 Video Duration | video_duration | custom - string
 
 Metric Name | metric_id | Unit
@@ -106,7 +106,7 @@ Enterprise customers also have the option to enrich their response with addition
 
 dimension_id | Metadata | Metadata description | Response block
 ------------ | ------------- | ------------- | -------------
-media_id | title, tags | media title and tags | includes
+media_id | title, tag | media title and tags | includes
 device_id | name | device ids to names | meta
 country_code | name | country codes(ISO 3166-1) to names | meta
 playlist_id | title, type | playlist title and type | includes
@@ -327,19 +327,19 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 	"includes": [{
 		"type": "media_id",
 		"iD7vAER7": {
-			"tags": ["background", "homepage", "jwplayer", "timelapse"],
+			"tag": ["background", "homepage", "jwplayer", "timelapse"],
 			"title": "Brooklyn Bridge Time Lapse"
 		}
 	}, {
 		"type": "media_id",
 		"EUijQ1Ay": {
-			"tags": ["background", "homepage"],
+			"tag": ["background", "homepage"],
 			"title": "Jellyfish"
 		}
 	}, {
 		"type": "media_id",
 		"oSRD4xzP": {
-			"tags": ["background", "homepage", "smoke"],
+			"tag": ["background", "homepage", "smoke"],
 			"title": "Whiskey Smoke"
 		}
 	}],
