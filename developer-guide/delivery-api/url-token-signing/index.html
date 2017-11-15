@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html class="mkdocs-jwplayer ">
   <head>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,8 +36,7 @@
   <body>
     <div class="site">
 
-				<div class="site-top">
-					<div class="site-header">
+        <div class="site-header">
   <div class="site-header-container">
     <a class="logo" href="/">
       <img src="/img/jw-logo-mark-white.svg">
@@ -56,7 +54,8 @@
     </ul>
   </div>
 </div>
-	        <div class="site-secondary-header">
+
+        <div class="site-secondary-header">
   <div class="site-secondary-header-container">
     <div class="site-secondary-header-group">
       <div class="site-secondary-header-dropdown">
@@ -65,57 +64,46 @@
         <a href="/jw-platform/" class="site-secondary-header-dropdown-link is-selected">JW Platform</a>
         <a href="/android-sdk/" class="site-secondary-header-dropdown-link ">Android SDK</a>
         <a href="/ios-sdk/" class="site-secondary-header-dropdown-link ">iOS SDK</a>
-        <a href="/tools/" class="site-secondary-header-dropdown-link ">Developer Tools</a>
-        <a href="/release-notes/" class="site-secondary-header-dropdown-link">Release Notes</a>
       </div>
     </div>
 		
 		
-	      <a href="/jw-platform/docs/delivery-api-reference/">Delivery API</a>      
-	      <a href="/jw-platform/reference/v1/">Management API</a>
-	      <a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
-	      <a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
-		
+			<a href="/jw-platform/reference/v1/">API Reference</a>
+			<a href="/jw-platform/docs/developer-guide/">Developer Guide</a>
+			<a href="https://github.com/jwplayer/jwdeveloper-platformdemos">API Examples</a>
+			<a href="/jw-platform/docs/developer-guide/release-notes/">Release Notes</a>
 		
 		
 		
   </div>
 </div>
-	        <div class="page-header">
-	<div class="page-label">
-		
-			URL Token Signing
-		
-	</div>
-	<form class="search" action="../../search.html" method="get">
-		<input type="search" name="q" placeholder="Search documentation..." />
-	</form>
-</div>
-				</div>
 
-        <div class="site-bottom">
+        <div class="site-body">
+          <div class="page mkdocs-jwplayer">
 
-					<div class="site-body">
+            <div class="page-header">
+              <div class="page-label">
+                
+                  URL Token Signing
+                
+              </div>
+              <form class="search" action="../../search.html" method="get">
+                <input type="search" name="q" placeholder="Search documentation..." />
+              </form>
+            </div>
 
-	          <div class="page">
+            <div class="page-body">
 
-	            <div class="page-body">
-
-	              <div class="scroll-to-top">
-	<img src="//icons.jwplayer.com/icons/white/change-arrow-up.svg">
-</div>
-
-	              <div class="aside">
-									
-										<ul>
-											
-		                    
+              <div class="aside">
+                <ul>
+                  
+                    
   <li >
     <a href="../..">Introduction</a>
   </li>
 
-		                  
-		                    
+                  
+                    
   <li>
     
       <span>Delivery API</span>
@@ -167,8 +155,8 @@
     </ul>
   </li>
 
-		                  
-		                    
+                  
+                    
   <li>
     
       <span>Management API</span>
@@ -208,8 +196,8 @@
     </ul>
   </li>
 
-		                  
-		                    
+                  
+                    
   <li>
     
       <span>JW Showcase Applications</span>
@@ -231,20 +219,19 @@
     </ul>
   </li>
 
-		                  
-		                    
+                  
+                    
   <li >
     <a href="../../release-notes/">Release Notes</a>
   </li>
 
-		                  
-										</ul>
-							    
-	              </div>
+                  
+                </ul>
+              </div>
 
-	              <div class="main">
-	                
-	                  <h1 id="protecting-your-content-with-url-token-signing">Protecting your content with URL Token Signing</h1>
+              <div class="main">
+                
+                  <h1 id="protecting-your-content-with-url-token-signing">Protecting your content with URL Token Signing</h1>
 <p>Delivery API includes a security feature that allows you to restrict public access to videos or to videos plus players. This feature is enabled in the dashboard. When enabled, content can only be requested by constructing so-called signed links. These links will expire after a short time, preventing unauthorized sharing or leeching of your content.</p>
 <h2 id="enabling-signing-enforcement">Enabling Signing Enforcement</h2>
 <p>You can require URL token signing for assets related to your account through the Management API <a href="https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/update.html">/accounts/update</a> call using the <code>allow_downloads</code> and <code>allow_embeds</code> parameters or via the dashboard as documented in the <a href="https://support.jwplayer.com/customer/en/portal/articles/1433647-jw-player-url-signing">support article</a>.</p>
@@ -343,25 +330,25 @@ print(encoded)
 <p>When unsigned content is requested while signing is enabled, the Delivery API will return a <strong>403 Forbidden</strong> HTTP Status.</p>
 <p>When incorrectly or expired signed content is requested, the content service will also return a <strong>403 Forbidden</strong> HTTP Status. Signed URLs can be incorrect due to a wrong signature or due to an already expired timestamp.</p>
 <p>Note that incorrectly signed URLs will always return a 403. Correctly signed, unexpired URLs will always work. Use this to test your signing mechanism and start using it across your site before enabling the security enforcement in the dashboard.</p>
-	                
-	                
-	                  <div class="pagination prev-next">
-	                    
-	                      <a class="btn md" href="../sources/" title="Source Selection">Previous Page</a>
-	                    
-	                    
-	                      <a class="btn md" href="../legacy-url-token-signing/" title="Legacy Token Signing"/>Next Page</a>
-	                    
-	                  </div>
-	                
-	              </div>
+                
+                
+                  <div class="pagination prev-next">
+                    
+                      <a class="btn md" href="../sources/" title="Source Selection">Previous Page</a>
+                    
+                    
+                      <a class="btn md" href="../legacy-url-token-signing/" title="Legacy Token Signing"/>Next Page</a>
+                    
+                  </div>
+                
+              </div>
 
-	            </div>
+            </div>
 
-	          </div>
-	        </div>
+          </div>
+        </div>
 
-	        <footer class="global-site-footer">
+        <footer class="global-site-footer">
   <div class="global-site-footer-container">
     <ul class="global-site-footer-row">
       <li>
@@ -390,7 +377,7 @@ print(encoded)
       </li>
     </ul>
     <div class="global-site-footer-row">
-      <p>&copy; 2016 - <script>document.write(new Date().getFullYear())</script> | Longtail Ad Solutions, Inc. All Rights Reserved.<br>
+      <p>&copy; 2016 Longtail Ad Solutions, Inc. All Rights Reserved.<br>
         JW Player is a registered trademark.</p>
       <ul>
         <li><a href="//www.jwplayer.com/tos/">Terms of Service</a></li>
@@ -401,8 +388,6 @@ print(encoded)
     </div>
   </div>
 </footer>
-
-        </div>
 
     </div>
 
