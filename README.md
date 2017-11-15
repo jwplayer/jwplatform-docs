@@ -31,3 +31,11 @@ Run `grunt` to for a full build without serving. This may be useful at times bec
 ## CDN Purge
 
 Use the following URL to purge the CDN for release notes: /data/release-notes/jw-platform.json
+
+
+## Linux Setup
+
+- NPM 5.5.1
+- Mkdocs 0.15.1
+- grunt-cli v1.2.0                                           
+- grunt v0.4.5      

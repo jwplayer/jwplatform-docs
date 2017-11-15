@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html class="mkdocs-jwplayer {% if config.extra.singlePage %}mkdocs-jwplayer-single-page{% endif %}">
   <head>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -47,60 +46,58 @@
   <body>
     <div class="site">
 
-				<div class="site-top">
-					{% include "site-header.html" %}
-	        {% include "site-secondary-header.html" %}
-	        {% include "page-header.html" %}
-				</div>
+        {% include "site-header.html" %}
 
-        <div class="site-bottom">
+        {% include "site-secondary-header.html" %}
 
-					<div class="site-body">
+        <div class="site-body">
+          <div class="page mkdocs-jwplayer">
 
-	          <div class="page">
+            <div class="page-header">
+              <div class="page-label">
+                {% if page_title %}
+                  {{ page_title }}
+                {% else %}
+                  {{ site_name }}
+                {% endif %}
+              </div>
+              <form class="search" action="{{ base_url }}/search.html" method="get">
+                <input type="search" name="q" placeholder="Search documentation..." />
+              </form>
+            </div>
 
-	            <div class="page-body">
+            <div class="page-body">
 
-	              {% include "scroll-btn.html" %}
+              <div class="aside">
+                <ul>
+                  {% for nav_item in nav %}
+                    {% include "nav.html" %}
+                  {% endfor %}
+                </ul>
+              </div>
 
-	              <div class="aside">
-									{% if config.extra.singlePage %}
-										<ul class="toc">
-											{% include "toc.html" %}
-										</ul>
-							    {% else %}
-										<ul>
-											{% for nav_item in nav %}
-		                    {% include "nav.html" %}
-		                  {% endfor %}
-										</ul>
-							    {% endif %}
-	              </div>
+              <div class="main">
+                {% block content %}
+                  {{ content }}
+                {% endblock %}
+                {% if next_page or previous_page %}
+                  <div class="pagination prev-next">
+                    {% if previous_page %}
+                      <a class="btn md" href="{{ previous_page.url }}" title="{{ previous_page.title }}">Previous Page</a>
+                    {% endif %}
+                    {% if next_page %}
+                      <a class="btn md" href="{{ next_page.url }}" title="{{ next_page.title }}"/>Next Page</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
 
-	              <div class="main">
-	                {% block content %}
-	                  {{ content }}
-	                {% endblock %}
-	                {% if next_page or previous_page %}
-	                  <div class="pagination prev-next">
-	                    {% if previous_page %}
-	                      <a class="btn md" href="{{ previous_page.url }}" title="{{ previous_page.title }}">Previous Page</a>
-	                    {% endif %}
-	                    {% if next_page %}
-	                      <a class="btn md" href="{{ next_page.url }}" title="{{ next_page.title }}"/>Next Page</a>
-	                    {% endif %}
-	                  </div>
-	                {% endif %}
-	              </div>
+            </div>
 
-	            </div>
-
-	          </div>
-	        </div>
-
-	        {% include "global-site-footer.html" %}
-
+          </div>
         </div>
+
+        {% include "global-site-footer.html" %}
 
     </div>
 
