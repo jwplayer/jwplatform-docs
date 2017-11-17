@@ -1,4 +1,4 @@
-# JW Platform Docs
+# JW Platform Developer Guide
 
 ## Developing Locally
 
