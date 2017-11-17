@@ -39,3 +39,7 @@ Use the following URL to purge the CDN for release notes: /data/release-notes/jw
 - Mkdocs 0.15.1
 - grunt-cli v1.2.0                                           
 - grunt v0.4.5      
+
+## Release Notes Build Process
+
+![Release Notes Build Process](release-notes-build.png)
