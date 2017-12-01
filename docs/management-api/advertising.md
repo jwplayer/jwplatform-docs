@@ -264,7 +264,7 @@ total | string | NO |
 
 ## Retrieve an advertising schedule
 ### GET
-`/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+`/sites/{site_id}/advertising/schedules/{ad_schedule_id}/`
 
 Retrieves an advertising schedule
 
@@ -383,7 +383,7 @@ error.description | string
 
 ## Patch an advertising schedule
 ### PATCH
-`/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+`/sites/{site_id}/advertising/schedules/{ad_schedule_id}/`
 
 Patches an advertising schedule
 
@@ -568,7 +568,7 @@ error.description | string
 
 ## Delete an advertising schedule
 ### DELETE
-`/sites/{site_id}/advertising/schedules/{ad_schedule_id}`
+`/sites/{site_id}/advertising/schedules/{ad_schedule_id}/`
 
 Deletes an advertising schedule
 
@@ -636,4 +636,3 @@ error.description | string
   }
 }
 ```
-
