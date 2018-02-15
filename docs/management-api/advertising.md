@@ -53,9 +53,11 @@ metadata.breaks.tags | Array of string | YES
 metadata.breaks.offset | string | YES
 metadata.breaks.skipoffset | integer | NO
 metadata.breaks.type | string | YES
-
-
-
+metadata.bids.bidders | Array of bidders | NO
+metadata.bids.bidders.name | Bidder Name | YES
+metadata.bids.bidders.id | Bidder ID | YES
+metadata.bids.settings.mediationLayerAdServer | string | YES
+metadata.bids.settings.floorPriceCents | integer | NO
 
 ### Request samples:
 
@@ -73,6 +75,18 @@ metadata.breaks.type | string | YES
         "type": "linear"
       }
     ],
+    "bids": {
+      "settings": {
+        "mediationLayerAdServer": "jwp",
+        "floorPriceCents": 10000
+      },
+      "bidders": [
+        {
+          "name": "SpotX",
+          "id": 123456
+        }
+      ]
+    },
     "client": "vast",
     "is_vmap": false,
     "vpaidmode": "secure"
@@ -100,7 +114,12 @@ metadata.breaks | Array of object | YES |
 metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
-metadata.breaks.type | string | YES
+metadata.breaks.type | string | YES |
+metadata.bids.bidders | Array of bidders | NO |
+metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+metadata.bids.bidders.id | Bidder ID | YES | 
+metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+metadata.bids.settings.floorPriceCents | integer | NO |
 
 ### Response samples:
 
@@ -124,6 +143,18 @@ metadata.breaks.type | string | YES
         "type": "linear"
       }
     ],
+    "bids": {
+      "settings": {
+        "mediationLayerAdServer": "jwp",
+        "floorPriceCents": 10000
+      },
+      "bidders": [
+        {
+          "name": "SpotX",
+          "id": 123456
+        }
+      ]
+    },
     "client": "vast",
     "is_vmap": false,
     "vpaidmode": "secure",
@@ -199,6 +230,11 @@ metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
 metadata.breaks.type | string | YES |
+metadata.bids.bidders | Array of bidders | NO |
+metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+metadata.bids.bidders.id | Bidder ID | YES | 
+metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+metadata.bids.settings.floorPriceCents | integer | NO |
 
 ## Response samples:
 ### 200 OK
@@ -231,6 +267,18 @@ metadata.breaks.type | string | YES |
       }
     }
   ],
+  "bids": {
+    "settings": {
+      "mediationLayerAdServer": "jwp",
+      "floorPriceCents": 10000
+    },
+    "bidders": [
+      {
+        "name": "SpotX",
+        "id": 123456
+      }
+    ]
+  },
   "page": 1,
   "page_length": 10,
   "total": 4
@@ -258,6 +306,11 @@ schedules.metadata.breaks.tags | Array of string | YES |
 schedules.metadata.breaks.offset | string | YES |
 schedules.metadata.breaks.skipoffset | integer | NO |
 schedules.metadata.breaks.type | string | YES |
+schedules.metadata.bids.bidders | Array of bidders | NO |
+schedules.metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+schedules.metadata.bids.bidders.id | Bidder ID | YES | 
+schedules.metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+schedules.metadata.bids.settings.floorPriceCents | integer | NO |
 page_length | string | NO |
 page | string | NO |
 total | string | NO |
@@ -297,6 +350,18 @@ ad_schedule_id | string | YES | The unique 8 character identifier for the ad sch
         "type": "linear"
       }
     ],
+    "bids": {
+      "settings": {
+        "mediationLayerAdServer": "jwp",
+        "floorPriceCents": 10000
+      },
+      "bidders": [
+        {
+          "name": "SpotX",
+          "id": 123456
+        }
+      ]
+    },
     "client": "vast",
     "is_vmap": false,
     "vpaidmode": "secure",
@@ -326,6 +391,11 @@ schedules.metadata.breaks.tags | Array of string | YES |
 schedules.metadata.breaks.offset | string | YES |
 schedules.metadata.breaks.skipoffset | integer | NO |
 schedules.metadata.breaks.type | string | YES |
+schedules.metadata.bids.bidders | Array of bidders | NO |
+schedules.metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+schedules.metadata.bids.bidders.id | Bidder ID | YES | 
+schedules.metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+schedules.metadata.bids.settings.floorPriceCents | integer | NO |
 
 #### 403 Forbidden
 
@@ -408,6 +478,11 @@ metadata.breaks.tags | Array of string | YES
 metadata.breaks.offset | string | YES
 metadata.breaks.skipoffset | integer | NO
 metadata.breaks.type | string | YES
+metadata.bids.bidders | Array of bidders | NO |
+metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+metadata.bids.bidders.id | Bidder ID | YES | 
+metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+metadata.bids.settings.floorPriceCents | integer | NO |
 
 ## Request samples:
 
@@ -425,6 +500,18 @@ metadata.breaks.type | string | YES
         "type": "linear"
       }
     ],
+    "bids": {
+      "settings": {
+        "mediationLayerAdServer": "jwp",
+        "floorPriceCents": 10000
+      },
+      "bidders": [
+        {
+          "name": "SpotX",
+          "id": 123456
+        }
+      ]
+    },
     "client": "vast",
     "is_vmap": false,
     "vpaidmode": "secure"
@@ -455,6 +542,11 @@ metadata.breaks.tags | Array of string | YES |
 metadata.breaks.offset | string | YES |
 metadata.breaks.skipoffset | integer | NO |
 metadata.breaks.type | string | YES
+metadata.bids.bidders | Array of bidders | NO |
+metadata.bids.bidders.name | Bidder Name | YES | Valid values 'SpotX'
+metadata.bids.bidders.id | Bidder ID | YES | 
+metadata.bids.settings.mediationLayerAdServer | string | YES | Valid values 'jwp', 'dfp'
+metadata.bids.settings.floorPriceCents | integer | NO |
 
 **Response sample**
 
@@ -477,6 +569,18 @@ metadata.breaks.type | string | YES
         "type": "linear"
       }
     ],
+    "bids": {
+      "settings": {
+        "mediationLayerAdServer": "jwp",
+        "floorPriceCents": 10000
+      },
+      "bidders": [
+        {
+          "name": "SpotX",
+          "id": 123456
+        }
+      ]
+    },
     "client": "vast",
     "is_vmap": false,
     "vpaidmode": "secure",
