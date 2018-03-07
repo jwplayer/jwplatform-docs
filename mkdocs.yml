@@ -13,8 +13,6 @@ pages:
       - Source Selection: 'delivery-api/sources.md'
       - URL Token Signing: 'delivery-api/url-token-signing.md'
       - Legacy Token Signing: 'delivery-api/legacy-url-token-signing.md'
-      - Feeds Widgets: 'delivery-api/widgets/playlist-widgets.md'
-      - Feeds Widget CSS Reference: 'delivery-api/widgets/playlist-widget-css-reference.md'
     - Management API:
       - Overview: 'management-api/index.md'
       - Uploading Videos: 'management-api/uploading-videos.md'
