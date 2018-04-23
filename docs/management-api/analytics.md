@@ -190,6 +190,10 @@ Body:
 
 ## Examples
 
+The following examples show how to use the API using [cURL](https://en.wikipedia.org/wiki/CURL) and a terminal console.
+
+Check out the [Github Repository](https://github.com/jwplayer/jwdeveloper-platformdemos/tree/master/analytics-api-samples) for Analytics API examples in PHP and Python.
+
 ###Example 1 (Curl) request:
 
 **Summary:** Total Plays for each media id for a given date range.
