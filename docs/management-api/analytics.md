@@ -4,6 +4,10 @@ The JW Player Analytics endpoint allows you to access your Video and Advertising
 
 ## Getting Started
 
+Check out the [Github Repository](https://github.com/jwplayer/jwdeveloper-platformdemos/tree/master/analytics-api-samples) for Analytics API examples in PHP and Python.
+
+To make Analytics Queries within an Active Google Sheet, make a copy of this [Sheet](https://docs.google.com/spreadsheets/d/1eCeaeolhxn66mX2bmGChgoeDUi-lttru8WPNENvCwoE/edit?usp=sharing).  To see the API in action within the Sheet, click 'Tools | Script Editor'.
+
 [**Skip to API Examples**](#examples)
 
 ### Obtaining your Site API Key & Secret
