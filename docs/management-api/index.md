@@ -3,7 +3,7 @@
 The JW Platform Management API at api.jwplatform.com provides a set of classes for managing all aspects of your library. The JW Platform Management API features a straightforward authentication mechanism and multiple output formats (PHP, JSON, XML, Python). This reference describes in detail how our API works and which classes and assets are available. 
 
 !!!warning
-To ensure fair access for all, usage of the JW Platform Management API (api.jwplatform.com) is limited to **60 calls per minute**. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. If you need a higher API rate, please [contact us](https://www.jwplayer.com/contact-us/?utm_source=developer&utm_medium=CTA&utm_campaign=platform-docs) to get your account upgraded. Note that calls to the Delivery API (cdn.jwplayer.com) do not count towards the API rate limit.
+To ensure fair access for all, usage of the JW Platform Management API (api.jwplatform.com) is limited to **60 calls per minute** for most routes. The `/videos/list` route is limited to **30 calls per minute**. Calls that exceed this rate will result in a 429 Rate Limit Exceeded error and will not be executed. If you need a higher API rate, please [contact us](https://www.jwplayer.com/contact-us/?utm_source=developer&utm_medium=CTA&utm_campaign=platform-docs) to get your account upgraded. Note that calls to the Delivery API (cdn.jwplayer.com) do not count towards the API rate limit.
 !!!
 
 ## JW Player Provided API Kits and Tools
