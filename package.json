@@ -7,6 +7,7 @@
     "grunt-mkdocs-jwplayer": "github:jwplayer/grunt-mkdocs-jwplayer"
   },
   "dependencies": {
+    "npm": "^5.8.0",
     "peer": "^0.2.8"
   },
   "peerdependencies": {
