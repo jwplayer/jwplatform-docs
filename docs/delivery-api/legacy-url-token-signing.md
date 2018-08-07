@@ -4,7 +4,7 @@ The legacy (v1) Delivery API endpoints include a similar a security feature to [
 
 ## Enabling Signing Enforcement
 
-You can require URL token signing for assets related to your account through the Management API [/accounts/update](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/update.html) call using the `allow_downloads` and `allow_embeds` parameters or via the dashboard as documented in the [support article](https://support.jwplayer.com/customer/en/portal/articles/1433647-jw-player-url-signing).
+You can require URL token signing for assets related to your account through the Management API [/accounts/update](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/update.html) call using the `allow_downloads` and `allow_embeds` parameters or via the dashboard as documented in the [support article](https://support.jwplayer.com/articles/how-to-enable-url-token-signing).
 
 !!!warning
 Please make sure you start to use signing on your site before changing this security setting! Unsigned videos and/or players will **drop dead** the instant you change this setting.
