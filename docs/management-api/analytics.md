@@ -199,6 +199,16 @@ In addition to the functionality described in the rest of this doc, Enterprise c
 		<td>video_duration</td>
 		<td>custom - string</td>
 	</tr>
+	<tr>
+		<td>Play Reason</td>
+		<td>play_reason</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Is First Play</td>
+		<td>is_first_play</td>
+		<td>boolean - string</td>
+	</tr>
 </table>
 
 ### Metrics
