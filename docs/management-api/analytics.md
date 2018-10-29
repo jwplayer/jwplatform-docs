@@ -41,32 +41,112 @@ The following rules apply to all JW Player users.  Users with access to our Ente
 
 A metric is a quantitative measurement.  Visit our [support doc](https://support.jwplayer.com/customer/portal/articles/2142460-using-jw-player-analytics) to learn more about how each metric is defined.  The following metrics are currently supported for all JW Player customers:
 
-Metric Name | metric_id | Units
------------- | ------------ | -------------
-Embeds | embeds | integer
-Plays | plays | integer
-Completes | completes | integer
-Time Watched | time_watched | integer
-Ad Impressions | ad_impressions | integer
-25% Completes | 25_percent_completes | integer
-50% Completes | 50_percent_completes | integer
-75% Completes | 75_percent_completees | integer
+<table>
+	<tr>
+		<th style="width:33%">Metric Name</th>
+		<th style="width:33%">metric_id</th>
+		<th style="width:33%">Units</th>
+	</tr>
+	<tr>
+		<td>Embeds</td>
+		<td>embeds</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Plays</td>
+		<td>plays</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Completes</td>
+		<td>completes</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Time Watched</td>
+		<td>time_watched</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Ad Impressions</td>
+		<td>ad_impressions</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>25% Completes</td>
+		<td>25_percent_completes</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>50% Completes</td>
+		<td>50_percent_completes</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>75% Completes</td>
+		<td>75_percent_completes</td>
+		<td>integer</td>
+	</tr>
+</table>
+
 
 ### Dimensions
 
 A dimension is an attribute of your metric(s).  For example, each Play event has several attributes that help describe it.  We determine what Country it took place in, what Video it was for, what device was used, etc.  Selecting a dimension will tell us how the metrics grouped in your response.  The following dimensions are currently supported for all JW Player customers:
 
-Dimension | dimension_id | Format
------------- | ------------- | -------------
-Eastern Date | eastern_date | 'yyyy-mm-dd'
-Media | media_id | media_id
-Device | device_id | custom - string
-Country | country_code | ISO 3166-1
-Playlist | playlist_id | playlist_id
-Platform | platform_id | custom - string
-Player | player_id | player_id
-Ad Schedule | ad_schedule_id | ad_schedule_id
-Page Domain | page_domain | N/A
+<table>
+	<tr>
+		<th style="width:33%">Dimension</th>
+		<th style="width:33%">dimension_id</th>
+		<th style="width:33%">Format</th>
+	</tr>
+	<tr>
+		<td>Eastern Date</td>
+		<td>eastern_date</td>
+		<td>'yyyy-mm-dd'</td>
+	</tr>
+	<tr>
+		<td>Media</td>
+		<td>media_id</td>
+		<td>media_id</td>
+	</tr>
+	<tr>
+		<td>Device</td>
+		<td>device_id</td>
+		<td>custom - string</td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>country_code</td>
+		<td>ISO 3166-1</td>
+	</tr>
+	<tr>
+		<td>Playlist</td>
+		<td>playlist_id</td>
+		<td>playlist_id</td>
+	</tr>
+	<tr>
+		<td>Platform</td>
+		<td>platform_id</td>
+		<td>custom - string</td>
+	</tr>
+	<tr>
+		<td>Player</td>
+		<td>player_id</td>
+		<td>player_id</td>
+	</tr>
+	<tr>
+		<td>Ad Schedule</td>
+		<td>ad_schedule_id</td>
+		<td>ad_schedule_id</td>
+	</tr>
+	<tr>
+		<td>Page Domain</td>
+		<td>page_domain</td>
+		<td>N/A</td>
+	</tr>
+</table>
+
 
 ### Filters (optional)
 
@@ -86,24 +166,100 @@ In addition to the functionality described in the rest of this doc, Enterprise c
 * **Apply up to 10 filters**
 * **Use the following dimensions and metrics**
 
-Dimension | dimension_id | Format
------------- | ------------- | -------------
-Region | region | custom - string
-City | city | custom - string
-Page URL | page_url | N/A
-Media Tags | tag | N/A
-Video Duration | video_duration | custom - string
+### Dimensions
 
-Metric Name | metric_id | Unit
------------- | ------------ | -------------
-Ad Clicks | ad_clicks | integer
-Ad Skips | ad_skips | integer
-Ad Completes | ad_completes | integer
-Unique Viewers | unique_viewers | integer
-Ad Impressions per Viewer | ads_per_viewer | total / viewer
-Plays per Viewer | plays_per_viewer | total / viewer
-Time watched per viewer | time_watched_per_viewer | seconds / viewer
-Complete Rate | complete_rate | percent
+<table>
+	<tr>
+		<th style="width:33%">Dimension</th>
+		<th style="width:33%">dimension_id</th>
+		<th style="width:33%">Format</th>
+	</tr>
+	<tr>
+		<td>Region</td>
+		<td>region</td>
+		<td>custom - string</td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>city</td>
+		<td>custom - string</td>
+	</tr>
+	<tr>
+		<td>Page URL</td>
+		<td>page_url</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td>Media Tags</td>
+		<td>tag</td>
+		<td>N/A</td>
+	</tr>
+	<tr>
+		<td>Video Duration</td>
+		<td>video_duration</td>
+		<td>custom - string</td>
+	</tr>
+	<tr>
+		<td>Play Reason</td>
+		<td>play_reason</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Is First Play</td>
+		<td>is_first_play</td>
+		<td>boolean - string</td>
+	</tr>
+</table>
+
+### Metrics
+
+<table>
+	<tr>
+		<th style="width:33%">Metric</th>
+		<th style="width:33%">metric_id</th>
+		<th style="width:33%">Unit</th>
+	</tr>
+	<tr>
+		<td>Ad Clicks</td>
+		<td>ad_clicks</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Ad Skips</td>
+		<td>ad_skips</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Ad Completes</td>
+		<td>ad_completes</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Unique Viewers</td>
+		<td>unique_viewers</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Ad Impressions per Viewer</td>
+		<td>ads_per_viewer</td>
+		<td>total / viewer</td>
+	</tr>
+	<tr>
+		<td>Plays per Viewer</td>
+		<td>plays_per_viewer</td>
+		<td>total / viewer</td>
+	</tr>
+	<tr>
+		<td>Time watched per viewer</td>
+		<td>time_watched_per_viewer</td>
+		<td>seconds / viewer</td>
+	</tr>
+	<tr>
+		<td>Complete Rate</td>
+		<td>complete_rate</td>
+		<td>percent</td>
+	</tr>
+</table>
 
 
 Enterprise customers also have the option to enrich their response with additional metadata (instead of just obtaining JW Platform IDs).  This is available for the dimensions listed below, and can be enabled by adding `"include_metadata": "1"` to the request.
