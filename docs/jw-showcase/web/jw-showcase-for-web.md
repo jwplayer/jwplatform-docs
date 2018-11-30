@@ -3,7 +3,7 @@
 _Last Updated: November 30, 2018_
 
 !!!warning
-JW Player has deprecated support for JW Showcase for Apple TV
+JW Player has deprecated support for JW Showcase for Apple TV.
 !!!
 
 JW Showcase is a sample application that leverages playlists from JW Platform to distribute your content across platforms. This guide will provide instructions for getting set up with our web app.
