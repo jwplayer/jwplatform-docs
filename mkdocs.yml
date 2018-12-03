@@ -19,7 +19,6 @@ pages:
       - Batch Migrations: 'management-api/batch-migration.md'
       - Analytics: 'management-api/analytics.md'
       - Advertising: 'management-api/advertising.md'
-    - JW Showcase Applications:
+    - JW Showcase:
       - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
-      - JW Showcase for Apple TV: 'jw-showcase/apple-tv/jw-showcase-for-apple-tv.md'
     - Release Notes: 'release-notes.md'
