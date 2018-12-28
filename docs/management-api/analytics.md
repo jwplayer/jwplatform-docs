@@ -18,7 +18,7 @@ Each request to the Analytics API is for a specific JW Player property (or site)
 
 You can find each property’s key in your JW Player dashboard by navigating to **Account > API Credentials** and clicking **Show Credentials** for the relevant property.
 
-To find your secret, you'll find **JW Reporting API Credentials** at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.
+To find your reporting secret, you'll find **JW Reporting API Credentials** at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.
 
 !!!warning
 The property API secret will not work for this endpoint - you must use the secret specific to the Reporting API.
@@ -362,7 +362,7 @@ Check out the [Github Repository](https://github.com/jwplayer/jwdeveloper-platfo
 
 ```curl
 curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \
- -H 'Authorization: {report secret}' \
+ -H 'Authorization: {reporting secret}' \
  -H 'Content-Type: application/json' \
  -d '{"start_date" : "2017-06-01", "end_date" : "2017-06-02", "dimensions" : ["media_id"], "metrics" : [{"operation": "sum", "field": "plays"}], "sort" : [{"field" : "plays", "order": "DESCENDING"}]}'
 ```
