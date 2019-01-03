@@ -1,14 +1,14 @@
 {
   "name": "jwplatform-docs",
   "devDependencies": {
-    "grunt": "^0.4.4",
+    "grunt": "^1.0.3",
     "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-mkdocs-jwplayer": "github:jwplayer/grunt-mkdocs-jwplayer"
   },
   "dependencies": {
-    "npm": "^5.8.0",
-    "peer": "^0.2.8"
+    "npm": "^6.5.0",
+    "peer": "^0.2.10"
   },
   "peerdependencies": {
     "grunt": "^0.4.0"

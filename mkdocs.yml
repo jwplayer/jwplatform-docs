@@ -22,3 +22,5 @@ pages:
     - JW Showcase:
       - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
     - Release Notes: 'release-notes.md'
+markdown_extensions:
+   - markdown_fenced_code_tabs
