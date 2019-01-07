@@ -1,5 +1,7 @@
 # Analytics
 
+<sup>Last Updated: January 19, 2019</sup>
+
 The JW Player Analytics endpoint allows you to access your Video and Advertising data programmatically.  This way, JW Player users are able to pull JW Player data into their own application, data warehouse, or analytics tools.  If you're looking for reports and visualizations to analyze your data, you can use the JW Player Dashboard.
 
 ## Getting Started
@@ -10,16 +12,16 @@ To make Analytics Queries within an Active Google Sheet, make a copy of this [Sh
 
 [**Skip to API Examples**](#examples)
 
-### Obtaining your Site API Key & Secret
+### Obtaining your Property Key & Reporting API Secret
 
-Each request to the Analytics API is for a specific JW Player site (or property) within your account.  To query data for one of your JW Player sites, you will need to obtain your site API key.
+Each request to the Analytics API is for a specific JW Player property (or site) within your account.  To query data for one of your JW Player properties, you will need to obtain your property key.
 
-You can find each property’s API Key in the JW Player Dashboard by navigating to Account > API Credentials and clicking "Show Credentials" for the relevant site.
+You can find each property’s key in your JW Player dashboard by navigating to **Account > API Credentials** and clicking **Show Credentials** for the relevant property.
 
-To find your secret, you'll find JW Reporting API Credentials at the bottom of the api credentials page.  You may need to first create a Private API key here if you have not already.
+To find your reporting secret, you'll find **JW Reporting API Credentials** at the bottom of the API credentials page.  You may need to first create a Private API key here if you have not already.
 
 !!!warning
-The property api secret will not work for this endpoint - you must use the secret specific to the Reporting API
+The property API secret will not work for this endpoint - you must use the secret specific to the Reporting API.
 !!!
 
 ## API Rules
@@ -281,7 +283,7 @@ city | name | 	city ids to names | meta
 
 ### Request Format
 
-Route: `https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/`
+Route: `https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/`
 
 Body:
 ```json
@@ -359,8 +361,8 @@ Check out the [Github Repository](https://github.com/jwplayer/jwdeveloper-platfo
 **Summary:** Total Plays for each media id for a given date range.
 
 ```curl
-curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
- -H 'Authorization: {site token secret}' \
+curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \
+ -H 'Authorization: {reporting secret}' \
  -H 'Content-Type: application/json' \
  -d '{"start_date" : "2017-06-01", "end_date" : "2017-06-02", "dimensions" : ["media_id"], "metrics" : [{"operation": "sum", "field": "plays"}], "sort" : [{"field" : "plays", "order": "DESCENDING"}]}'
 ```
@@ -399,8 +401,8 @@ curl -X POST https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/
 **Summary:** Embeds for each country code for a given date range (for the top two countries).  Filter: only for Desktop.
 
 ```json
-POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
--H 'Authorization: {site token secret}' \
+POST: https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \
+-H 'Authorization: {reporting secret}' \
 -d {
 	"start_date": "2017-06-01",
 	"end_date": "2017-06-02",
@@ -460,8 +462,8 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 **Summary:** Total Plays and Embeds by device, for a given date range (title and tag metadata included)
 
 ```json
-POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
--H 'Authorization: {site token secret}' \
+POST: https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \
+-H 'Authorization: {reporting secret}' \
 -d
 {
 	"start_date": "2017-02-01",
@@ -532,3 +534,26 @@ POST: https://api.jwplayer.com/v2/sites/{site api key}/analytics/queries/ \
 	}
 }
 ```
+
+
+<br/><br/>
+<div id="wufoo-mff60sc1xnn4cu">
+Use this <a href="https://jwplayerdocs.wufoo.com/forms/mff60sc1xnn4cu">form</a> to provide your feedback.
+</div>
+<script type="text/javascript">var mff60sc1xnn4cu;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'jwplayerdocs',
+'formHash':'mff60sc1xnn4cu',
+'autoResize':true,
+'height':'288',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true,
+'defaultValues': 'field118=' + location.pathname};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { mff60sc1xnn4cu = new WufooForm();mff60sc1xnn4cu.initialize(options);mff60sc1xnn4cu.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
