@@ -1,6 +1,6 @@
 # Analytics
 
-<sup>Last Updated: January 19, 2019</sup>
+<sup>Last Updated: January 23, 2019</sup>
 
 The JW Player Analytics endpoint allows you to access your Video and Advertising data programmatically.  This way, JW Player users are able to pull JW Player data into their own application, data warehouse, or analytics tools.  If you're looking for reports and visualizations to analyze your data, you can use the JW Player Dashboard.
 
