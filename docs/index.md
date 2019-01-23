@@ -1,6 +1,6 @@
 # Welcome to the JW Platform Developer Guide
 <img align="right" src=images/JWPlatformDiagram.png>
-The JW Platform Developer guide provides guidance, recommendations and examples for how you can integrate programmatically with JW Platform. 
+The JW Platform Developer guide provides guidance, recommendations and examples for how you can integrate programmatically with JW Platform.
 
 ## Getting Started - A tale of two APIs
 

@@ -1,11 +1,12 @@
 site_name: JW Platform Developer Guide
-theme: jwplayer
+theme:
+  name: null
+  custom_dir: node_modules/mkdocs-jwplayer/jwplayer
 extra:
   product: platform
 site_dir: developer-guide
 repo_url: https://github.com/jwplayer/jwplatform-docs
-site_favicon: http://www.jwplayer.com/wp-content/themes/jwplayer-20/assets/images/favicon.ico
-pages:
+nav:
     - Introduction: 'index.md'
     - Delivery API:
       - Overview: 'delivery-api/index.md'
