@@ -1,6 +1,6 @@
 #Getting Started with JW Showcase for Web
 
-<sup>_Last Updated: December 5, 2018_</sup>
+<sup>Last Updated: December 5, 2018</sup>
 
 !!!warning
 JW Player has deprecated support for JW Showcase for Apple TV.
