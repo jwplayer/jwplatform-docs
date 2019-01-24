@@ -1,6 +1,6 @@
 #Getting Started with JW Showcase for Web
 
-<sup>_Last Updated: December 5, 2018_</sup>
+<sup>Last Updated: December 5, 2018</sup>
 
 !!!warning
 JW Player has deprecated support for JW Showcase for Apple TV.
@@ -33,7 +33,7 @@ Install project dependencies for Bower and Node:
 
 Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “**app**” folder.
 
-![JW Showcase Config](/images/text-editor-config-json.png)
+![JW Showcase Config](../../images/text-editor-config-json.png)
 
 Here you’ll need to replace the sample “**player**”, “**featuredPlaylist**”, and “**playlists**” with media ids from your library within the JW Player dashboard.
 
@@ -55,11 +55,11 @@ Here you’ll need to replace the sample “**player**”, “**featuredPlaylist
 
 To locate your player ID, navigate to “**Tools**” under the “**Players**” section of the dashboard.
 
-![JW Dashboard Tools](/images/dashboard-tools.png)
+![JW Dashboard Tools](../../images/dashboard-tools.png)
 
 Select the player you wish to use for your app under “**Cloud Hosted Player Libraries**”. The library URL for that player will contain your player ID.
 
-![JW Player Library](/images/cloud-hosted-player-library.png)
+![JW Player Library](../../images/cloud-hosted-player-library.png)
 
 Replace the ID in the config.json file with your own, ie:
 
@@ -67,11 +67,11 @@ Replace the ID in the config.json file with your own, ie:
 
 Next, to set your “**featured playlist**” and “**playlists**” for the app, navigate to “**Curated**” under the “**Playlists**” section of the dashboard.
 
-![JW Dashboard Playlists](/images/dashboard-playlists.png)
+![JW Dashboard Playlists](../../images/dashboard-playlists.png)
 
 Click into any playlist you wish to feature in your app and grab the playlist ID from the top of the playlist detail page.
 
-![JW Playlists ID](/images/playlist-id.png)
+![JW Playlists ID](../../images/playlist-id.png)
 
 Replace the “**featuredPlaylist**” and “**playlists**” IDs in the config.json file, ie:
 
@@ -94,7 +94,7 @@ In the config.json file, you can choose between a “**light**” and “**dark*
 
 To use your own logo, simply replace the “logo.png” file in the “images” folder with your own.
 
-![JW Showcase logo](/images/text-editor-logo.png)
+![JW Showcase logo](../../images/text-editor-logo.png)
 
 ##Advanced Customization
 
@@ -102,13 +102,13 @@ To use your own logo, simply replace the “logo.png” file in the “images”
 
 The JW Showcase app is built from “views” located within the app folder of the project. Here you can modify the default HTML of the header and footer of the app. 
 
-![JW Showcase views](/images/text-editor-views.png)
+![JW Showcase views](../../images/text-editor-views.png)
 
 ###Custom CSS
 
 The JW Showcase app uses SASS to compile a master css file from partial sass files located in “styles” within the app folder of the project. Custom css can be added to the header.scss and footer.scss files located in the “components” folder within “styles”.
 
-![JW Showcase styles](/images/text-editor-styles.png)
+![JW Showcase styles](../images/text-editor-styles.png)
 
 ##Building Your App
 
@@ -124,6 +124,6 @@ To launch your app locally, run the command:
 
 After your app has been built and tested, you can use any FTP client (ie. Cyberduck) to upload only the files within the “dist” folder onto your own web server.
 
-![JW Showcase ftp upload](/images/ftp-file-upload.png)
+![JW Showcase ftp upload](../images/ftp-file-upload.png)
 
 
