@@ -108,7 +108,7 @@ The JW Showcase app is built from “views” located within the app folder of t
 
 The JW Showcase app uses SASS to compile a master css file from partial sass files located in “styles” within the app folder of the project. Custom css can be added to the header.scss and footer.scss files located in the “components” folder within “styles”.
 
-![JW Showcase styles](../images/text-editor-styles.png)
+![JW Showcase styles](../../images/text-editor-styles.png)
 
 ##Building Your App
 
@@ -124,6 +124,6 @@ To launch your app locally, run the command:
 
 After your app has been built and tested, you can use any FTP client (ie. Cyberduck) to upload only the files within the “dist” folder onto your own web server.
 
-![JW Showcase ftp upload](../images/ftp-file-upload.png)
+![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
 
