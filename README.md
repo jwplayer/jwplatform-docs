@@ -5,14 +5,14 @@
 #### Install [MkDocs](http://www.mkdocs.org/)
 
 ```
-$ pip install mkdocs==0.16.3 --upgrade
-$ pip install git+ssh://git@github.com/jwplayer/mkdocs-jwplayer --upgrade --force-reinstall
+$ pip install mkdocs
+$ pip install markdown-fenced-code-tabs
 ```
 
 #### Install Node modules:
 
 ```
-$ npm install
+$ yarn install
 ```
 
 #### Install Grunt globally:
@@ -24,6 +24,7 @@ $ npm install grunt -g cli
 #### Run Grunt and serve via localhost:
 
 ```
+$ mkdocs build
 $ grunt serve
 ```
 

@@ -2,6 +2,8 @@ site_name: JW Platform Developer Guide
 theme:
   name: null
   custom_dir: node_modules/mkdocs-jwplayer/jwplayer
+  include_search_page: true
+  search_index_only: false
 extra:
   product: platform
 site_dir: developer-guide
