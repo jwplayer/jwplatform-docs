@@ -1,6 +1,6 @@
 # Analytics
 
-<sup>Last Updated: January 23, 2019</sup>
+<sup>Last Updated: February 13, 2019</sup>
 
 The JW Player Analytics endpoint allows you to access your Video and Advertising data programmatically.  This way, JW Player users are able to pull JW Player data into their own application, data warehouse, or analytics tools.  If you're looking for reports and visualizations to analyze your data, you can use the JW Player Dashboard.
 
@@ -146,6 +146,11 @@ A dimension is an attribute of your metric(s).  For example, each Play event has
 		<td>Page Domain</td>
 		<td>page_domain</td>
 		<td>N/A</td>
+	</tr>
+	<tr>
+		<td>Browser</td>
+		<td>browser</td>
+		<td>custom - string</td>
 	</tr>
 </table>
 
