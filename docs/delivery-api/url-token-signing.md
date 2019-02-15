@@ -1,6 +1,6 @@
 # Protecting your content with URL Token Signing
 
-<sup>Last Updated: February 28, 2019</sup>
+<sup>Last Updated: February 15, 2019</sup>
 
 Delivery API includes a security feature that allows you to restrict public access to videos or to videos plus players. This feature is enabled in the dashboard. When enabled, content can only be requested by constructing so-called signed links. These links will expire after a short time, preventing unauthorized sharing or leeching of your content.
 
