@@ -55,7 +55,7 @@ The payload consists of claims that specify a `resource` being requested, an exp
   * The shorter you make the expiration dates, the more you lock down your content. If a link has expired, even download tools will not be able to grab the content. However, overly quick expirations can result in bad user experience dues to small discrepancies in server time or delays in clients requesting resources at the expiring links.
   * If you have a high-volume website, the extra signature generation step might be a performance issue. In that case, you could cache signed URLs with an interval of e.g. 5 minutes. Signed requests do not have to be unique.
 
-**Additional Claims:** JWTs can optionally contain additional claims to specify additional query parameters that are applicable to that resource, the example above includes `related_media_id` because the resource is a Similar Playlist. Specific query parameters available for each resource can be found in the [Delivery API v2 reference](https://app.swaggerhub.com/api/jwplayer/Delivery-API/v2.0).
+**Additional Claims:** JWTs can optionally contain additional claims to specify additional query parameters that are applicable to that resource, the example above includes `related_media_id` because the resource is a Similar Playlist. Specific query parameters available for each resource can be found in the [Delivery API reference](https://developer.jwplayer.com/jw-platform/docs/delivery-api-reference/).
 
 ### JWT Signature for JW Platform Requests
 
