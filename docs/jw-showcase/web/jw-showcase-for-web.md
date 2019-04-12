@@ -31,11 +31,27 @@ Install project dependencies for Bower and Node:
 
 ##Configure Your App
 
-Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “**app**” folder.
+<ol>
+	<li>Locate and copy the IDs for the player and playlists that you want to associate with your Showcase.<br/>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Acquisition Process</th>
+			</tr>
+			<tr>
+				<td>Player</td>
+				<td>1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click <strong>Players</strong>.<br/>2. Click the name of the player.<br/>3. In the <strong>Cloud-Hosted Player Library</strong> section in the right panel, copy the eight-digit, alphanumeric value at the end of the URL. For example, if the URL is <code>https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js</code>, copy <code>VeAzOR4Y</code>.</td>
+			</tr>
+		</table>
+	</li>
+</ol>
 
-![JW Showcase Config](../../images/text-editor-config-json.png)
-
-Here you’ll need to replace the sample “**player**”, “**featuredPlaylist**”, and “**playlists**” with media ids from your library within the JW Player dashboard.
+1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>,  click **Players**.
+2. Click the name of the player.
+3. In the **Cloud-Hosted Player Library** section in the right panel, copy the eight-digit, alphanumeric value at the end of the URL. For example, if the URL is `https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js`, copy `VeAzOR4Y`.
+3. Copy the **Cloud Player Library Url**.
+2. Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “**app**” folder.
+2. Replace the sample “**player**”, “**featuredPlaylist**”, and “**playlists**” with media ids from your library within the JW Player dashboard.
 
     {
 	    "player": "DTYxzkKG",
