@@ -13,6 +13,7 @@ You can also set up a [cloud-hosted version of JW Showcase](https://support.jwpl
 !!!tip
 If you have additional questions after reading this article, read the <a href="https://github.com/jwplayer/jw-showcase/wiki" target="_blank">JW Showcase wiki</a>
 !!!
+
 <br/>
 
 ## Get Showcase code
@@ -57,19 +58,19 @@ If you are using the Showcase source code, you can add [advanced customizations]
 
 ```json
 {
-	"player": "DTYxzkKG",
-	"theme": "light",
-	"siteName": "JW Showcase",
-	"description": "JW Showcase is an open-source, dynamically generated video website built around JW Player and JW Platform services. It enables you to easily publish your JW Player-hosted video content with no coding and minimal configuration.",
-	"bannerImage": "images/logo.png",
-	"footerText": "Powered by JW Player",
-	"backgroundColor": "",
-	"featuredPlaylist": "lrYLc95e",
-	"playlists": [
-			"WXu7kuaW",
-			"Q352cyuc",
-			"oR7ahO0J"
-	]
+  "player": "DTYxzkKG",
+  "theme": "light",
+  "siteName": "JW Showcase",
+  "description": "JW Showcase is an open-source, dynamically generated video website built around JW Player and JW Platform services. It enables you to easily publish your JW Player-hosted video content with no coding and minimal configuration.",
+  "bannerImage": "images/logo.png",
+  "footerText": "Powered by JW Player",
+  "backgroundColor": "",
+  "featuredPlaylist": "lrYLc95e",
+  "playlists": [
+    "WXu7kuaW",
+    "Q352cyuc",
+    "oR7ahO0J"
+  ]
 }
 ```
 | Property | Type | Description |
