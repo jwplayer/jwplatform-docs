@@ -121,7 +121,7 @@ Once your Showcase has been configured and customized, you must install several 
 2. Install project dependencies for Bower and Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
 3. Compile your Showcase.<br/><br/>`grunt build`<br/><br/>
 4. Preview and test your Showcase locally.<br/><br/>`grunt serve`<br/><br/>
-5. After previewing and testing your Showcase, use an FTP to upload the files in the **/dist/** folder to your own web server.
+5. After previewing and testing your Showcase, use an FTP to upload the files in the **/dist** folder to your own web server.
 
 ![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
