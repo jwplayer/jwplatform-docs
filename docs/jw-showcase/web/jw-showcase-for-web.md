@@ -1,145 +1,147 @@
-#Getting Started with JW Showcase for Web
+# Getting Started with JW Showcase for Web
 
-<sup>Last Updated: December 5, 2018</sup>
+<sup>Last Updated: April 15, 2019</sup>
 
 !!!warning
 JW Player has deprecated support for JW Showcase for Apple TV.
 !!!
 
-JW Showcase is a sample application that leverages playlists from JW Platform to distribute your content across platforms. This guide will provide instructions for getting set up with our web app.
+JW Showcase is a video gallery web app that leverages playlists from your JW Player dashboard to distribute your content on desktop and mobile web. Use the steps below to set up a self-hosted Showcase.
 
-For advanced configuration and customization, we recommend cloning the JW Showcase source code within Github. Modifying the cloned source gives you greater control over the app framework and allows you to keep your Showcase app in sync with our source repository as we add new features and bug fixes. For instructions on basic configuration of the precompiled static app, see our [Support article](https://support.jwplayer.com/customer/portal/articles/2618634-jw-showcase).
+You can also set up a [cloud-hosted version of JW Showcase](https://support.jwplayer.com/articles/set-up-a-jw-showcase). With the cloud-hosted version, you can configure and customize your Showcase within your JW Player dashboard.
 
-##Download the latest version
+!!!tip
+If you have additional questions after reading this article, read the <a href="https://github.com/jwplayer/jw-showcase/wiki" target="_blank">JW Showcase wiki</a>
+!!!
+<br/>
 
-Clone the source code from: `https://github.com/jwplayer/jw-showcase`
+## Get Showcase code
 
+JW Player offers two versions of the Showcase code: source code and precompiled code.
 
-After cloning you’ll need to install the following tools globally on your machine:
+| Type | Notes and code location |
+| -- | -- |
+| Precompiled code | - Allows basic configuration and customization<br/>- Provides a simpler self-hosted Showcase implementation<br/><br/>From the <a href="https://github.com/jwplayer/jw-showcase/releases/" target="_blank">JW Showcase GitHub repository</a>, click **precompiled-static-app.zip** for the latest release.|
+| Source code | - Permits advanced configuration and customization<br/>- Allows greater control over the Showcase framework<br/>- Provides the ability to keep your Showcase app in-sync with the source repository<br/><br/>`git clone https://github.com/jwplayer/jw-showcase.git`|
 
-`$ gem install compass`
+<br/>
 
-`$ npm i grunt-cli -g`
+## Acquire player and playlist IDs
+Before you can configure your Showcase, you need to locate and copy the IDs of the player and playlists that you want to associate with your Showcase.
 
-`$ npm i bower -g`
-
-Install project dependencies for Bower and Node:
-
-`cd /path/to/showcase-source-code/`
-
-`$ npm install`
-
-##Configure Your App
-
-<ol>
-	<li>Locate and copy the IDs for the player and playlists that you want to associate with your Showcase.<br/>
-		<table>
-			<tr>
-				<th>ID</th>
-				<th>Acquisition Process</th>
-			</tr>
-			<tr>
-				<td>Player</td>
-				<td>1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click <strong>Players</strong>.<br/>2. Click the name of the player.<br/>3. In the <strong>Cloud-Hosted Player Library</strong> section in the right panel, copy the eight-digit, alphanumeric value at the end of the URL. For example, if the URL is <code>https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js</code>, copy <code>VeAzOR4Y</code>.</td>
-			</tr>
-		</table>
-	</li>
-</ol>
-
-1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>,  click **Players**.
+### Player ID
+1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click **Players**.
 2. Click the name of the player.
-3. In the **Cloud-Hosted Player Library** section in the right panel, copy the eight-digit, alphanumeric value at the end of the URL. For example, if the URL is `https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js`, copy `VeAzOR4Y`.
-3. Copy the **Cloud Player Library Url**.
-2. Open the JW Showcase source code in any text editor and navigate to the config.json file located in the “**app**” folder.
-2. Replace the sample “**player**”, “**featuredPlaylist**”, and “**playlists**” with media ids from your library within the JW Player dashboard.
+3. In the **Cloud-Hosted Player Library** section in the right panel, copy the eight-digit, alphanumeric value at the end of the URL. <br/><br/>For example, if the URL is <code>https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js</code>, copy <code>VeAzOR4Y</code>.
 
-    {
-	    "player": "DTYxzkKG",
-	    "theme": "light",
-	    "siteName": "JW Showcase",
-	    "description": "JW Showcase is an open-source, dynamically generated video website built around JW Player and JW Platform services. It enables you to easily publish your JW Player-hosted video content with no coding and minimal configuration.",
-	    "bannerImage": "images/logo.png",
-	    "footerText": "Powered by JW Player",
-	    "backgroundColor": "",
-	    "featuredPlaylist": "lrYLc95e",
-	    "playlists": [
-	        "WXu7kuaW",
-	        "Q352cyuc",
-	        "oR7ahO0J"
-	    ]
-    }
+### Playlist IDs
+1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click **Playlists**. You can add any manual, dynamic, or trending playlist to your Showcase.
+2. Click the name of the playlist.
+3. On the **DEVELOPERS** tab, copy the **Playlist ID**.
+4. Repeat these steps to locate and copy the IDs of each playlist you want to include in your Showcase.
 
-To locate your player ID, navigate to “**Tools**” under the “**Players**” section of the dashboard.
+<br/>
 
-![JW Dashboard Tools](../../images/dashboard-tools.png)
+## Configure Your App
 
-Select the player you wish to use for your app under “**Cloud Hosted Player Libraries**”. The library URL for that player will contain your player ID.
+1. In a text editor, open **/app/config.json** from the JW Showcase folder.
+2. Replace the value for `player` with the eight-digit player ID that you copied from your dashboard.
+3. Replace the value for `featuredPlaylist` with the ID for the playlist that you want to feature in your Showcase.
+4. Replace the values for `playlist` with the IDs for the additional playlist that you want to appear in your Showcase. These playlists will appear in your Showcase in the order in which they are listed. 
+5. (Optional) Use the following code example and table to configure other properties to match your brand. 
 
-![JW Player Library](../../images/cloud-hosted-player-library.png)
+!!!tip
+If you are using the Showcase source code, you can add [advanced customizations](#advanced-customization) to your Showcase.
+!!!
 
-Replace the ID in the config.json file with your own, ie:
 
-    "player": "DTYxzkKG",
+```json
+{
+	"player": "DTYxzkKG",
+	"theme": "light",
+	"siteName": "JW Showcase",
+	"description": "JW Showcase is an open-source, dynamically generated video website built around JW Player and JW Platform services. It enables you to easily publish your JW Player-hosted video content with no coding and minimal configuration.",
+	"bannerImage": "images/logo.png",
+	"footerText": "Powered by JW Player",
+	"backgroundColor": "",
+	"featuredPlaylist": "lrYLc95e",
+	"playlists": [
+			"WXu7kuaW",
+			"Q352cyuc",
+			"oR7ahO0J"
+	]
+}
+```
+| Property | Type | Description |
+| -- | -- | -- |
+| `backgroundColor`| String | Color of the Showcase background<br/><br/>Advanced customizations should be made in the .scss files.
+| `bannerImage`| String | URL of your brand logo<br/><br/>The ideal logo height is 72px. For logos that have a height that is greater than 72px, the logo will be proportionally resized.
+| `description` | String | Short explanation of the Showcase content|
+| `featuredPlaylist`| String | Unique identifier of the playlist that you want to feature in your Showcase |
+| `footerText` | String | Text that appears in the footer |
+| `player` | String | Unique identifier of the player used in your Showcase|
+| `playlist` | Array | List of the identifiers of additional playlists that you want to appear in your Showcase|
+| `siteName` | String | Name of the `<title>`, `<og:title>`, and `<og:site_name>` properties of your Showcase|
+| `theme` | String | Preconfigured theme of the Showcase<br/><br/>Possible values include:<br/>`dark`<br/>`light`|
 
-Next, to set your “**featured playlist**” and “**playlists**” for the app, navigate to “**Curated**” under the “**Playlists**” section of the dashboard.
+<br/>
 
-![JW Dashboard Playlists](../../images/dashboard-playlists.png)
+<a name="advanced-customization"></a>
 
-Click into any playlist you wish to feature in your app and grab the playlist ID from the top of the playlist detail page.
+## Advanced Customization
 
-![JW Playlists ID](../../images/playlist-id.png)
+If you are using the source code to create your Showcase, you have the ability to add advanced customizations to your Showcase. This section briefly explains where you can set custom HTML and custom CSS. 
 
-Replace the “**featuredPlaylist**” and “**playlists**” IDs in the config.json file, ie:
+!!!
+If you are using the precompile code to create your Showcase, continue to [Install tools and compile app](#install-and-compile).
+!!!
 
-    "featuredPlaylist": "lrYLc95e",
-	    "playlists": [
-	        "WXu7kuaW",
-	        "Q352cyuc",
-	        "oR7ahO0J"
-	    ]
+### Custom HTML
 
-##Branding Your App
-
-In the config.json file, you can choose between a “**light**” and “**dark**” theme option for the app to match your branding. You can also designate a site name, description, and footer text for your app.
-
-    "theme": "light",
-    "siteName": "JW Showcase",
-    "description": "JW Showcase is an open-source, dynamically generated video website built around JW Player and JW Platform services. It enables you to easily publish your JW Player-hosted video content with no coding and minimal configuration.",
-    "bannerImage": "images/logo.png",
-    "footerText": "Powered by JW Player",
-
-To use your own logo, simply replace the “logo.png” file in the “images” folder with your own.
-
-![JW Showcase logo](../../images/text-editor-logo.png)
-
-##Advanced Customization
-
-###Custom HTML
-
-The JW Showcase app is built from “views” located within the app folder of the project. Here you can modify the default HTML of the header and footer of the app. 
+Showcase is built from “views” located within the **/app/views** folder of your project. Here you can modify the default HTML of your Showcase. The **header.html** and **footer.html** files are shown in the following screenshot. 
 
 ![JW Showcase views](../../images/text-editor-views.png)
 
-###Custom CSS
+### Custom CSS
 
-The JW Showcase app uses SASS to compile a master css file from partial sass files located in “styles” within the app folder of the project. Custom css can be added to the header.scss and footer.scss files located in the “components” folder within “styles”.
+Showcase uses Sass to compile a master .css file from partial .scss files located in withing the **/app/styles/components** folder of your project. Custom CSS can be added to the .scss files. The  **header.scss** and **footer.scss** files are shown in the following screenshot.
 
 ![JW Showcase styles](../../images/text-editor-styles.png)
 
-##Building Your App
+<br/>
 
-Once your app has been configured, branded, and customized, re-compile the app by running:
+<a name="install-and-compile"></a>
 
-`grunt build`
+## Install tools and compile app
 
-To launch your app locally, run the command:
+Once your Showcase has been configured, branded, and customized, you must install several tools and compile your Showcase.
 
-`grunt serve`
-
-##Launching Your App
-
-After your app has been built and tested, you can use any FTP client (ie. Cyberduck) to upload only the files within the “dist” folder onto your own web server.
+1. Install the following tools globally on your machine:<br/><br/>`$ gem install compass`<br/>`$ npm i grunt-cli -g`<br>`$ npm i bower -g`<br/><br/> 
+2. Install project dependencies for Bower and Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
+3. Compile your Showcase.<br/><br/>`grunt build`<br/><br/>
+4. Preview and test your Showcase locally.<br/><br/>`grunt serve`<br/><br/>
+5. After previewing and testing your Showcase, use an FTP to upload the files in the **/dist/** folder to your own web server.
 
 ![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
-
+<br/><br/>
+<div id="wufoo-mff60sc1xnn4cu">
+Use this <a href="https://jwplayerdocs.wufoo.com/forms/mff60sc1xnn4cu">form</a> to provide your feedback.
+</div>
+<script type="text/javascript">var mff60sc1xnn4cu;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'jwplayerdocs',
+'formHash':'mff60sc1xnn4cu',
+'autoResize':true,
+'height':'288',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true,
+'defaultValues': 'field118=' + location.pathname};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { mff60sc1xnn4cu = new WufooForm();mff60sc1xnn4cu.initialize(options);mff60sc1xnn4cu.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
