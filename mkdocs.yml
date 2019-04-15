@@ -20,7 +20,9 @@ nav:
       - Overview: 'management-api/index.md'
       - Uploading Videos: 'management-api/uploading-videos.md'
       - Batch Migrations: 'management-api/batch-migration.md'
+    - Analytics:
       - Analytics: 'management-api/analytics.md'
+    - Advertising:
       - Advertising: 'management-api/advertising.md'
     - JW Showcase:
       - JW Showcase for Web: 'jw-showcase/web/jw-showcase-for-web.md'
