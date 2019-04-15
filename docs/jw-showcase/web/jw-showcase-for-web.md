@@ -105,7 +105,7 @@ Showcase is built from “views” located within the **app/views** folder of yo
 
 ### Custom CSS
 
-Showcase uses Sass to compile a master .css file from partial .scss files located within the **/app/styles/components** folder of your project. Custom CSS can be added to the .scss files. The  **header.scss** and **footer.scss** files are shown in the following screenshot.
+Showcase uses Sass to compile a master .css file from partial .scss files located within the **app/styles/components** folder of your project. Custom CSS can be added to the .scss files. The  **header.scss** and **footer.scss** files are shown in the following screenshot.
 
 ![JW Showcase styles](../../images/text-editor-styles.png)
 
@@ -121,7 +121,7 @@ Once your Showcase has been configured and customized, you must install several 
 2. Install project dependencies for Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
 3. Compile your Showcase.<br/><br/>`grunt build`<br/><br/>
 4. Preview and test your Showcase locally.<br/><br/>`grunt serve`<br/><br/>
-5. After previewing and testing your Showcase, upload the files in the **/dist** folder to your own web server.
+5. After previewing and testing your Showcase, upload the files in the **dist** folder to your own web server.
 
 ![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
