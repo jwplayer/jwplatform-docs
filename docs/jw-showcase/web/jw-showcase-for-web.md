@@ -11,7 +11,7 @@ JW Showcase is a video gallery web app that leverages playlists from your JW Pla
 You can also set up a [cloud-hosted version of JW Showcase](https://support.jwplayer.com/articles/set-up-a-jw-showcase). With the cloud-hosted version, you can configure and customize your Showcase within your JW Player dashboard.
 
 !!!tip
-If you have additional questions after reading this article, read the <a href="https://github.com/jwplayer/jw-showcase/wiki" target="_blank">JW Showcase wiki</a>
+If you have additional questions after reading this article, read the <a href="https://github.com/jwplayer/jw-showcase/wiki" target="_blank">JW Showcase wiki</a>.
 !!!
 
 <br/>
