@@ -33,7 +33,7 @@ Before you can configure your Showcase, you need to locate and copy the IDs of t
 ### Player ID
 1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click **Players**.
 2. Click the name of the player.
-3. In the **Cloud-Hosted Player Library** section in the right panel, copy the eight-digit value at the end of the URL. <br/><br/>For example, if the URL is <code>https://content-portal.jwplatform.com/libraries/VeAzOR4Y.js</code>, copy <code>VeAzOR4Y</code>.
+3. In the **Cloud-Hosted Player Library** section in the right panel, copy the eight-digit value at the end of the URL. <br/><br/>For example, if the URL is <code>https://cdn.jwplayer.com/libraries/VeAzOR4Y.js</code>, copy <code>VeAzOR4Y</code>.
 
 ### Playlist IDs
 1. From your <a href="https://dashboard.jwplayer.com/" target="_blank">dashboard</a>, click **Playlists**.
@@ -45,10 +45,10 @@ Before you can configure your Showcase, you need to locate and copy the IDs of t
 
 ## Configure Your App
 
-1. In a text editor, open **/app/config.json** from the JW Showcase folder.
+1. In a text editor, open **app/config.json** (compiled) or **config.json** (precompiled) from the JW Showcase folder.
 2. Replace the value for `player` with the eight-digit player ID that you copied from your dashboard.
 3. Replace the value for `featuredPlaylist` with the ID for the playlist that you want to feature in your Showcase.
-4. Replace the values for `playlist` with the IDs for the additional playlists that you want to appear in your Showcase. These playlists will appear in your Showcase in the order in which they are listed. 
+4. Replace the values for `playlists` with the IDs for the additional playlists that you want to appear in your Showcase. These playlists will appear in your Showcase in the order in which they are listed. 
 5. (Optional) Use the following code example and table to customize other properties to match your brand. 
 
 !!!tip
@@ -81,7 +81,7 @@ If you are using the Showcase source code, you can add [advanced customizations]
 | `featuredPlaylist`| String | Unique identifier of the playlist that you want to feature in your Showcase |
 | `footerText` | String | Text that appears in the footer |
 | `player` | String | Unique identifier of the player used in your Showcase|
-| `playlist` | Array | List of the identifiers of additional playlists that you want to appear in your Showcase|
+| `playlists` | Array | List of the identifiers of additional playlists that you want to appear in your Showcase|
 | `siteName` | String | Name of the `<title>`, `<og:title>`, and `<og:site_name>` properties of your Showcase|
 | `theme` | String | Preconfigured theme of the Showcase<br/><br/>Possible values include:<br/><br/>`dark`<br/><br/>`light`|
 
@@ -99,7 +99,7 @@ If you are using the precompile code to create your Showcase, continue to [Insta
 
 ### Custom HTML
 
-Showcase is built from “views” located within the **/app/views** folder of your project. Here you can modify the default HTML of your Showcase. The **header.html** and **footer.html** files are shown in the following screenshot. 
+Showcase is built from “views” located within the **app/views** folder of your project. Here you can modify the default HTML of your Showcase. The **header.html** and **footer.html** files are shown in the following screenshot. 
 
 ![JW Showcase views](../../images/text-editor-views.png)
 
@@ -117,11 +117,11 @@ Showcase uses Sass to compile a master .css file from partial .scss files locate
 
 Once your Showcase has been configured and customized, you must install several tools, compile your Showcase, and upload your Showcase to your web server.
 
-1. Install the following tools globally on your machine:<br/><br/>`$ gem install compass`<br/>`$ npm i grunt-cli -g`<br>`$ npm i bower -g`<br/><br/> 
-2. Install project dependencies for Bower and Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
+1. Install the following tools globally on your machine:<br/><br/>`$ gem install compass`<br/>`$ npm i grunt-cli -g`<br><br/> 
+2. Install project dependencies for Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
 3. Compile your Showcase.<br/><br/>`grunt build`<br/><br/>
 4. Preview and test your Showcase locally.<br/><br/>`grunt serve`<br/><br/>
-5. After previewing and testing your Showcase, use an FTP to upload the files in the **/dist** folder to your own web server.
+5. After previewing and testing your Showcase, upload the files in the **/dist** folder to your own web server.
 
 ![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
