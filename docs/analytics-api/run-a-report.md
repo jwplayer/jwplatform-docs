@@ -50,15 +50,15 @@ The query body enables you to filter the data that is returned by the Reporting 
 
 | Property | Type | Description |
 | -- | -- | -- |
-| start_date | String | First date of a query date range in `YYYY-MM-DD` format |
-| end_date | String | Last date of a query date range in `YYYY-MM-DD` format |
-| dimensions | Array | List of dimensions to include in the query response |
-| metrics | Object | |
-| filter | Object | Defines how to restrict the data returned in the report query response |
-| page | Number | |
-| page_length | Number | Number of records displayed on each page of results |
-| sort | Object | Defines the field by which to sort the data and the order of the sort |
-| include_metadata_ | Number | 
+| `dimensions` | Array | List of dimensions to include in the query response |
+| `end_date` | String | Last date of a query date range in `YYYY-MM-DD` format |
+| `filter` | Object | Defines how to restrict the data returned in the report query response 
+| `include_metadata` | Number | |
+| `metrics` | Object | |
+| `page` | Number | |
+| `page_length` | Number | Number of records displayed on each page of results |
+| `sort` | Object | Defines the field by which to sort the data and the order of the sort |
+| `start_date` | String | First date of a query date range in `YYYY-MM-DD` format |
 
 <br/>
 
