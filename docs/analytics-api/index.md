@@ -48,4 +48,4 @@ The Analytics API requires the items in the following table.
 </table>
 
 ## Getting started
-You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now [run a report](../analytics/run-a-report).
+You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now [run a report](../analytics-api/run-a-report).
