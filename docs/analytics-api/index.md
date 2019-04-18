@@ -1,4 +1,4 @@
-# Introduction
+# Overview
 
 <sup>Last Updated: April 18, 2019</sup>
 
@@ -52,4 +52,4 @@ The Analytics API requires the items in the following table.
 </table>
 
 ## Getting started
-You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now begin to [query the data](../analytics/query-the-data).
+You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now begin to [query the data](../../query-the-data).

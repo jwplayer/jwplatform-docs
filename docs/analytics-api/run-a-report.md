@@ -1,4 +1,4 @@
-# Query the data
+# Run a report
 
 <sup>Last Updated: April 18, 2019</sup>
 
@@ -15,14 +15,8 @@ When you query this route, your request must include the following items:
 - JSON-formatted query body
 
 !!!tip
-You can also run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.<br/><br/>
-JW Player provides you with several options to query the data with the Analytics API. Read each approach and click on the link for the applicable steps to get started. 
+You can also use a [query tool](../../run-a-report-with-tools) to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.<br/><br/>
 
-| Approach | Description |
-| -- | -- |
-| Active Google Sheet | &bull; No coding<br/>&bull; Simplified querying|
-| PHP samples | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit samples for custom situations<br/><br/>The following files are included:<br/><br/>**analyticsApiWrapper.php**: Class wrapper for making Analytics API calls<br/><br/>**analytics-example.php**: Preconfigured code to make API calls and write the report to a .csv file<br/><br/>**enriched-videos.php** Preconfigured code to create an enriched report with an Enterprise license|
-| Python sample | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit sample for custom situations<br/><br/>The following file is included:<br/><br/>**analytics-example.py**: Preconfigured code to query data |
 !!!
 
 <br/>
