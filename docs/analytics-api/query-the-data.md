@@ -15,7 +15,14 @@ When you query this route, your request must include the following items:
 - JSON-formatted query body
 
 !!!tip
+You can also run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.<br/><br/>
+JW Player provides you with several options to query the data with the Analytics API. Read each approach and click on the link for the applicable steps to get started. 
 
+| Approach | Description |
+| -- | -- |
+| Active Google Sheet | &bull; No coding<br/>&bull; Simplified querying|
+| PHP samples | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit samples for custom situations<br/><br/>The following files are included:<br/><br/>**analyticsApiWrapper.php**: Class wrapper for making Analytics API calls<br/><br/>**analytics-example.php**: Preconfigured code to make API calls and write the report to a .csv file<br/><br/>**enriched-videos.php** Preconfigured code to create an enriched report with an Enterprise license|
+| Python sample | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit sample for custom situations<br/><br/>The following file is included:<br/><br/>**analytics-example.py**: Preconfigured code to query data |
 !!!
 
 <br/>
@@ -81,6 +88,7 @@ curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
 
 ### Example 1: Total Plays for media IDs in a defined time frame
 
+
 **Objective**: For a property (key: 1A23bCD4), list the total number of plays for each video within the date range of June 1, 2017 - June 2, 2017. The list should be sorted by the number of plays, in descending order.
 
 **Query**: You can make the following cURL request. 
@@ -90,9 +98,11 @@ curl -X POST https://api.jwplayer.com/v2/sites/1A23bCD4/analytics/queries/ \
  -H 'Content-Type: application/json' \
  -d '{"start_date" : "2017-06-01", "end_date" : "2017-06-02", "dimensions" : ["media_id"], "metrics" : [{"operation": "sum", "field": "plays"}], "sort" : [{"field" : "plays", "order": "DESCENDING"}]}'
 ```
+<br/>
 
 ### Example 2: Total Plays for media IDs in a defined time frame
 
+
 **Objective**: For a property (key: 1A23bCD4), list the total number of plays for each video within the date range of June 1, 2017 - June 2, 2017. The list should be sorted by the number of plays, in descending order.
 
 **Query**: You can make the following cURL request. 
@@ -102,11 +112,3 @@ curl -X POST https://api.jwplayer.com/v2/sites/1A23bCD4/analytics/queries/ \
  -H 'Content-Type: application/json' \
  -d '{"start_date" : "2017-06-01", "end_date" : "2017-06-02", "dimensions" : ["media_id"], "metrics" : [{"operation": "sum", "field": "plays"}], "sort" : [{"field" : "plays", "order": "DESCENDING"}]}'
 ```
-
-JW Player provides you with several options to query the data with the Analytics API. Read each approach and click on the link for the applicable steps to get started. 
-
-| Approach | Description |
-| -- | -- |
-| Active Google Sheet | &bull; No coding<br/>&bull; Simplified querying|
-| PHP samples | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit samples for custom situations<br/><br/>The following files are included:<br/><br/>**analyticsApiWrapper.php**: Class wrapper for making Analytics API calls<br/><br/>**analytics-example.php**: Preconfigured code to make API calls and write the report to a .csv file<br/><br/>**enriched-videos.php** Preconfigured code to create an enriched report with an Enterprise license|
-| Python sample | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit sample for custom situations<br/><br/>The following file is included:<br/><br/>**analytics-example.py**: Preconfigured code to query data |
