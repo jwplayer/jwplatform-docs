@@ -22,6 +22,8 @@ nav:
       - Batch Migrations: 'management-api/batch-migration.md'
     - Analytics:
       - Analytics: 'management-api/analytics.md'
+      - Introduction: 'analytics-api/index.md'
+      - Query the data: 'analytics-api/query-the-data.md'
     - Advertising:
       - Advertising: 'management-api/advertising.md'
     - JW Showcase:
