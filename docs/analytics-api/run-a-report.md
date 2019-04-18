@@ -15,7 +15,7 @@ When you query this route, your request must include the following items:
 - JSON-formatted query body
 
 !!!tip
-You can also use a [query tool](../../run-a-report-with-tools) to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.<br/><br/>
+You can also use a [query tool](../run-a-report-with-tools) to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.<br/><br/>
 
 !!!
 

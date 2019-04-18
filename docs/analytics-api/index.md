@@ -4,10 +4,6 @@
 
 The Analytics API is a RESTful API that allows you to query various data sets and import video and advertising data to a data warehouse or analytics solution.
 
-!!!tip
-You can also use [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) to generate reports from your JW Player dashboard.
-!!!
-
 <br/>
 
 ## Requirements
@@ -52,4 +48,4 @@ The Analytics API requires the items in the following table.
 </table>
 
 ## Getting started
-You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now begin to [query the data](../../query-the-data).
+You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now begin to [query the data](../query-the-data).
