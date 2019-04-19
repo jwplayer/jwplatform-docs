@@ -14,9 +14,9 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:25px"><strong>* Ad Completes</strong></td>
-    <td></td> 
-    <td></td>
+    <td style="width:21%"><strong>* Ad Completes</strong></td>
+    <td style="width:19%"></td> 
+    <td style="width:5%"></td>
     <td></td>
   </tr>
   <tr>
