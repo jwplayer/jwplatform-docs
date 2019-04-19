@@ -2,6 +2,8 @@
 
 <sup>Last Updated: April 18, 2019</sup>
 
+<a name="metrics"></a>
+
 ## Metrics
 
 ### Ads
@@ -176,7 +178,9 @@
 
 <sup>* This metric requires a JW Player Enterprise license.
 
-## Metrics
+<a name="dimensions"></a>
+
+## Dimensions
 
 ### Ads
 
@@ -188,18 +192,27 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:25px"><strong>* Ad Completes</strong></td>
-    <td></td> 
+    <td style="width:21%"><strong></strong></td>
+    <td style="width:19%"></td> 
+    <td style="width:5%"></td>
     <td></td>
   </tr>
   <tr>
-    <td><strong>* Ad Skips</strong></td>
+    <td><strong></strong></td>
     <td></td> 
+    <td></td>
     <td></td>
   </tr>
   <tr>
-    <td><strong>Ad Clicks</strong></td>
+    <td><strong></strong></td>
     <td></td> 
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong></strong></td>
+    <td></td> 
+    <td></td>
     <td></td>
   </tr>
 </table>
