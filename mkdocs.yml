@@ -25,7 +25,7 @@ nav:
       - Overview: 'analytics-api/index.md'
       - Run a report: 'analytics-api/run-a-report.md'
       - Run a report with query tools: 'analytics-api/run-a-report-with-tools.md'
-      - Metrics and dimensions: 'analytics/metrics-and-dimensions.md'
+      - Metrics and dimensions: 'analytics-api/metrics-and-dimensions.md'
     - Advertising:
       - Advertising: 'management-api/advertising.md'
     - JW Showcase:
