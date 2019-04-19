@@ -45,9 +45,9 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:25px"><strong>* Complete Rate</strong></td>
-    <td></td> 
-    <td></td>
+    <td style="width:21%"><strong>* Complete Rate</strong></td>
+    <td style="width:19%"></td> 
+    <td style="width:5%"></td>
     <td></td>
   </tr>
   <tr>
@@ -82,9 +82,9 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:25px">Embeds</td>
-    <td></td> 
-    <td></td>
+    <td style="width:21%"><strong>Embeds</strong></td>
+    <td style="width:19%"></td> 
+    <td style="width:5%"></td>
     <td></td>
   </tr>
   <tr>
@@ -149,10 +149,10 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:55px"><strong>* Unique Viewers</strong></td>
-    <td>Test</td> 
-    <td>Test</td>
-    <td style="width:100px">Test</td>
+    <td style="width:21%"><strong>* Unique Viewers</strong></td>
+    <td style="width:19%"></td> 
+    <td style="width:5%"></td>
+    <td></td>
   </tr>
   <tr>
     <td><strong>* Plays per Viewer</strong></td>
