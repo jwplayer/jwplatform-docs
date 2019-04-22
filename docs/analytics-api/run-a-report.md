@@ -49,15 +49,37 @@ The query body enables you to filter the data that is returned by the Reporting 
 
 | Property | Type | Description |
 | -- | -- | -- |
-| `dimensions` | Array | List of <a href="../metrics-and-dimensions/#metrics" target="_blank">dimensions</a> to include in the query response |
-| `end_date` | String | Last date of a query date range in `YYYY-MM-DD` format |
-| `filter` | Object | Defines how to restrict the data returned in the report query response 
+| `dimensions` | Array | <p>List of <a href="../metrics-and-dimensions/#metrics" target="_blank">dimensions</a> to include in the query response</p> |
+| `end_date` | String | <p>Last date of a query date range in `YYYY-MM-DD` format</p> |
+| `filter` | Object | <p>Defines how to restrict the data returned in the report query response</p>| 
 | `include_metadata` | Number | |
-| `metrics` | Object | <a href="../metrics-and-dimensions/#metrics" target="_blank">metrics</a>|
+| `metrics` | Object | <p><a href="../metrics-and-dimensions/#metrics" target="_blank">metrics</a></p>|
 | `page` | Number | |
-| `page_length` | Number | Number of records displayed on each page of results |
-| `sort` | Object | Defines the field by which to sort the data and the order of the sort |
-| `start_date` | String | First date of a query date range in `YYYY-MM-DD` format |
+| `page_length` | Number | <p>Number of records displayed on each page of results</p> |
+| `sort` | Object | <p>Defines the field by which to sort the data and the order of the sort</p> |
+| `start_date` | String | <p>First date of a query date range in `YYYY-MM-DD` format</p> |
+
+<br/>
+
+### filter
+
+<br/>
+
+### metrics
+
+| Property | Type | Description |
+| -- | -- | -- |
+| `field` | String | The `metric_id` of the metric to return in the report query response<br/><br/>Review <a href="../metrics-and-dimensions#metrics" target="_blank">Metrics and dimensions</a> to see all the possible values for `metric_id`|
+| `operator` | String | Type of calculation to perform on the `metric_id` field<br/><br/>Possible values include:<br/><br/><code>max</code><br/><code>min</code><br/><code>sum</code> |
+
+<br/>
+
+### sort
+
+| Property | Type | Description |
+| -- | -- | -- |
+| `field` | String | <p>Name of the field by which to sort the response<p>|
+| `order` | String | <p>Order in which data response is sorted<br/><br/>Possible values include:<br/><br/><code>ASCENDING</code><br/><code>DESCENDING</code></p>|
 
 <br/>
 
