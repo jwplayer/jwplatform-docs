@@ -1,6 +1,6 @@
 # Overview
 
-<sup>Last Updated: April 18, 2019</sup>
+<sup>Last Updated: April 22, 2019</sup>
 
 The Analytics API is a RESTful API that allows you to query various data sets and import video and advertising data to a data warehouse or analytics solution.
 

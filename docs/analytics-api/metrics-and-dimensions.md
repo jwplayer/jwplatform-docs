@@ -1,6 +1,6 @@
 # Metrics and dimensions
 
-<sup>Last Updated: April 18, 2019</sup>
+<sup>Last Updated: April 22, 2019</sup>
 
 <a name="metrics"></a>
 

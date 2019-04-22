@@ -1,6 +1,6 @@
 # Run a report
 
-<sup>Last Updated: April 18, 2019</sup>
+<sup>Last Updated: April 22, 2019</sup>
 
 The Analytics API allows you to query your data through a single route.
 
@@ -20,74 +20,13 @@ You can also use a [query tool](../run-a-report-with-tools) to run a report or r
 
 <br/>
 
-## Construct a query body
 
-The query body enables you to filter the data that is returned by the Reporting API. Use the following body format and property table to contruct your query body.
-
-```json
-{
-  "start_date": "2017-06-01",
-  "end_date": "2017-06-02",
-  "dimensions": ["country_code"],
-  "metrics": [{
-    "operation": "sum",
-    "field": "plays"
-  }],
-  "filter": [{
-    "field": "device_id",
-    "operator": "=",
-    "value": ["Desktop"]
-  }],
-  "page": 0,
-  "page_length": 2,
-  "sort": [{
-    "field": "plays",
-    "order": "DESCENDING"
-  }]
-}
-```
-
-| Property | Type | Description |
-| -- | -- | -- |
-| `dimensions` | Array | <p>List of <a href="../metrics-and-dimensions/#metrics" target="_blank">dimensions</a> to include in the query response</p> |
-| `end_date` | String | <p>Last date of a query date range in `YYYY-MM-DD` format</p> |
-| `filter` | Object | <p>Defines how to restrict the data returned in the report query response</p>| 
-| `include_metadata` | Number | |
-| `metrics` | Object | <p><a href="../metrics-and-dimensions/#metrics" target="_blank">metrics</a></p>|
-| `page` | Number | |
-| `page_length` | Number | <p>Number of records displayed on each page of results</p> |
-| `sort` | Object | <p>Defines the field by which to sort the data and the order of the sort</p> |
-| `start_date` | String | <p>First date of a query date range in `YYYY-MM-DD` format</p> |
-
-<br/>
-
-### filter
-
-<br/>
-
-### metrics
-
-| Property | Type | Description |
-| -- | -- | -- |
-| `field` | String | The `metric_id` of the metric to return in the report query response<br/><br/>Review <a href="../metrics-and-dimensions#metrics" target="_blank">Metrics and dimensions</a> to see all the possible values for `metric_id`|
-| `operator` | String | Type of calculation to perform on the `metric_id` field<br/><br/>Possible values include:<br/><br/><code>max</code><br/><code>min</code><br/><code>sum</code> |
-
-<br/>
-
-### sort
-
-| Property | Type | Description |
-| -- | -- | -- |
-| `field` | String | <p>Name of the field by which to sort the response<p>|
-| `order` | String | <p>Order in which data response is sorted<br/><br/>Possible values include:<br/><br/><code>ASCENDING</code><br/><code>DESCENDING</code></p>|
-
-<br/>
 
 ## Run a report query
 
 1. Replace the `{property key}` with your key.
 2. Add the `{reporting secret}` with your secret.
-3. Append the query body.
+3. Append the <a href="../construct-a-query-body" target="_blank">query body</a>.
 
 ```curl
 curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \

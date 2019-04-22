@@ -1,6 +1,6 @@
 # Run a report with query tools
 
-<sup>Last Updated: April 18, 2019</sup>
+<sup>Last Updated: April 22, 2019</sup>
 
 JW Player provides you with several options to query the data with the Analytics API. Read each approach and click on the link for the applicable steps to get started. 
 
