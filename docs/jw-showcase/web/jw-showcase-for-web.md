@@ -1,6 +1,6 @@
 # Getting Started with JW Showcase for Web
 
-<sup>Last Updated: April 15, 2019</sup>
+<sup>Last Updated: April 23, 2019</sup>
 
 !!!warning
 JW Player has deprecated support for JW Showcase for Apple TV.
@@ -45,7 +45,7 @@ Before you can configure your Showcase, you need to locate and copy the IDs of t
 
 ## Configure Your App
 
-1. In a text editor, open **app/config.json** (compiled) or **config.json** (precompiled) from the JW Showcase folder.
+1. In a text editor, open **config.json** (precompiled) or **app/config.json** (source code) from the JW Showcase folder.
 2. Replace the value for `player` with the eight-digit player ID that you copied from your dashboard.
 3. Replace the value for `featuredPlaylist` with the ID for the playlist that you want to feature in your Showcase.
 4. Replace the values for `playlists` with the IDs for the additional playlists that you want to appear in your Showcase. These playlists will appear in your Showcase in the order in which they are listed. 
@@ -94,7 +94,7 @@ If you are using the Showcase source code, you can add [advanced customizations]
 If you are using the source code to create your Showcase, you have the ability to add advanced customizations to your Showcase. This section briefly explains where you can set custom HTML and custom CSS. 
 
 !!!
-If you are using the precompile code to create your Showcase, continue to [Install tools and compile app](#install-and-compile).
+If you are using the precompile code to create your Showcase, continue to the [Upload app](#upload-precompiled) section.
 !!!
 
 ### Custom HTML
@@ -120,8 +120,24 @@ Once your Showcase has been configured and customized, you must install several 
 1. Install the following tools globally on your machine:<br/><br/>`$ gem install compass`<br/>`$ npm i grunt-cli -g`<br><br/> 
 2. Install project dependencies for Node.<br><br/>`cd /path/to/showcase-source-code/`<br/>`$ npm install`<br/><br/>
 3. Compile your Showcase.<br/><br/>`grunt build`<br/><br/>
-4. Preview and test your Showcase locally.<br/><br/>`grunt serve`<br/><br/>
-5. After previewing and testing your Showcase, upload the files in the **dist** folder to your own web server.
+4. Preview and test your Showcase locally.<br/><br/>`grunt serve`
+
+<br/>
+
+## Upload app
+
+<a name="upload-precompiled"></a>
+
+### Precompiled code
+
+After previewing and testing your Showcase, upload the files in the root folder to your own web server.
+
+
+<a name="upload-source-code"></a>
+
+### Source code
+
+After previewing and testing your Showcase, upload the files in the **dist** folder to your own web server.
 
 ![JW Showcase ftp upload](../../images/ftp-file-upload.png)
 
