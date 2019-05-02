@@ -2,14 +2,23 @@
 
 <sup>Last Updated: May 1, 2019</sup>
 
+!!!important
+Some metrics and dimensions require a JW Player Enterprise license. Please [contact our team](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) to upgrade your account.
+!!!
+
+<br/>
+
+| Field Type | Category |
+| -- | -- |
+|  [Metrics](#metrics)  |  Ads<br/>Engagement<br/>Performance<br/>Viewers|
+[Dimensions](#dimensions)  | Content <br/>Date/Time<br/>Device<br/>Geography<br/>Placement|
+
 <a name="metrics"></a>
 
 ## Metrics
 
 
 A *metric* is a quantitative measurement. The following metrics are currently offered.
-
-Some metrics require a JW Player Enterprise license. Please [contact our team](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) to upgrade your account.
 
 ### Ads
 
@@ -83,7 +92,7 @@ Some metrics require a JW Player Enterprise license. Please [contact our team](h
   </tr>
   <tr>
     <td><strong>* Complete Rate</strong></td>
-    <td></td>
+    <td><code>complete_rate</code></td>
     <td></td>
     <td>Number of plays divided by the number of completes, as a percentage</td>
   </tr>
@@ -156,7 +165,7 @@ Some metrics require a JW Player Enterprise license. Please [contact our team](h
   </tr>
   <tr>
     <td>Time Watched</td>
-    <td></td> 
+    <td><code>time_watched</code></td> 
     <td></td>
     <td>Total time watched across all your players (measured in seconds)<br/><br/><em>This metric excludes time watched for external live streams.</em></td>
   </tr>
@@ -201,13 +210,13 @@ Some metrics require a JW Player Enterprise license. Please [contact our team](h
 
 <sup>* This metric requires a JW Player Enterprise license.</sup>
 
+<br/>
+
 <a name="dimensions"></a>
 
 ## Dimensions
 
 A *dimension* is an attribute of your metrics.  For example, each Play Event has several attributes that help describe it. JW Player determines what Country it took place in, what Video it was for, what device was used, etc.
-
-Some dimensions require a JW Player Enterprise license. Please [contact our team](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) to upgrade your account.
 
 ### Content
 
