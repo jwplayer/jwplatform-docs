@@ -17,7 +17,7 @@ You can also use a query tool to run a report or run a report query with [Custom
 In your platform or language of choice, use the following steps to query your data:
 
 1. In the request route, replace the `{property key}` with your key.
-2. Add the `{reporting secret}` with your secret.
+2. Replace the `{reporting secret}` with your secret.
 3. Create a <a href="../api-reference#query-body" target="_blank">query body</a>.
 4. Append the query body to your request.
 
