@@ -123,12 +123,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:19%">String</td>
-    <td>Dimension (dimension_id) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/>&nbsp;&nbsp;<code>country_code</code><br/>&nbsp;&nbsp;<code>eastern_date</code><br/>&nbsp;&nbsp;<code>media_id</code><br/>&nbsp;&nbsp;<code>platform_id</code><br/>&nbsp;&nbsp;<code>playlist_id</code><br/>&nbsp;&nbsp;<code>playlist_type</code><br/>&nbsp;&nbsp;<code>tag</code><br/>&nbsp;&nbsp;<code>upload_date</code><br/>&nbsp;&nbsp;<code>video_duration</code></td>
+    <td>Dimension (dimension_id) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><br/>&nbsp;&nbsp;<code>country_code</code><br/><br/>&nbsp;&nbsp;<code>eastern_date</code><br/><br/>&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;<code>platform_id</code><br/><br/>&nbsp;&nbsp;<code>playlist_id</code><br/><br/>&nbsp;&nbsp;<code>playlist_type</code><br/><br/>&nbsp;&nbsp;<code>tag</code><br/><br/>&nbsp;&nbsp;<code>upload_date</code><br/><br/>&nbsp;&nbsp;<code>video_duration</code></td>
   </tr>
   <tr>
     <td><code>operator</code></td>
     <td>String</td>
-    <td>Filter matching behavior<br/><br/>Possible values:<br/>&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/>&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/>&nbsp;&nbsp;<code>LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.<br/>&nbsp;&nbsp;<code>!LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.</td>
+    <td>Filter matching behavior<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;<code>LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.<br/><br/>&nbsp;&nbsp;<code>!LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.</td>
   </tr>
   <tr>
     <td><code>value</code></td>
@@ -157,7 +157,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td><code>operation</code></td>
     <td>String</td>
-    <td>Possible values:<br/>&nbsp;&nbsp;<code>max</code><br/>&nbsp;&nbsp;<code>min</code><br/>&nbsp;&nbsp;<code>sum</code></td>
+    <td>Possible values:<br/><br/>&nbsp;&nbsp;<code>max</code><br/><br/>&nbsp;&nbsp;<code>min</code><br/><br/>&nbsp;&nbsp;<code>sum</code></td>
   </tr>
 </table>
 
@@ -181,7 +181,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td><code>order</code></td>
     <td>String</td>
-    <td>Possible values:<br/>&nbsp;&nbsp;<code>ASCENDING</code><br/>&nbsp;&nbsp;<code>DESCENDING</code></td>
+    <td>Possible values:<br/><br/>&nbsp;&nbsp;<code>ASCENDING</code><br/><br/>&nbsp;&nbsp;<code>DESCENDING</code></td>
   </tr>
 </table>
 
@@ -257,7 +257,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td style="width:21%"><code>type</code></td>
     <td style="width:19%">String</td>
-    <td>Possible values:<br/>&nbsp;&nbsp;<code>ad_schedule_id</code><br/>&nbsp;&nbsp;<code>media_id</code><br/>&nbsp;&nbsp;<code>player_id</code><br/>&nbsp;&nbsp;<code>playlist_id</code></td>
+    <td>Possible values:<br/><br/>&nbsp;&nbsp;&bull; ad_schedule_id<br/>&nbsp;&nbsp;&bull; media_id<br/>&nbsp;&nbsp;&bull; player_id<br/>&nbsp;&nbsp;&bull; playlist_id</td>
   </tr>
   <tr>
     <td>(unique ID of the returned type)</td>
@@ -281,7 +281,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td style="width:21%"><code>column_headers</code></td>
     <td style="width:19%">Object</td>
-    <td>Possible values:<br/>&nbsp;&nbsp;<code>dimensions</code><br/>&nbsp;&nbsp;<code>metrics</code></td>
+    <td>Possible values:<br/><br/>&nbsp;&nbsp;&bull; dimensions<br/>&nbsp;&nbsp;&bull; metrics</td>
   </tr>
   <tr>
     <td><code>end_date</code></td>
@@ -315,22 +315,22 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td style="width:21%"><code>city</code></td>
     <td style="width:19%">Object</td>
-    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["city"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><code>"city": {"Brussels|BRU|BE": "Brussels - Brussels Capital (Belgium)","Bucharest|B|RO": "Bucharest - Bucuresti (Romania)"}</code></td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["city"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/>"city": {"Brussels|BRU|BE": "Brussels - Brussels Capital (Belgium)"}</td>
   </tr>
   <tr>
     <td><code>country_code</code></td>
     <td>Object</td>
-    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["country_code"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><code>"country_code": {"HU": "Hungary", "NL": "Netherlands"}</code></td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["country_code"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/>"country_code": {"HU": "Hungary", "NL": "Netherlands"}</td>
   </tr>
   <tr>
     <td><code>device_id</code></td>
     <td>Object</td>
-    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["device_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><code>"device_id": {"Desktop": "Desktop", "Phone": "Phone"}</code></td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["device_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/>"device_id": {"Desktop": "Desktop", "Phone": "Phone"}</td>
   </tr>
   <tr>
     <td><code>platform_id</code></td>
     <td>Object</td>
-    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["platform_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><code>"platform_id": {"web": "Web"}</code></td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["platform_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/>"platform_id": {"web": "Web"}</td>
   </tr>
 </table>
 
