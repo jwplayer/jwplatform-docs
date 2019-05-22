@@ -24,6 +24,7 @@ nav:
       - Analytics: 'management-api/analytics.md'
       - Overview: 'analytics-api/index.md'
       - Run a report: 'analytics-api/run-a-report.md'
+      - Example report queries: 'analytics-api/example-report-queries.md'
       - Run a report with query tools: 'analytics-api/run-a-report-with-tools.md'
       - Analytics API reference: 'analytics-api/api-reference.md'
       - Metrics and dimensions: 'analytics-api/metrics-and-dimensions.md'

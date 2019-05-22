@@ -1,6 +1,6 @@
 # Analytics API reference
 
-<sup>Last Updated: May 27, 2010</sup>
+<sup>Last Updated: May 27, 2019</sup>
 
 This Analytics API reference details the structure of the query request body and query response body. Be sure you have your API credentials and understand how to create a report query.
 
