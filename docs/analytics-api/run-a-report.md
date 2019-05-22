@@ -18,7 +18,7 @@ In your platform or language of choice, use the following steps to query your da
 
 1. In the request route, replace the `{property key}` with your key.
 2. Add the `{reporting secret}` with your secret.
-3. Create a <a href="../api-reference" target="_blank">query body</a>.
+3. Create a <a href="../api-reference#query-body" target="_blank">query body</a>.
 4. Append the query body to your request.
 
 To help you construct a report, view these examples of report queries. These examples demonstrate both basic and advanced queries that can be run against the Analytics API.
