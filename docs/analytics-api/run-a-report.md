@@ -21,6 +21,8 @@ In your platform or language of choice, use the following steps to query your da
 
 To help you construct a report, view these examples of report queries. These examples demonstrate both basic and advanced queries that can be run against the Analytics API.
 
+<br/>
+
 ## Sample query
 
 The following is a cURL sample.
@@ -36,7 +38,7 @@ curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
 
 | Parameter | Type | Description |
 | -- | -- | -- |
-| {property key} | String | **(Required)** Unique [property identifier](../index) |
+| {property key} | String | **(Required)** Unique [property identifier](../) |
 
 <hr>
 
