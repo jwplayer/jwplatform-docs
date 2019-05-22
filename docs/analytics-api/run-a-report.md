@@ -1,6 +1,6 @@
 # Run a report
 
-<sup>Last Updated: April 22, 2019</sup>
+<sup>Last Updated: May 27, 2019</sup>
 
 The Analytics API allows you to query your data through a single route.
 
@@ -8,33 +8,35 @@ The Analytics API allows you to query your data through a single route.
 https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
 ```
 
-When you query this route, your request must include the following items:
-
-- Property key
-- Reporting secret
-- JSON-formatted query body
-
 !!!tip
-You can also use a [query tool](../run-a-report-with-tools) to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard.
+You can also use a query tool to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard
 !!!
 
-<br/>
+In your platform or language of choice, use the following steps to query your data:
 
-
-
-## Run a report query
-
-1. Replace the `{property key}` with your key.
+1. In the request route, replace the `{property key}` with your key.
 2. Add the `{reporting secret}` with your secret.
-3. Append the <a href="../construct-a-query-body" target="_blank">query body</a>.
+3. Create a <a href="../construct-a-query-body" target="_blank">query body</a>.
+4. Append the query body to your request.
 
+To help you construct a report, view these examples of report queries. These examples demonstrate both basic and advanced queries that can be run against the Analytics API.
+
+## Sample query
+
+The following is a cURL sample.
 ```curl
 curl -X POST https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/ \
  -H 'Authorization: {reporting secret}' \
  -H 'Content-Type: application/json' \
- -d '{"start_date" : "2017-06-01", "end_date" : "2017-06-02", "dimensions" : ["media_id"], "metrics" : [{"operation": "sum", "field": "plays"}], "sort" : [{"field" : "plays", "order": "DESCENDING"}]}'
+ -d '{"start_date": "2017-06-01", "end_date": "2017-06-02", "dimensions": ["media_id"], "metrics": [{"operation": "sum", "field": "plays"}], "sort": [{"field": "plays", "order": "DESCENDING"}]}'
 ```
 <br/>
+
+## URL parameter
+
+| Parameter | Type | Description |
+| -- | -- | -- |
+| {property key} | String | **(Required)** Unique [property identifier](../index) |
 
 <hr>
 

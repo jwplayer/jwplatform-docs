@@ -1,24 +1,12 @@
 # Overview
 
-<sup>Last Updated: April 22, 2019</sup>  
+<sup>Last Updated: May 27, 2019</sup>  
 
-The Analytics API is a RESTful API that allows you to query various data sets and import video and advertising data to a data warehouse or analytics solution.
-
-<br/>
-v
-## Requirements
-
-The Analytics API requires the items in the following table.
-
-| Item | Description |
-| -- | -- |
-| Key | Unique property identifier<br/><br/>1. From your [JW Player dashbord](https://dashboard.jwplayer.com), click the gear next to your name **> API Credentials**.<br/>2. In the **JW Platform API Credentials** section, click **SHOW CREDENTIALS** next to a property name.<br/>3. Copy the **Key**.|
-| Secret | Unique user reporting credential<br/><br/>1. From the your [JW Player dashboard](https://dashboard.jwplayer.com), click the gear next to your name **> API Credentials**.<br/>2. In the **JW Reporting API Credentials** section, click **SHOW CREDENTIALS** next to an API key name.<br/><br/>**NOTE**: If no API key names exist, type a new API key name, select a permission level, and click **ADD NEW API KEY**. Your account must have the Admin permission to create a new API key.<br/><br/> 3. Copy the **Secret**.|
-| Enterprise license | (Optional) Account plan that enables access to additional dimensions, enriched metadata, and metrics<br/><br/>[Upgrade](https://www.jwplayer.com/pricing/) to an Enterprise license if you would like to access this additional data. |
+The Analytics API allows you to query various data sets relating to the performance of your media items, players, and advertising ad breaks. Responses can be returned in .csv or .json file formats that can be ingested by a data warehouse or analytics solution.
 
 <br/>
 
-## Data constraints
+## Data availability
 
 <table>
 <tr>
@@ -31,11 +19,11 @@ The Analytics API requires the items in the following table.
 </tr>
 <tr>
     <td>Data refresh rate</td>
-    <td>Updated approximately every 30 minutes during peak traffic</td>
+    <td>Updated <strong>approximately every 30 minutes</strong> during peak traffic</td>
 </tr>
 <tr>
     <td>Rate limit</td>
-    <td>60 request/minute per API token or IP</td>
+    <td><strong>60 requests/minute</strong> per API token or IP</td>
 </tr>
 <tr>
     <td>Maximum page length</td>
@@ -43,9 +31,46 @@ The Analytics API requires the items in the following table.
 </tr>
 <tr>
     <td>Queries</td>
-    <td><strong>Enterprise license</strong><br/>&bull; Group by up to 2 dimensions<br/>&bull; Apply up to 5 metrics<br/>&bull; Apply up to 10 filters<br/><br/><strong>Non-Enterprise license</strong><br/>&bull; Group by only one dimension<br/>&bull; Apply up to five metrics<br/>&bull; Apply only one filter</td>
+    <td><strong>Enterprise license</strong><br/>&bull; Group by up to <strong>two</strong> dimensions<br/>&bull; Apply up to <strong>five</strong> metrics<br/>&bull; Apply up to <strong>ten</strong> filters<br/><br/><strong>Non-Enterprise license</strong><br/>&bull; Group by only <strong>one</strong> dimension<br/>&bull; Apply up to <strong>five</strong> metrics<br/>&bull; Apply only <strong>one</strong> filter</td>
 </tr>
 </table>
+
+<br/>
+
+## Get the required items
+
+The Analytics API requires the items in the following table.
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td style="width:21%">Key</td>
+    <td>Unique property identifier<br/><br/>
+      <ol>
+        <li>From your <a href="https://dashboard.jwplayer.com">JW Player dashbord</a>, click the gear next to your name <strong>> API Credentials</strong>.</li>
+        <li>In the <strong>JW Platform API Credentials</strong> section, click <strong>SHOW CREDENTIALS</strong> next to a property name.</li>
+        <li>Copy the <strong>Key</strong>.</li>
+      </ol></td>
+  </tr>
+  <tr>
+    <td>Secret</td>
+    <td>Unique user reporting credential<br/><br/>
+      <ol>
+        <li>From your <a href="https://dashboard.jwplayer.com">JW Player dashbord</a>, click the gear next to your name <strong>> API Credentials</strong>.</li>
+        <li>In the <strong>JW Reporting API Credentials</strong> section, click <strong>SHOW CREDENTIALS</strong> in the row of the relevant API key name.<br/><br/><strong>NOTE</strong>: If no API key names exist, type a new API key name, select a permission level, and click <strong>ADD NEW API KEY</strong>. Your account must have the Admin permission to create a new API key.</li>
+        <li>Copy the <strong>Secret</strong>.</li>
+      </ol></td>
+  </tr>
+  <tr>
+    <td>Business or Enterprise license</td>
+    <td>(Optional) Account plan that enables access to additional dimensions, enriched metadata, and metrics<br/><br/><a href="https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA&utm_campaign=Developer%20Nav%20Upgrade" target="_blank">Upgrade</a> to a Business or Enterprise license if you would like to access this additional data.</td>
+  </tr>
+</table>
+
+<br/>
 
 ## Getting started
 You have retrieved your property key and reporting secret, and you have reviewed the data constraints. You can now [run a report](../analytics-api/run-a-report).
