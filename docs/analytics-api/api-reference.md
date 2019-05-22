@@ -5,7 +5,7 @@
 This Analytics API reference details the structure of the query request body and query response body. Be sure you have your API credentials and understand how to create a report query.
 
 !!!tip
-View some examples of report queries. These examples demonstrate both basic and advanced queries that can be run against the Analytics API.
+View some [examples of report queries](../example-report-queries). These examples demonstrate both basic and advanced queries that can be run against the Analytics API.
 !!!
 
 <br/>
