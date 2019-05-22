@@ -31,13 +31,13 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
   <tr>
     <td style="width:21%">Ad Clicks</td>
-    <td style="width:25%"><code>ad_clicks</code></td> 
+    <td style="width:21%"><code>ad_clicks</code></td> 
     <td style="width:5%"></td>
     <td>Number of times a video ad was clicked in the player</td>
   </tr>
   <tr>
     <td style="width:21%"><strong>* Ad Completes</strong></td>
-    <td style="width:19%"><code>ad_completes</code></td> 
+    <td style="width:21%"><code>ad_completes</code></td> 
     <td style="width:5%"></td>
     <td>Number of times a video ad was completed in the player</td>
   </tr>
@@ -62,7 +62,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
   <tr>
     <td style="width:21%">25% Completes</td>
-    <td style="width:19%"><code>25_percent_completes</code></td> 
+    <td style="width:21%"><code>25_percent_completes</code></td> 
     <td style="width:5%"></td>
     <td>Number of times a view hit the 25% mark of a video<br/><br/><em>Only available for videos over 30 seconds.</em></td>
   </tr>
@@ -117,7 +117,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
   <tr>
     <td style="width:21%">3-Second Plays</td>
-    <td style="width:19%"><code>3_second_plays</code></td> 
+    <td style="width:21%"><code>3_second_plays</code></td> 
     <td style="width:5%"></td>
     <td></td>
   </tr>
@@ -184,7 +184,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
   <tr>
     <td style="width:21%"><strong>* Ad Impressions per Viewer</strong></td>
-    <td style="width:19%"><code>ads_per_viewer</code></td> 
+    <td style="width:21%"><code>ads_per_viewer</code></td> 
     <td style="width:5%"></td>
     <td>Average number of ad impressions for a unique viewer</td>
   </tr>
@@ -229,7 +229,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
   <tr>
     <td style="width:21%">Ad Schedule</td>
-    <td style="width:19%"><code>ad_schedule_id</code></td> 
+    <td style="width:21%"><code>ad_schedule_id</code></td> 
     <td style="width:5%"></td>
     <td>Unique ID associated with a specific ad schedule</td>
   </tr>
@@ -302,7 +302,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
   <tr>
     <td style="width:21%">Eastern Date</td>
-    <td style="width:19%"><code>eastern_date</code></td> 
+    <td style="width:21%"><code>eastern_date</code></td> 
     <td style="width:5%"></td>
     <td>Date in EST when the media started playing within a player</td>
   </tr>
@@ -326,7 +326,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
   <tr>
     <td style="width:21%">Browser</td>
-    <td style="width:19%"><code>browser</code></td> 
+    <td style="width:21%"><code>browser</code></td> 
     <td style="width:5%"></td>
     <td>Indicates what type of browser was used to watch a video</td>
   </tr>
@@ -355,7 +355,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
   <tr>
     <td style="width:21%"><strong>* City</strong></td>
-    <td style="width:19%"><code>city</code></td> 
+    <td style="width:21%"><code>city</code></td> 
     <td style="width:5%"></td>
     <td>City this user was accessing the video from</td>
   </tr>
@@ -379,7 +379,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
   <tr>
     <td style="width:21%">Domain</td>
-    <td style="width:19%"><code>page_domain</code></td> 
+    <td style="width:21%"><code>page_domain</code></td> 
     <td style="width:5%"></td>
     <td>Domain this player was embedded in. If there is a subdomain it will be included unless its www
     </td>
