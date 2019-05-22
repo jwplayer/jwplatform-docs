@@ -10,7 +10,7 @@ The Analytics API allows you to query various data sets relating to the performa
 
 <table>
 <tr>
-    <td>Earliest available data</td>
+    <td style="width:21%">Earliest available data</td>
     <td>2017-01-01</td>
 </tr>
 <tr>
