@@ -31,7 +31,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
   <tr>
     <td style="width:21%">Ad Clicks</td>
-    <td style="width:19%"><code>ad_clicks</code></td> 
+    <td style="width:21%"><code>ad_clicks</code></td> 
     <td style="width:5%"></td>
     <td>Number of times a video ad was clicked in the player</td>
   </tr>
