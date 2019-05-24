@@ -10,8 +10,8 @@ Some metrics and dimensions require a JW Player Enterprise license. Please [cont
 
 | Field Type | Category |
 | -- | -- |
-|  [Metrics](#metrics)  | Ads - Engagement - Performance - Viewers|
-[Dimensions](#dimensions)  | Content - Date/Time - Device - Geography - Placement|
+|  [Metrics](#metrics)  | [Ads](#ads) \| [Engagement](#engagement) \| [Performance](#performance) \| [Viewers](#viewers)|
+[Dimensions](#dimensions)  | [Content](#content) \| [Date/Time](#date-time) \| [Device](#device) \| [Geography](#geography) \| [Placement](#placement)|
 
 <a name="metrics"></a>
 
@@ -19,6 +19,8 @@ Some metrics and dimensions require a JW Player Enterprise license. Please [cont
 
 
 A *metric* is a quantitative measurement. The following metrics are currently offered.
+
+<a name="ads"></a>
 
 ### Ads
 
@@ -32,24 +34,26 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   <tr>
     <td style="width:21%"><strong>* Ad Clicks</strong></td>
     <td style="width:23%"><code>ad_clicks</code></td> 
-    <td style="width:5%"></td>
+    <td style="width:5%">Integer</td>
     <td>Number of times a video ad was clicked in an embedded player</td>
   </tr>
   <tr>
     <td style="width:21%"><strong>* Ad Completes</strong></td>
     <td style="width:23%"><code>ad_completes</code></td> 
-    <td style="width:5%"></td>
+    <td style="width:5%">Integer</td>
     <td>Number of times a video ad was completed in an embedded player</td>
   </tr>
   <tr>
     <td><strong>* Ad Skips</strong></td>
     <td><code>ad_skips</code></td> 
-    <td></td>
+    <td>Integer</td>
     <td>Number of times a video ad was skipped in an embedded player</td>
   </tr>
 </table>
 
 <sup>* This metric requires a JW Player Enterprise license.</sup>
+
+<a name="engagement"></a>
 
 ### Engagement
 
@@ -105,6 +109,8 @@ A *metric* is a quantitative measurement. The following metrics are currently of
 </table>
 
 <sup>* This metric requires a JW Player Enterprise license.</sup>
+
+<a name="performance"></a>
 
 ### Performance
 
@@ -174,6 +180,8 @@ A *metric* is a quantitative measurement. The following metrics are currently of
 
 <sup>* This metric requires a JW Player Enterprise license.</sup>
 
+<a name="viewers"></a>
+
 ### Viewers
 
 <table>
@@ -186,25 +194,25 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   <tr>
     <td style="width:21%"><strong>* Ad Impressions per Viewer</strong></td>
     <td style="width:23%"><code>ads_per_viewer</code></td> 
-    <td style="width:5%"></td>
+    <td style="width:5%">Integer</td>
     <td>Average number of ad impressions for a unique viewer</td>
   </tr>
   <tr>
     <td><strong>* Plays per Viewer</strong></td>
     <td><code>plays_per_viewer</code></td> 
-    <td></td>
+    <td>Integer</td>
     <td>Average number of plays for each unique viewer</td>
   </tr>
   <tr>
     <td><strong>* Time Watched per Viewer</strong></td>
     <td><code>time_watched_per_viewer</code></td> 
-    <td></td>
+    <td>Integer</td>
     <td>Average duration of content watched for a unique viewer</td>
   </tr>
   <tr>
     <td><strong>* Unique Viewers</strong></td>
     <td><code>unique_viewers</code></td> 
-    <td></td>
+    <td>Integer</td>
     <td>Number of unique users who have played at least one media item</td>
   </tr>
 </table>
@@ -218,6 +226,8 @@ A *metric* is a quantitative measurement. The following metrics are currently of
 ## Dimensions
 
 A *dimension* is an attribute of your metrics.  For example, each Play Event has several attributes that help describe it. JW Player determines what Country it took place in, what Video it was for, what device was used, etc.
+
+<a name="content"></a>
 
 ### Content
 
@@ -292,6 +302,8 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 
 <sup>* This dimension requires a JW Player Enterprise license.</sup>
 
+<a name="date-time"></a>
+
 ### Date/Time
 
 <table>
@@ -316,6 +328,8 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 </table>
 
 <sup>* This dimension requires a JW Player Enterprise license.</sup>
+
+<a name="device"></a>
 
 ### Device
 
@@ -348,6 +362,8 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 
 <sup>* This dimension requires a JW Player Enterprise license.</sup>
 
+<a name="geography"></a>
+
 ### Geography
 
 <table>
@@ -372,6 +388,8 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 </table>
 
 <sup>* This dimension requires a JW Player Enterprise license.</sup>
+
+<a name="placement"></a>
 
 ### Placement
 
