@@ -1,6 +1,6 @@
 # Analytics API reference
 
-<sup>Last Updated: May 27, 2019</sup>
+<sup>Last Updated: May 29, 2019</sup>
 
 This Analytics API reference details the structure of the query request body and query response body. Be sure you have your API credentials and understand how to create a report query.
 
@@ -101,6 +101,11 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
     <td></td>
   </tr>
   <tr>
+    <td><code>relative_timeframe</code></td>
+    <td>String</td>
+    <td></td>
+  </tr>
+  <tr>
     <td><code>sort</code></td>
     <td>Object</td>
     <td>Defines the field by which to sort the data and the order of the sort<br/><br/>See: <a href="#sort">sort</a> object</td>
@@ -129,7 +134,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:10%">String</td>
-    <td>Dimension (dimension_id) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>country_code</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>eastern_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>platform_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_type</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>tag</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>upload_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>video_duration</code></td>
+    <td>Dimension (dimension_id) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>country_code</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>eastern_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>platform_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_type</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>tag</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>upload_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>video_duration</code></td>
   </tr>
   <tr>
     <td><code>operator</code></td>
@@ -336,7 +341,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
   <tr>
     <td><code>platform_id</code></td>
     <td>Object</td>
-    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["platform_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/>"platform_id": {"web": "Web"}</td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["platform_id"]</code> are part of the API query, an object of identifier-to-name pairings is returned<br/><br/>For example:<br/><br/><code>"platform_id": {"web": "Web"}</code></td>
   </tr>
 </table>
 
