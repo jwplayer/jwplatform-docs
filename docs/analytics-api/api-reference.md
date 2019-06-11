@@ -24,19 +24,19 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%">{property key}</td>
+    <td style="width:21%"><code>{property key}</code></td>
     <td style="width:10%">String</td>
     <td><strong>(Required)</strong> Unique property identifier</td>
   </tr>
   <tr>
-    <td>format</td>
+    <td><code>format</code></td>
     <td>String</td>
-    <td>File type of the response query output<br/><br/>Possible values include:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>json</code> (Default)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>csv</code></td>
+    <td>File type of the response query output<br/><br/>Possible values include:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>json</code> (Default)<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>csv</code></td>
   </tr>
   <tr>
-    <td>souce</td>
+    <td><code>source</code></td>
     <td>String</td>
-    <td>Data set against which to run the request query<br/><br/>Possible values include:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>default</code>: This option includes all JW Player data, excluding OTT data.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>floatleft</code>: This option only includes OTT data.<br/><br/>Only a subset of dimensions are available for OTT data: <p><code>country_code</code>, <code>eastern_date</code>, <code>media_id</code>, <code>platform_id</code>, <code>playlist_id</code>, <code>playlist_type</code>, <code>tag</code>, <code>upload_date</code>, and <code>video_duration</code>.</p><br/><br/>Only a subset of metrics are available for OTT data: <p><code>ad_impressions</code>, <code>ads_per_viewer</code>, <code>completes</code>, <code>complete_rate</code>, <code>plays</code>, <code>plays_per_viewer</code>, <code>time_watched</code>, <code>time_watched_per_viewer</code>, and <code>unique_viewers</code>. </td>
+    <td>Data set against which to run the request query<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>default</code>: This option includes all JW Player data, excluding OTT data.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>floatleft</code>: This option only includes OTT data.<br/><br/><br/>The following dimensions and metrics are available for OTT data: <p>DIMENSIONS - <code>country_code</code>, <code>eastern_date</code>, <code>media_id</code>, <code>platform_id</code>, <code>playlist_id</code>, <code>playlist_type</code>, <code>tag</code>, <code>upload_date</code>, and <code>video_duration</code>.</p><br/><p>METRICS - <code>ad_impressions</code>, <code>ads_per_viewer</code>, <code>completes</code>, <code>complete_rate</code>, <code>plays</code>, <code>plays_per_viewer</code>, <code>time_watched</code>, <code>time_watched_per_viewer</code>, and <code>unique_viewers</code>. </td>
   </tr>
 </table>
 
@@ -78,7 +78,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>dimensions</code></td>
     <td style="width:10%">Array</td>
-    <td>Dimensions to include in the report query response, listed by dimension_id.</td>
+    <td>Dimensions to include in the report query response, listed by (<a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a>).</td>
   </tr>
   <tr>
     <td><code>end_date</code></td>
@@ -93,27 +93,29 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><strong>*<code>include_metadata</code></strong></td>
     <td>Boolean</td>
-    <td>-</td>
+    <td>Indicates that eligible dimensions are enriched with additional metadata<br/><br/>Depending on the dimension, enriched metadata appears either in the <a href="#includes">includes</a> or <a href="#metadata-name">metadata.name</a> object of the query response.</td>
   </tr>
   <tr>
     <td><code>metrics</code></td>
     <td>Array</td>
-    <td>Metrics to include in the report query response, listed by `metric_id`.<br/><br/>See: <a href="#metrics">metrics</a> object</td>
+    <td>Metrics to include in the report query response, listed by <code>metric_id</code>.<br/><br/>See: <a href="#metrics">metrics</a> object</td>
   </tr>
   <tr>
     <td><code>page</code></td>
     <td>Number</td>
-    <td></td>
+    <td>Index of the page of results<br/><br/>The value of the first page of results is <code>0</code>. The number of total pages is inversely related to the <code>page_length</code>.</td>
   </tr>
   <tr>
     <td><code>page_length</code></td>
     <td>Number</td>
-    <td></td>
+    <td>(JSON) Total number of records returned on each page of results<br/><br/>If not set, the default value is <code>10</code>. This value must be <strong>≤ 100</strong>.
+</td>
   </tr>
   <tr>
     <td><code>relative_timeframe</code></td>
     <td>String</td>
-    <td></td>
+    <td>Preconfigured time range for a report query<br/><br/>Possible values include:<br/><br/><p>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>7 Days</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>30 Days</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>90 Days</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>Last Quarter</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>Month To Date</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>Today</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>Yesterday</code></p>
+</td>
   </tr>
   <tr>
     <td><code>sort</code></td>
