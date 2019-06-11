@@ -8,15 +8,21 @@ JW Player provides you with several options to query the data with the Analytics
 All [data availability](../index) constraints apply to making requests to the Analytics API.
 !!!
 
+<br/>
+
 | Approach | Description |
 | -- | -- |
 | [Active Google Sheet](#active-google-sheet) | &bull; No coding<br/>&bull; Simplified querying|
 | [PHP samples](#php-samples) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit code samples for custom situations<br/><br/>The following relevant files are included:<br/><br/>[**analytics-example.php**](#php-samples): Preconfigured code to make API calls and write the report to a .csv file<br/><br/>[**enriched-videos.php**](#php-samples-enriched-videos) Preconfigured code to create an enriched report with an Enterprise or Developer license|
 | [Python sample](#python-sample) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit the code sample for custom situations<br/><br/>The following file is included:<br/><br/>**analytics-example.py**: Preconfigured code to query data |
 
+<br/>
+
 !!!tip
-You can also use a [query tool](../run-a-report-with-tools) to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard
+You can also [query the API](../run-a-report) directly to run a report or run a report query with [Custom Reports](https://support.jwplayer.com/articles/how-to-use-custom-reports) from your JW Player dashboard
 !!!
+
+<br/>
 
 <a name="active-google-sheet"></a>
 
@@ -35,6 +41,8 @@ Use the following steps to query your data:
 After a few moments, the results of the query display in the Google Sheet, starting from column I. The results are sorted in descending order by the value of the selected metrics.
 
 <br/>
+
+* * *
 
 <a name="php-samples"></a>
 
@@ -57,11 +65,13 @@ Use the following steps to query your data:
 11. Save the file.
 12. Open a command-line interface (CLI) and navigate to the folder containing <strong>analytics-example.php</strong>.
 13. At the CLI prompt, replace the `[property key]` and `[reporting secret]` placeholders and type: `php analytics-example.php [property key] [reporting secret]`.
-<br/>
 
 After a few moments, status information appears in the CLI which includes the remaining requests that can be made to the Analytics API and a .csv file is created in the same folder as the <strong>analytics-example.php</strong> file.
 
+<br/>
+
 #### Sample query body
+
 The following sample query body returns the total number of plays for each of the top two countries (`$pageLen=2` and `country_code`) within the date range of June 1, 2017 - June 2, 2017. The results are filtered for desktop only.
 
 ```php
@@ -78,15 +88,16 @@ $body->metrics = [
   ["operation" => "sum", "field" => 'plays'],
 ];
 ```
+<br/>
 
 <a name="php-samples-enriched-videos"></a>
 
-## Make a query for enriched video data
+### Make a query for enriched video data
 
 This enriched video report combines metadata and metrics data in a single report. Some of the information included in this report include: completes, media ID, plays, property key, time watched per viewer, unique viewers, video duration, video publish date, and video title.
 
 !!!important
-In addition to your property key and reporting secret, you will need the property secret. The property secret is needed since this .php script makes an additional call to the Management API.
+In addition to your property key and reporting secret, you will need the <a href="..#get-the-required-items" target="_blank">property secret</a>. The property secret is needed since this .php script makes an additional call to the Management API.
 !!!
 
 Use the following steps to query your data:
@@ -104,11 +115,11 @@ Use the following steps to query your data:
 11. Open a command-line interface (CLI) and navigate to the folder containing <strong>enriched-videos.php</strong>.
 12. At the CLI prompt, type: `php enriched-videos.php`.
 
-<br/>
-
 After a few moments, status information appears in the CLI and a .csv file is created in the same folder as the <strong>enriched-videos.php</strong> file.
 
 <br/>
+
+* * *
 
 <a name="python-sample"></a>
 
