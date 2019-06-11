@@ -1,9 +1,9 @@
 # Metrics and dimensions
 
-<sup>Last Updated: May 29, 2019</sup>
+<sup>Last Updated: June 12, 2019</sup>
 
 !!!important
-Some metrics and dimensions require a JW Player Enterprise license. Please [contact our team](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) to upgrade your account.
+Premium metrics and dimensions denoted in the following tables require a JW Player [Enterprise](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) or [Developer](https://developer.jwplayer.com/sign-up/) license.
 !!!
 
 <br/>
@@ -38,9 +38,9 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <td>Number of times a video ad was clicked in an embedded player</td>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* Ad Completes</strong></td>
-    <td style="width:23%"><code>ad_completes</code></td> 
-    <td style="width:5%">Integer</td>
+    <td><strong>* Ad Completes</strong></td>
+    <td><code>ad_completes</code></td> 
+    <td>Integer</td>
     <td>Number of times a video ad was completed in an embedded player</td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
 </table>
 
-<sup>* This metric requires a JW Player Enterprise license.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="engagement"></a>
 
@@ -68,34 +68,34 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <td style="width:21%">25% Completes</td>
     <td style="width:23%"><code>25_percent_completes</code></td> 
     <td style="width:5%">Integer</td>
-    <td>Number of times viewers watched to the 25% mark of a media item<br/><br/>Only available for media items over 30 seconds</td>
+    <td>Number of times viewers watched to the 25% mark of a media item<br/><br/>This metric is only available for media items over 30 seconds.</td>
   </tr>
   <tr>
     <td>50% Completes</td>
     <td><code>50_percent_completes</code></td> 
     <td>Integer</td>
-    <td>Number of times viewers watched to the 50% mark of a media item<br/><br/>Only available for media items over 30 seconds</td>
+    <td>Number of times viewers watched to the 50% mark of a media item<br/><br/>This metrics is only available for media items over 30 seconds.</td>
   </tr>
   <tr>
     <td>75% Completes</td>
     <td><code>75_percent_completes</code></td> 
     <td>Integer</td>
-    <td>Number of times viewers watched to the 75% mark of a media item<br/><br/>Only available for media items over 30 seconds</td>
+    <td>Number of times viewers watched to the 75% mark of a media item<br/><br/>This metrics is only available for media items over 30 seconds.</td>
   </tr>
   <tr>
     <td>Adjusted Complete Rate</td>
     <td><code>adjusted_complete_rate</code></td> 
     <td>Percent</td>
-    <td>Adjusted completes per plays<br/><br/>Only available via Analytics API</td>
+    <td>Adjusted completes per plays<br/><br/>This metric is not available in dashboard Custom Reports.</td>
   </tr>
   <tr>
     <td>Adjusted Completes</td>
     <td><code>adjusted_completes</code></td> 
     <td>Integer</td>
-    <td>Used to calculate the Content Score, number of times a viewer watched at least 75% the total duration of a media item<br/><br/>Only available via Reporting API</td>
+    <td>Used to calculate the Content Score, number of times a viewer watched at least 75% the total duration of a media item<br/><br/>This metric is not available in dashboard Custom Reports.</td>
   </tr>
   <tr>
-    <td><strong>* Complete Rate</strong></td>
+    <td>Complete Rate</td>
     <td><code>complete_rate</code></td>
     <td>Percent</td>
     <td>Plays per completes, expressed as a percentage</td>
@@ -108,7 +108,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
 </table>
 
-<sup>* This metric requires a JW Player Enterprise license.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="performance"></a>
 
@@ -122,19 +122,19 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%">3-Second Plays</td>
+    <td style="width:21%"><strong>&#10013; 3-Second Plays</strong></td>
     <td style="width:23%"><code>3_second_plays</code></td> 
     <td style="width:5%">Integer</td>
     <td>Number of times viewers watched to the 3-second mark of a media item</td>
   </tr>
   <tr>
-    <td>10-Second Plays</td>
+    <td><strong>&#10013; 10-Second Plays</strong></td>
     <td><code>10_second_plays</code></td> 
     <td>Integer</td>
     <td>Number of times viewers watched to the 10-second mark of a media item</td>
   </tr>
   <tr>
-    <td>30-Second Plays</td>
+    <td><strong>&#10013; 30-Second Plays</strong></td>
     <td><code>30_second_plays</code></td> 
     <td>Integer</td>
     <td>Number of times viewers watched to the 30-second mark of a media item</td>
@@ -174,11 +174,11 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <td>Time Watched</td>
     <td><code>time_watched</code></td> 
     <td>Integer</td>
-    <td>Total duration of content watched across all embedded players, measured in seconds<br/><br/>This metric excludes time watched for external live streams.</td>
+    <td>Total duration of content watched across all embedded players, measured in seconds<br/><br/>This metric excludes the duration of external live streams watched.</td>
   </tr>
 </table>
 
-<sup>* This metric requires a JW Player Enterprise license.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.<br/><br/>&#10013; This metrics requires both a JW Player Enterprise and special authorization. Please contact your JW Player representative.</sup>
 
 <a name="viewers"></a>
 
@@ -217,7 +217,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
 </table>
 
-<sup>* This metric requires a JW Player Enterprise license.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.</sup>
 
 <br/>
 
@@ -234,7 +234,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 <table>
   <tr>
     <th>Name</th>
-    <th>Metric_ID</th> 
+    <th>Dimension_ID</th> 
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -266,7 +266,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Play Reason</strong></td>
     <td><code>play_reason</code></td> 
     <td>Integer</td>
-    <td>Indicator of how media playback was initiated<br/><br/>Possible values include:<br/><br/>&bull; 0: Unknown reason<br/>&bull; 1: A user clicked on the video<br/>&bull; 2: Autostart based on the configuration of the player<br/>&bull; 3: Auto-repeat based on the configuration of the player<br/>&bull; 4: JavaScript call to the JW Player API<br/>&bull; 5: Auto-advance on recommendation, search, and trending playlists<br/>&bull; 6: Auto-advance on dynamic and manual playlists</td>
+    <td>Indicator of how media playback was initiated<br/><br/>Possible values include:<br/><br/>&bull; 0: Unknown reason<br/>&bull; 1: A user clicked on the video<br/>&bull; 2: Autostarted playback, not dependent upon player viewability settings<br/>&bull; 3: Auto-repeat based on the configuration of the player<br/>&bull; 4: JavaScript call to the JW Player API<br/>&bull; 5: Auto-advance on recommendation, search, and trending playlists<br/>&bull; 6: Auto-advance on dynamic and manual playlists</td>
   </tr>
   <tr>
     <td>Player</td>
@@ -296,11 +296,11 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Video Duration</strong></td>
     <td><code>video_duration</code></td> 
     <td></td>
-    <td>Video duration of the content<br/><br/>&bull; Short (under 4 mins)<br/>&bull; Medium (4-20 mins)<br/>&bull; Long (over 20 mins)</td>
+    <td>Duration of the content<br/><br/>&bull; Short (under 4 mins)<br/>&bull; Medium (4-20 mins)<br/>&bull; Long (over 20 mins)</td>
   </tr>
 </table>
 
-<sup>* This dimension requires a JW Player Enterprise license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="date-time"></a>
 
@@ -309,7 +309,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 <table>
   <tr>
     <th>Name</th>
-    <th>Metric_ID</th> 
+    <th>Dimension_ID</th> 
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -317,17 +317,17 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td style="width:21%">Eastern Date</td>
     <td style="width:23%"><code>eastern_date</code></td> 
     <td style="width:5%">String</td>
-    <td>Date when the media item started to play within a player, in YYYY-MM-DD (USA - Eastern Time)</td>
+    <td>Date when the media item started to play within a player, using `YYYY-MM-DD` (USA - Eastern Time) format</td>
   </tr>
   <tr>
     <td><strong>* Upload Date</strong></td>
     <td><code>upload_date</code></td> 
     <td>String</td>
-    <td>Date when the media item was last uploaded to the platform in YYYY-MM-DD (USA - Eastern Time)</td>
+    <td>Date when the media item was last uploaded to the platform, using `YYYY-MM-DD` (USA - Eastern Time) format</td>
   </tr>
 </table>
 
-<sup>* This dimension requires a JW Player Enterprise license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="device"></a>
 
@@ -336,7 +336,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 <table>
   <tr>
     <th>Name</th>
-    <th>Metric_ID</th> 
+    <th>Dimension_ID</th> 
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -353,14 +353,14 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>Type of device used to watch a media item</td>
   </tr>
   <tr>
-    <td>Platform</td>
+    <td><strong>* Platform</strong></td>
     <td><code>platform_id</code></td> 
     <td>String</td>
     <td>SDK platform in which the player was embedded</td>
   </tr>
 </table>
 
-<sup>* This dimension requires a JW Player Enterprise license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="geography"></a>
 
@@ -369,7 +369,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 <table>
   <tr>
     <th>Name</th>
-    <th>Metric_ID</th> 
+    <th>Dimension_ID</th> 
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -387,7 +387,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
 </table>
 
-<sup>* This dimension requires a JW Player Enterprise license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
 
 <a name="placement"></a>
 
@@ -396,7 +396,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
 <table>
   <tr>
     <th>Name</th>
-    <th>Metric_ID</th> 
+    <th>Dimension_ID</th> 
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -414,4 +414,27 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
 </table>
 
-<sup>* This dimension requires a JW Player Enterprise license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
+
+
+<br/><br/>
+<div id="wufoo-mff60sc1xnn4cu">
+Use this <a href="https://jwplayerdocs.wufoo.com/forms/mff60sc1xnn4cu">form</a> to provide your feedback.
+</div>
+<script type="text/javascript">var mff60sc1xnn4cu;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'jwplayerdocs',
+'formHash':'mff60sc1xnn4cu',
+'autoResize':true,
+'height':'288',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true,
+'defaultValues': 'field118=' + location.pathname};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { mff60sc1xnn4cu = new WufooForm();mff60sc1xnn4cu.initialize(options);mff60sc1xnn4cu.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
