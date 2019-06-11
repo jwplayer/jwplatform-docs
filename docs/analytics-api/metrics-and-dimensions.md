@@ -67,7 +67,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   <tr>
     <td style="width:21%">25% Completes</td>
     <td style="width:23%"><code>25_percent_completes</code></td> 
-    <td style="width:5%">Integer</td>
+    <td style="width:7%">Integer</td>
     <td>Number of times viewers watched to the 25% mark of a media item<br/><br/>This metric is only available for media items over 30 seconds.</td>
   </tr>
   <tr>
@@ -124,7 +124,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   <tr>
     <td style="width:21%"><strong>&#10013; 3-Second Plays</strong></td>
     <td style="width:23%"><code>3_second_plays</code></td> 
-    <td style="width:5%">Integer</td>
+    <td style="width:7%">Integer</td>
     <td>Number of times viewers watched to the 3-second mark of a media item</td>
   </tr>
   <tr>
@@ -178,7 +178,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
 </table>
 
-<sup>* This premium metric requires a JW Player Enterprise or Developer license.<br/><br/>&#10013; This metrics requires both a JW Player Enterprise and special authorization. Please contact your JW Player representative.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.<br/>&#10013; This premium metric requires both a JW Player Enterprise and special authorization. Please contact your JW Player representative.</sup>
 
 <a name="viewers"></a>
 
@@ -194,7 +194,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   <tr>
     <td style="width:21%"><strong>* Ad Impressions per Viewer</strong></td>
     <td style="width:23%"><code>ads_per_viewer</code></td> 
-    <td style="width:5%">Integer</td>
+    <td style="width:7%">Integer</td>
     <td>Average number of ad impressions for a unique viewer</td>
   </tr>
   <tr>
@@ -241,7 +241,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   <tr>
     <td style="width:21%"><strong>* Ad Schedule</strong></td>
     <td style="width:23%"><code>ad_schedule_id</code></td> 
-    <td style="width:5%">String</td>
+    <td style="width:7%">String</td>
     <td>ID associated with a specific ad schedule</td>
   </tr>
   <tr>
@@ -316,7 +316,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   <tr>
     <td style="width:21%">Eastern Date</td>
     <td style="width:23%"><code>eastern_date</code></td> 
-    <td style="width:5%">String</td>
+    <td style="width:7%">String</td>
     <td>Date when the media item started to play within a player, using `YYYY-MM-DD` (USA - Eastern Time) format</td>
   </tr>
   <tr>
@@ -343,7 +343,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   <tr>
     <td style="width:21%"><strong>* Browser</strong></td>
     <td style="width:23%"><code>browser</code></td> 
-    <td style="width:5%">String</td>
+    <td style="width:7%">String</td>
     <td>Type of browser used to watch a media item</td>
   </tr>
   <tr>
@@ -376,7 +376,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   <tr>
     <td style="width:21%"><strong>* City</strong></td>
     <td style="width:23%"><code>city</code></td> 
-    <td style="width:5%">String</td>
+    <td style="width:7%">String</td>
     <td>City from which a user accessed the media item<br/><br/>The value is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> standard.</td>
   </tr>
   <tr>
@@ -403,7 +403,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   <tr>
     <td style="width:21%">Domain</td>
     <td style="width:23%"><code>page_domain</code></td> 
-    <td style="width:5%">String</td>
+    <td style="width:7%">String</td>
     <td>Domain within which a player was embedded<br/><br/>Excluding www, all subdomains are also included.</td>
   </tr>
   <tr>

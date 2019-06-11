@@ -40,8 +40,6 @@ Use the following steps to query your data:
 
 After a few moments, the results of the query display in the Google Sheet, starting from column I. The results are sorted in descending order by the value of the selected metrics.
 
-<br/>
-
 * * *
 
 <a name="php-samples"></a>
@@ -117,8 +115,6 @@ Use the following steps to query your data:
 
 After a few moments, status information appears in the CLI and a .csv file is created in the same folder as the <strong>enriched-videos.php</strong> file.
 
-<br/>
-
 * * *
 
 <a name="python-sample"></a>
@@ -135,9 +131,7 @@ Use the following steps to query your data:
 6. Open a command-line interface (CLI) and navigate to the folder containing <strong>analytics-example.py</strong>.
 7. At the CLI prompt, replace the `[property key]` and `[reporting secret]` placeholders and type: `python analytics-example.py --site-id [property key] --authorization [reporting secret]`.
 
-<br/>
-
-After a few moments, status information appears in the CLI and a .csv file is created in the same folder as the <strong>nalytics-example.php</strong> file.
+After a few moments, status information appears in the CLI and a .csv file is created in the same folder as the <strong>analytics-example.php</strong> file.
 
 <br/><br/>
 <div id="wufoo-mff60sc1xnn4cu">
