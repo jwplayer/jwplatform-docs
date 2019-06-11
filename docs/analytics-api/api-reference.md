@@ -1,6 +1,6 @@
 # Analytics API reference
 
-<sup>Last Updated: May 29, 2019</sup>
+<sup>Last Updated: June 12, 2019</sup>
 
 This Analytics API reference details the structure of the query request body and query response body. Be sure you have your API credentials and understand how to create a report query.
 
@@ -13,7 +13,7 @@ View some [examples of report queries](../example-report-queries). These example
 ## Route
 
 ```html
-https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
+https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&source=default
 ```
 ### URL parameter
 
@@ -27,6 +27,16 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
     <td style="width:21%">{property key}</td>
     <td style="width:10%">String</td>
     <td><strong>(Required)</strong> Unique property identifier</td>
+  </tr>
+  <tr>
+    <td>format</td>
+    <td>String</td>
+    <td>File type of the response query output<br/><br/>Possible values include:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>json</code> (Default)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>csv</code></td>
+  </tr>
+  <tr>
+    <td>souce</td>
+    <td>String</td>
+    <td>Data set against which to run the request query<br/><br/>Possible values include:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>default</code>: This option includes all JW Player data, excluding OTT data.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>floatleft</code>: This option only includes OTT data.<br/><br/>Only a subset of dimensions are available for OTT data: <p><code>country_code</code>, <code>eastern_date</code>, <code>media_id</code>, <code>platform_id</code>, <code>playlist_id</code>, <code>playlist_type</code>, <code>tag</code>, <code>upload_date</code>, and <code>video_duration</code>.</p><br/><br/>Only a subset of metrics are available for OTT data: <p><code>ad_impressions</code>, <code>ads_per_viewer</code>, <code>completes</code>, <code>complete_rate</code>, <code>plays</code>, <code>plays_per_viewer</code>, <code>time_watched</code>, <code>time_watched_per_viewer</code>, and <code>unique_viewers</code>. </td>
   </tr>
 </table>
 
