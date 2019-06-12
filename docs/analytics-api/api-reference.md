@@ -308,7 +308,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>rows</code></td>
     <td style="width:10%">Array</td>
-    <td>Values for each <a hef="#metadata-column-headers">metadata.column_headers</a> property listed as an array of nested arrays</td>
+    <td>Values for each <a href="#metadata-column-headers">metadata.column_headers</a> property listed as an array of nested arrays</td>
   </tr>
 </table>
 

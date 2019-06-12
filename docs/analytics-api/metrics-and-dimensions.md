@@ -284,7 +284,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Playlist Type</strong></td>
     <td><code>playlist_type</code></td> 
     <td>String</td>
-    <td>Type of playlist<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Curated</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Recommendations</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
+    <td>Type of playlist<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Curated</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Recommendations</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
   </tr>
   <tr>
     <td><strong>* Promotion</strong></td>
@@ -296,7 +296,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Video Duration</strong></td>
     <td><code>video_duration</code></td> 
     <td></td>
-    <td>Duration of the content<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Short (under 4 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Medium (4-20 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Long (over 20 mins)</code></td>
+    <td>Duration of the content<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Short (under 4 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Medium (4-20 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Long (over 20 mins)</code></td>
   </tr>
 </table>
 
