@@ -36,7 +36,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><code>source</code></td>
     <td>String</td>
-    <td>Data set against which to run the request query<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>default</code>: This option includes all JW Player data, excluding OTT data.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>floatleft</code>: This option only includes OTT data.<br/><br/><br/>The following dimensions and metrics are available for OTT data:<br/><br/><strong>DIMENSIONS</strong> - <p><code>country_code</code>, <code>eastern_date</code>, <code>media_id</code>, <code>platform_id</code>, <code>playlist_id</code>, <code>playlist_type</code>, <code>tag</code>, <code>upload_date</code>, and <code>video_duration</code></p><br/><strong>METRICS</strong> - <p><code>ad_impressions</code>, <code>ads_per_viewer</code>, <code>completes</code>, <code>complete_rate</code>, <code>plays</code>, <code>plays_per_viewer</code>, <code>time_watched</code>, <code>time_watched_per_viewer</code>, and <code>unique_viewers</code></p> </td>
+    <td>Data set against which to run the request query<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>default</code>: This option includes all JW Player data, excluding OTT data.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>floatleft</code>: This option only includes OTT data.<br/><br/><br/>The following dimensions and metrics are available for OTT data:<br/><br/><strong>DIMENSIONS</strong> - <p><code>country_code</code>, <code>eastern_date</code>, <code>media_id</code>, <code>platform_id</code>, <code>playlist_id</code>, <code>playlist_type</code>, <code>tag</code>, <code>upload_date</code>, and <code>video_duration</code></p><br/><br/><strong>METRICS</strong> - <p><code>ad_impressions</code>, <code>ads_per_viewer</code>, <code>completes</code>, <code>complete_rate</code>, <code>plays</code>, <code>plays_per_viewer</code>, <code>time_watched</code>, <code>time_watched_per_viewer</code>, and <code>unique_viewers</code></p> </td>
   </tr>
 </table>
 
@@ -108,7 +108,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><code>page_length</code></td>
     <td>Number</td>
-    <td>(JSON) Total number of records returned on each page of results<br/><br/>If not set, the default value is <code>10</code>. This value must be <strong>≤ 100</strong>.
+    <td>(JSON only) Total number of records returned on each page of results<br/><br/>If not set, the default value is <code>10</code>. This value must be <strong>≤ 100</strong>.
 </td>
   </tr>
   <tr>
@@ -146,12 +146,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:10%">String</td>
-    <td>Dimension (<a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a>) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>country_code</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>eastern_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>platform_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_type</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>tag</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>upload_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>video_duration</code></td>
+    <td>Dimension (<a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a>) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variables can be used:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>country_code</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>eastern_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>platform_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_type</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>tag</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>upload_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>video_duration</code></td>
   </tr>
   <tr>
     <td><code>operator</code></td>
     <td>String</td>
-    <td>Filter-matching behavior<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>LIKE</code>: Use this operator when the value is metadata information.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>!LIKE</code>: Use this operator when the value is metadata information.</td>
+    <td>Filter-matching behavior<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>LIKE</code>: Use this operator when the value is metadata information.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>!LIKE</code>: Use this operator when the value is metadata information.</td>
   </tr>
   <tr>
     <td><code>value</code></td>
@@ -182,7 +182,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><code>operation</code></td>
     <td>String</td>
-    <td>Calculation applied to selected metric<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>max</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>min</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>sum</code></td>
+    <td>Calculation applied to selected metric<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>max</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>min</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>sum</code></td>
   </tr>
 </table>
 
@@ -207,7 +207,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><code>order</code></td>
     <td>String</td>
-    <td>Manner in which response query is organized<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ASCENDING</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>DESCENDING</code></td>
+    <td>Manner in which response query is organized<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ASCENDING</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>DESCENDING</code></td>
   </tr>
 </table>
 
@@ -264,17 +264,17 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>data</code></td>
     <td style="width:10%">Object</td>
-    <td>See: <a href="#data">data object</a></td>
+    <td>See: <a href="#data">data</a> object</td>
   </tr>
   <tr>
     <td><code>includes</code></td>
     <td>Object</td>
-    <td>See: <a href="#includes">includes object</a></td>
+    <td>See: <a href="#includes">includes</a> object</td>
   </tr>
   <tr>
     <td><code>metadata</code></td>
     <td>Object</td>
-    <td>See: <a href="#metadata">metadata object</a></td>
+    <td>See: <a href="#metadata">metadata</a> object</td>
   </tr>
   <tr>
     <td><code>page</code></td>
@@ -347,7 +347,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>type</code></td>
     <td style="width:10%">String</td>
-    <td>Dimension to which the unique ID belongs<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ad_schedule_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>player_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_id</code></td>
+    <td>Dimension to which the unique ID belongs<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ad_schedule_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>player_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>playlist_id</code></td>
   </tr>
 </table>
 
@@ -366,7 +366,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>column_headers</code></td>
     <td style="width:10%">Object</td>
-    <td>Category of column data<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>dimensions</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>metrics</code><br/><br/>See: <a href="#metadata-column-headers">metadata.column_headers</a> object</td>
+    <td>Category of column data<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>dimensions</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>metrics</code><br/><br/>See: <a href="#metadata-column-headers">metadata.column_headers</a> object</td>
   </tr>
   <tr>
     <td><code>end_date</code></td>
@@ -432,12 +432,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>dimensions</code></td>
     <td style="width:10%">Array</td>
-    <td>Set of objects for each dimension included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a> value.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
+    <td>Set of objects for each dimension included in the report query<br/><br/>Each object includes:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a> value.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
   </tr>
   <tr>
     <td><code>metrics</code></td>
     <td>Array</td>
-    <td>Set of objects for each metric included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#metrics" target="_blank">metric_id</a> value<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
+    <td>Set of objects for each metric included in the report query<br/><br/>Each object includes:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#metrics" target="_blank">metric_id</a> value<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
   </tr>
 </table>
 
