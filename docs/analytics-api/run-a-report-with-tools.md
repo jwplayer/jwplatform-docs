@@ -5,7 +5,7 @@
 JW Player provides you with several options to query the data with the Analytics API. Read each approach and click on the link for the applicable steps to get started.
 
 !!!important
-All [data availability](../index) constraints apply to making requests to the Analytics API.
+All [data availability](..) constraints apply to making requests to the Analytics API.
 !!!
 
 <br/>
@@ -41,7 +41,6 @@ Use the following steps to query your data:
 After a few moments, the results of the query display in the Google Sheet, starting from column I. The results are sorted in descending order by the value of the selected metrics.
 
 * * *
-
 <a name="php-samples"></a>
 
 ## PHP samples
@@ -116,7 +115,6 @@ Use the following steps to query your data:
 After a few moments, status information appears in the CLI and a .csv file is created in the same folder as the <strong>enriched-videos.php</strong> file.
 
 * * *
-
 <a name="python-sample"></a>
 
 ## Python sample

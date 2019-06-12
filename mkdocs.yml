@@ -23,10 +23,10 @@ nav:
     - Analytics:
       - Overview: 'analytics-api/index.md'
       - Run a report: 'analytics-api/run-a-report.md'
-      - Example report queries: 'analytics-api/example-report-queries.md'
       - Run a report with query tools: 'analytics-api/run-a-report-with-tools.md'
-      - Analytics API reference: 'analytics-api/api-reference.md'
       - Metrics and dimensions: 'analytics-api/metrics-and-dimensions.md'
+      - Example report queries: 'analytics-api/example-report-queries.md'
+      - Analytics API reference: 'analytics-api/api-reference.md'
     - Advertising:
       - Advertising: 'management-api/advertising.md'
     - JW Showcase:

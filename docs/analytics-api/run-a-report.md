@@ -9,7 +9,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries/
 ```
 
 !!!important
-All [data availability](../index) constraints apply to making requests to the Analytics API.
+All [data availability](..) constraints apply to making requests to the Analytics API.
 !!!
 
 <br/>

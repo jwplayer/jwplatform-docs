@@ -432,12 +432,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>dimensions</code></td>
     <td style="width:10%">Array</td>
-    <td>Set of objects for each dimension included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The dimension_id value.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
+    <td>Set of objects for each dimension included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a> value.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
   </tr>
   <tr>
     <td><code>metrics</code></td>
     <td>Array</td>
-    <td>Set of objects for each metric included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The metric_id value<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
+    <td>Set of objects for each metric included in the report query<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>field</code>: The <a href="../metrics-and-dimensions#metrics" target="_blank">metric_id</a> value<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unit</code>: Format of the data that is returned</td>
   </tr>
 </table>
 
