@@ -266,7 +266,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Play Reason</strong></td>
     <td><code>play_reason</code></td> 
     <td>Integer</td>
-    <td>Indicator of how media playback was initiated<br/><br/>Possible values include:<br/><br/>&bull; 0: Unknown reason<br/>&bull; 1: A user clicked on the video<br/>&bull; 2: Autostarted playback, not dependent upon player viewability settings<br/>&bull; 3: Auto-repeat based on the configuration of the player<br/>&bull; 4: JavaScript call to the JW Player API<br/>&bull; 5: Auto-advance on recommendation, search, and trending playlists<br/>&bull; 6: Auto-advance on dynamic and manual playlists</td>
+    <td>Indicator of how media playback was initiated<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>0</code>: Unknown reason<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>1</code>: A user clicked on the video<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>2</code>: Autostarted playback, not dependent upon player viewability settings<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>3</code>: Auto-repeat based on the configuration of the player<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>4</code>: JavaScript call to the JW Player API<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>5</code>: Auto-advance on recommendation, search, and trending playlists<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>6</code>: Auto-advance on dynamic and manual playlists</td>
   </tr>
   <tr>
     <td>Player</td>
@@ -284,7 +284,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Playlist Type</strong></td>
     <td><code>playlist_type</code></td> 
     <td>String</td>
-    <td>Type of playlist<br/><br/>&bull; Article Matching<br/>&bull; Curated<br/>&bull; Manual<br/>&bull; None<br/>&bull; Recommendations<br/>&bull; Search<br/>&bull; Trending</td>
+    <td>Type of playlist<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Curated</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Recommendations</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
   </tr>
   <tr>
     <td><strong>* Promotion</strong></td>
@@ -296,7 +296,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>* Video Duration</strong></td>
     <td><code>video_duration</code></td> 
     <td></td>
-    <td>Duration of the content<br/><br/>&bull; Short (under 4 mins)<br/>&bull; Medium (4-20 mins)<br/>&bull; Long (over 20 mins)</td>
+    <td>Duration of the content<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Short (under 4 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Medium (4-20 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Long (over 20 mins)</code></td>
   </tr>
 </table>
 
@@ -317,13 +317,13 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td style="width:21%">Eastern Date</td>
     <td style="width:23%"><code>eastern_date</code></td> 
     <td style="width:10%">String</td>
-    <td>Date when the media item started to play within a player, using `YYYY-MM-DD` (USA - Eastern Time) format</td>
+    <td>Date when the media item started to play within a player, using <code>YYYY-MM-DD</code> (USA - Eastern Time) format</td>
   </tr>
   <tr>
     <td><strong>* Upload Date</strong></td>
     <td><code>upload_date</code></td> 
     <td>String</td>
-    <td>Date when the media item was last uploaded to the platform, using `YYYY-MM-DD` (USA - Eastern Time) format</td>
+    <td>Date when the media item was last uploaded to the platform, using <code>YYYY-MM-DD</code> (USA - Eastern Time) format</td>
   </tr>
 </table>
 

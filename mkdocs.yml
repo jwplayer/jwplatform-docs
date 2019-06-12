@@ -21,7 +21,6 @@ nav:
       - Uploading Videos: 'management-api/uploading-videos.md'
       - Batch Migrations: 'management-api/batch-migration.md'
     - Analytics:
-      - Analytics: 'management-api/analytics.md'
       - Overview: 'analytics-api/index.md'
       - Run a report: 'analytics-api/run-a-report.md'
       - Example report queries: 'analytics-api/example-report-queries.md'
