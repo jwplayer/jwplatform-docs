@@ -91,7 +91,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
     <td>Defines how to restrict the data returned in the response<br/><br/>See: <a href="#filter">filter</a> object</td>
   </tr>
   <tr>
-    <td><strong>*<code>include_metadata</code></strong></td>
+    <td><strong>*<code> include_metadata</code></strong></td>
     <td>Boolean</td>
     <td>Indicates that eligible dimensions are enriched with additional metadata<br/><br/>Depending on the dimension, enriched metadata appears either in the <a href="#includes">includes</a> or <a href="#metadata-name">metadata.name</a> object of the query response.</td>
   </tr>
@@ -125,11 +125,11 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td><code>start_date</code></td>
     <td>String</td>
-    <td>First date of a query date range in `YYYY-MM-DD` format</td>
+    <td>First date of a query date range in <code>YYYY-MM-DD</code> format</td>
   </tr>
 </table>
 
-<sup>* This metric requires a JW Player Enterprise license.</sup>
+<sup>* This property requires a JW Player Enterprise or Developer license.</sup>
 
 <br/>
 
@@ -146,12 +146,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:10%">String</td>
-    <td>Dimension (dimension_id) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>country_code</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>eastern_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>media_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>platform_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_id</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_type</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>tag</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>upload_date</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>video_duration</code></td>
+    <td>Dimension (<a href="../metrics-and-dimensions#dimensions" target="_blank">dimension_id</a>) by which to restrict the returned data set<br/><br/>When filtering <strong>JWP Data</strong>, all <code>dimension_id</code> variables can be used.<br/><br/>When filtering <strong>OTT Data</strong>, only the following <code>dimension_id</code> variable can be used:<br/><p>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>country_code</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>eastern_date</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>media_id</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>platform_id</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_id</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>playlist_type</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>tag</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>upload_date</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;&bull; <code>video_duration</code></p></td>
   </tr>
   <tr>
     <td><code>operator</code></td>
     <td>String</td>
-    <td>Filter matching behavior<br/><br/>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>!LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.</td>
+    <td>Filter-matching behavior<br/><br/>Possible values:<br/><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>=</code>: Use this operator when the value is an ID.<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>!=</code>: Use this operator when the value is an ID.<br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.<br/>&nbsp;&nbsp;&nbsp;&nbsp;* <code>!LIKE</code>: (Business, Enterprise only) Use this operator when the value is metadata information.</td>
   </tr>
   <tr>
     <td><code>value</code></td>
@@ -159,6 +159,8 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
     <td>Value of a specific <code>dimension_id</code> by which to restrict the returned data set</td>
   </tr>
 </table>
+
+<sup>* This property value requires a JW Player Enterprise or Developer license.</sup>
 
 <br/>
 
@@ -175,12 +177,12 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:10%">String</td>
-    <td>Metrics to include in the report query response, listed by metric_id.</td>
+    <td>Metrics to include in the report query response, listed by <a href="../metrics-and-dimensions#metrics" target="_blank">metric_id</a>.</td>
   </tr>
   <tr>
     <td><code>operation</code></td>
     <td>String</td>
-    <td>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>max</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>min</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>sum</code></td>
+    <td>Calculation applied to selected metric<br/><br/>Possible values:<br/><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>max</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>min</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>sum</code></p></td>
   </tr>
 </table>
 
@@ -199,12 +201,13 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>field</code></td>
     <td style="width:10%">String</td>
-    <td>Dependent upon the metrics and dimensions included in the report query body</td>
+    <td>Metric or dimension by which the response query is organized<br/><br/>The metric or dimension must be on of the metrics and dimensions included in the report query body.
+</td>
   </tr>
   <tr>
     <td><code>order</code></td>
     <td>String</td>
-    <td>Possible values:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ASCENDING</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>DESCENDING</code></td>
+    <td>Manner in which response query is organized<br/><br/>Possible values:<br/><p>&nbsp;&nbsp;&nbsp;&nbsp;<code>ASCENDING</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>DESCENDING</code></p></td>
   </tr>
 </table>
 
@@ -229,7 +232,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
           "field": "dimension_id",
           "type": "datatype"
         }
-      ]
+      ],
       "metrics": [
         {
           "field": "plays",
@@ -248,6 +251,49 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   }
 }
 ```
+
+<a name="data"></a>
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td style="width:21%"><code>data</code></td>
+    <td style="width:10%">Object</td>
+    <td>See: <a href="#data">data object</a></td>
+  </tr>
+  <tr>
+    <td><code>includes</code></td>
+    <td>Object</td>
+    <td>See: <a href="#includes">includes object</a></td>
+  </tr>
+  <tr>
+    <td><code>metadata</code></td>
+    <td>Object</td>
+    <td>See: <a href="#metadata">metadata object</a></td>
+  </tr>
+  <tr>
+    <td><code>page</code></td>
+    <td>Number</td>
+    <td>Index of the page of results</td>
+  </tr>
+  <tr>
+    <td><code>page_length</code></td>
+    <td>Number</td>
+    <td>(JSON only) Total number of records returned on each page of results</td>
+  </tr>
+  <tr>
+    <td><code>type</code></td>
+    <td>String</td>
+    <td>Category of report query<br/><br/>This will always return <code>query_results</code>.</td>
+  </tr>
+</table>
+
+<br/>
+
 <a name="data"></a>
 
 ### data
@@ -261,7 +307,7 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
   <tr>
     <td style="width:21%"><code>rows</code></td>
     <td style="width:10%">Array</td>
-    <td>Values for each metadata.column_headers property listed as an array of nested arrays</td>
+    <td>Values for each <a hef="#metadata-column-headers">metadata.column_headers</a> property listed as an array of nested arrays</td>
   </tr>
 </table>
 
@@ -276,6 +322,16 @@ https://api.jwplayer.com/v2/sites/{property key}/analytics/queries?format=csv&so
     <th>Property</th>
     <th>Type</th>
     <th>Description</th>
+  </tr>
+  <tr>
+    <td style="width:21%">(ad_schedule_id - unique ID of the returned type)</td>
+    <td style="width:10%">Object</td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["ad_schedule_id"]</code> are part of the API query, an object of identifier-to-name pairings<br/><br/>The object includes:<br/><p><code>name</code>: User-generated name of the ad schedule</p></td>
+  </tr>
+  <tr>
+    <td>(media_id - unique ID of the returned type)</td>
+    <td style="width:10%">Object</td>
+    <td>When <code>include_metadata: 1</code> and <code>dimensions: ["media_id"]</code> are part of the API query, an object of identifier-to-name pairings<br/><br/>The object includes:<br/><ul><li><code>duration_bucket</code>: Categorization of video duration</li><li><code>tags</code>: Metadata tags associated with the media item</li><li><code>title</code>: Name of the media item</li><li><code>uploade_date</code>: Date when the media item was uploaded in <code>YYYY-MM-DD</code> format</li></ul></td>
   </tr>
   <tr>
     <td style="width:21%"><code>type</code></td>
