@@ -284,7 +284,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>Playlist Type*</strong></td>
     <td><code>playlist_type</code></td> 
     <td>String</td>
-    <td>Type of playlist<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Curated</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Recommendations</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
+    <td>Type of playlist<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Dynamic</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Feed</code><sup>1</sup><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
   </tr>
   <tr>
     <td><strong>Promotion*</strong></td>
@@ -300,7 +300,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
   </tr>
 </table>
 
-<sup>* This premium dimension requires a JW Player Enterprise or Developer license.</sup>
+<sup>* This premium dimension requires a JW Player Enterprise or Developer license.<br/> 1 This is the same as a recommendations playlist.</sup>
 
 <a name="date-time"></a>
 
@@ -353,7 +353,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>Type of device used to watch a media item</td>
   </tr>
   <tr>
-    <td><strong>* Platform</strong></td>
+    <td><strong>Platform*</strong></td>
     <td><code>platform_id</code></td> 
     <td>String</td>
     <td>SDK platform in which the player was embedded</td>
