@@ -23,7 +23,7 @@ The Analytics API allows you to query various data sets relating to the performa
 </tr>
 <tr>
     <td>Rate limit</td>
-    <td><strong>60 requests/minute</strong> per API token or IP<br/><br/>The number of remaining requests that can be made to the Analytics API is returned in the reponse header of each query.</td>
+    <td><strong>60 requests/minute</strong> per API token or IP<br/><br/>The number of remaining requests that can be made to the Analytics API is returned in the response header of each query.</td>
 </tr>
 <tr>
     <td>Page length</td>
