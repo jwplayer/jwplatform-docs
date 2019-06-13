@@ -32,19 +32,19 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* Ad Clicks</strong></td>
+    <td style="width:21%"><strong>Ad Clicks*</strong></td>
     <td style="width:23%"><code>ad_clicks</code></td> 
     <td style="width:10%">Integer</td>
     <td>Number of times a video ad was clicked in an embedded player</td>
   </tr>
   <tr>
-    <td><strong>* Ad Completes</strong></td>
+    <td><strong>Ad Completes*</strong></td>
     <td><code>ad_completes</code></td> 
     <td>Integer</td>
     <td>Number of times a video ad was completed in an embedded player</td>
   </tr>
   <tr>
-    <td><strong>* Ad Skips</strong></td>
+    <td><strong>Ad Skips*</strong></td>
     <td><code>ad_skips</code></td> 
     <td>Integer</td>
     <td>Number of times a video ad was skipped in an embedded player</td>
@@ -101,7 +101,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <td>Plays per completes, expressed as a percentage</td>
   </tr>
   <tr>
-    <td><strong>* Content Score</strong></td>
+    <td><strong>Content Score*</strong></td>
     <td><code>content_score</code></td>
     <td>Integer</td>
     <td>Average of the play rate and complete rate</td>
@@ -122,19 +122,19 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>&#10013; 3-Second Plays</strong></td>
+    <td style="width:21%"><strong>3-Second Plays&#9768;</strong></td>
     <td style="width:23%"><code>3_second_plays</code></td> 
     <td style="width:10%">Integer</td>
     <td>Number of times viewers watched to the 3-second mark of a media item</td>
   </tr>
   <tr>
-    <td><strong>&#10013; 10-Second Plays</strong></td>
+    <td><strong>10-Second Plays&#9768;</strong></td>
     <td><code>10_second_plays</code></td> 
     <td>Integer</td>
     <td>Number of times viewers watched to the 10-second mark of a media item</td>
   </tr>
   <tr>
-    <td><strong>&#10013; 30-Second Plays</strong></td>
+    <td><strong>30-Second Plays&#9768;</strong></td>
     <td><code>30_second_plays</code></td> 
     <td>Integer</td>
     <td>Number of times viewers watched to the 30-second mark of a media item</td>
@@ -159,7 +159,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
 </td>
   </tr>
   <tr>
-    <td><strong>* Play Rate</strong></td>
+    <td><strong>Play Rate*</strong></td>
     <td><code>play_rate</code></td> 
     <td>Percent</td>
     <td>Plays per embeds<br/><br/>Only the first play (based on the <code>firstFrame</code> event) for a given embed is counted.</td>
@@ -178,7 +178,7 @@ A *metric* is a quantitative measurement. The following metrics are currently of
   </tr>
 </table>
 
-<sup>* This premium metric requires a JW Player Enterprise or Developer license.<br/>&#10013; This premium metric requires both a JW Player Enterprise and special authorization. Please contact your JW Player representative.</sup>
+<sup>* This premium metric requires a JW Player Enterprise or Developer license.<br/>&#9768; This premium metric requires both a JW Player Enterprise and special authorization. Please contact your JW Player representative.</sup>
 
 <a name="viewers"></a>
 
@@ -192,25 +192,25 @@ A *metric* is a quantitative measurement. The following metrics are currently of
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* Ad Impressions per Viewer</strong></td>
+    <td style="width:21%"><strong>Ad Impressions per Viewer*</strong></td>
     <td style="width:23%"><code>ads_per_viewer</code></td> 
     <td style="width:10%">Integer</td>
     <td>Average number of ad impressions for a unique viewer</td>
   </tr>
   <tr>
-    <td><strong>* Plays per Viewer</strong></td>
+    <td><strong>Plays per Viewer*</strong></td>
     <td><code>plays_per_viewer</code></td> 
     <td>Integer</td>
     <td>Average number of plays for each unique viewer</td>
   </tr>
   <tr>
-    <td><strong>* Time Watched per Viewer</strong></td>
+    <td><strong>Time Watched per Viewer*</strong></td>
     <td><code>time_watched_per_viewer</code></td> 
     <td>Integer</td>
     <td>Average duration of content watched for a unique viewer</td>
   </tr>
   <tr>
-    <td><strong>* Unique Viewers</strong></td>
+    <td><strong>Unique Viewers*</strong></td>
     <td><code>unique_viewers</code></td> 
     <td>Integer</td>
     <td>Number of unique users who have played at least one media item</td>
@@ -239,13 +239,13 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* Ad Schedule</strong></td>
+    <td style="width:21%"><strong>Ad Schedule*</strong></td>
     <td style="width:23%"><code>ad_schedule_id</code></td> 
     <td style="width:10%">String</td>
     <td>ID associated with a specific ad schedule</td>
   </tr>
   <tr>
-    <td><strong>* Is First Play</strong></td>
+    <td><strong>Is First Play*</strong></td>
     <td><code>is_first_play</code></td> 
     <td>Boolean</td>
     <td>Indicator that the media was the first media item within a playlist</td>
@@ -257,13 +257,13 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>ID of the media item</td>
   </tr>
   <tr>
-    <td><strong>* Media Tag</strong></td>
+    <td><strong>Media Tag*</strong></td>
     <td><code>tag</code></td> 
     <td>String</td>
     <td>Metadata associated with a media item</td>
   </tr>
   <tr>
-    <td><strong>* Play Reason</strong></td>
+    <td><strong>Play Reason*</strong></td>
     <td><code>play_reason</code></td> 
     <td>Integer</td>
     <td>Indicator of how media playback was initiated<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>0</code>: Unknown reason<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>1</code>: A user clicked on the video<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>2</code>: Autostarted playback, not dependent upon player viewability settings<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>3</code>: Auto-repeat based on the configuration of the player<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>4</code>: JavaScript call to the JW Player API<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>5</code>: Auto-advance on recommendation, search, and trending playlists<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>6</code>: Auto-advance on dynamic and manual playlists<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>7</code>: Autostarted playback when the player was viewable, dependent upon player viewability settings</td>
@@ -281,19 +281,19 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>ID of the playlist loaded into the player</td>
   </tr>
   <tr>
-    <td><strong>* Playlist Type</strong></td>
+    <td><strong>Playlist Type*</strong></td>
     <td><code>playlist_type</code></td> 
     <td>String</td>
     <td>Type of playlist<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Article Matching</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Curated</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Manual</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>None</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Recommendations</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Search</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Trending</code></td>
   </tr>
   <tr>
-    <td><strong>* Promotion</strong></td>
+    <td><strong>Promotion*</strong></td>
     <td><code>promotion</code></td> 
     <td>String</td>
     <td>ID of the playlist pinned into a recommendations playlist that promoted the media item played in a player</td>
   </tr>
   <tr>
-    <td><strong>* Video Duration</strong></td>
+    <td><strong>Video Duration*</strong></td>
     <td><code>video_duration</code></td> 
     <td></td>
     <td>Duration of the content<br/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Short (under 4 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Medium (4-20 mins)</code><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>Long (over 20 mins)</code></td>
@@ -320,7 +320,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>Date when the media item started to play within a player, using <code>YYYY-MM-DD</code> (USA - Eastern Time) format</td>
   </tr>
   <tr>
-    <td><strong>* Upload Date</strong></td>
+    <td><strong>Upload Date*</strong></td>
     <td><code>upload_date</code></td> 
     <td>String</td>
     <td>Date when the media item was last uploaded to the platform, using <code>YYYY-MM-DD</code> (USA - Eastern Time) format</td>
@@ -341,7 +341,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* Browser</strong></td>
+    <td style="width:21%"><strong>Browser*</strong></td>
     <td style="width:23%"><code>browser</code></td> 
     <td style="width:10%">String</td>
     <td>Type of browser used to watch a media item</td>
@@ -374,7 +374,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <th>Description</th>
   </tr>
   <tr>
-    <td style="width:21%"><strong>* City</strong></td>
+    <td style="width:21%"><strong>City*</strong></td>
     <td style="width:23%"><code>city</code></td> 
     <td style="width:10%">String</td>
     <td>City from which a user accessed the media item<br/><br/>The value is based on the <a href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> standard.</td>
@@ -407,7 +407,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td>Domain within which a player was embedded<br/><br/>Excluding www, all subdomains are also included.</td>
   </tr>
   <tr>
-    <td><strong>* URL</strong></td>
+    <td><strong>URL*</strong></td>
     <td><code>page_url</code></td> 
     <td>String</td>
     <td>URL of the page within which a player was embedded</td>
