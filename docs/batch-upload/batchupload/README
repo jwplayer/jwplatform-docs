@@ -1,0 +1,10 @@
+=== Batch Upload Code Sample (PHP) ===
+- this example can be run via command line
+- the script can be altered to handle the CSV file as an upload
+
+=== Running the script (with output) ===
+$ php batch.php
+Sintel Trailer upload success. key = ad9vs7d
+Big Buck Bunny Trailer upload success. key = ad9vs7d
+Elephants Dtream Trailer upload success. key = ad9vs7d
+
