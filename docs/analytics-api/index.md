@@ -23,7 +23,7 @@ The Analytics API allows you to query various data sets relating to the performa
 </tr>
 <tr>
     <td>Rate limit</td>
-    <td><strong>60 requests/minute</strong> per API token or IP</td>
+    <td><strong>60 requests/minute</strong> per API token or IP<br/><br/>The number of remaining requests that can be made to the Analytics API is returned in the response header of each query.</td>
 </tr>
 <tr>
     <td>Page length</td>
@@ -35,7 +35,7 @@ The Analytics API allows you to query various data sets relating to the performa
 </tr>
 <tr>
     <td>Query date range limit</td>
-    <td><strong>Enterprise or Developer license</strong><br/>&bull; <strong>92-day window</strong> (queries that include at least one premium* metric or dimension)<br/>&bull; <strong>No limit</strong> (queries that do not include any premium* metrics or dimensions)<br/><br/><strong>Other licenses</strong><br/>&bull; <strong>No limit</strong><br/><br/><sup>* Premium metrics and dimensions are denoted with an asterisk (*) or a cross (&#10013;)</td>
+    <td><strong>Enterprise or Developer license</strong><br/>&bull; <strong>92-day window</strong> (queries that include at least one premium* metric or dimension)<br/>&bull; <strong>No limit</strong> (queries that do not include any premium* metrics or dimensions)<br/><br/><strong>Other licenses</strong><br/>&bull; <strong>No limit</strong><br/><br/><sup>* Premium metrics and dimensions are denoted with an asterisk (*) or a cross (&#9768;)</td>
 </table>
 
 <br/>

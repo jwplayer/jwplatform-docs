@@ -5,7 +5,7 @@ Though it is possible to do individual video uploads to your platform account, i
 ## Preparing a CSV Ingest Sheet
 
 Your csv should have columns A-F in the header. For the sake of organization, **download\_url**, **title**, **description**, **tags**, **date**, and **link** are highly recommended to be present in your csv. We will still be able to ingest your files if your video records have an empty value for some of the fields, so it is worth utilizing these whenever possible.
-An example of a properly formatted CSV can be downloaded [here](http://support-static.jwplayer.com/API/jwplatform_manifest_template.csv).
+An example of a properly formatted CSV can be downloaded [here](../batch-upload/jwplatform_manifest_template.csv).
 
 
 ### Required Value
@@ -56,4 +56,4 @@ When successfully running a batch upload, the expected result would be as follow
     Big Buck Bunny Trailer upload success. key = ad9vs7d
     Elephants Dtream Trailer upload success. key = ad9vs7d
 
-To perform your own batch import, please see our code sample [here](http://support-static.jwplayer.com/API/api-batchupload.zip). This zip includes both PHP and Python batch upload sample code.
+To perform your own batch import, please see our code sample [here](../batch-upload/api-batchupload.zip). This zip includes both PHP and Python batch upload sample code.
