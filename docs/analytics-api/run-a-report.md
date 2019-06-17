@@ -1,6 +1,6 @@
 # Run a report
 
-<sup>Last Updated: June 12, 2019</sup>
+<sup>Last Updated: June 17, 2019</sup>
 
 The Analytics API allows you to query your data through the following single route.
 
@@ -17,7 +17,7 @@ All [data availability](..) constraints apply to making requests to the Analytic
 In your platform or language of choice, use the following steps to query your data:
 
 1. In the request route, replace the `{property key}` with your key.
-2. Replace the `{reporting secret}` with your secret.
+2. Add your secret to authenticate your request.
 3. Create a <a href="../api-reference#query-body" target="_blank">query body</a>.
 4. Append the query body to your `POST` request.
 
