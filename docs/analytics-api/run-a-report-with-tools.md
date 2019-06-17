@@ -13,8 +13,8 @@ All [data availability](..) constraints apply to making requests to the Analytic
 | Approach | Description |
 | -- | -- |
 | [Active Google Sheet](#active-google-sheet) | &bull; No coding<br/>&bull; Simplified querying|
-| [PHP samples](#php-samples) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit code samples for custom situations<br/><br/>The following relevant files are included:<br/><br/>[**analytics-example.php**](#php-samples): Preconfigured code to make API calls and write the report to a .csv file<br/><br/>[**enriched-videos.php**](#php-samples-enriched-videos) Preconfigured code to create an enriched report with an Enterprise or Developer license|
-| [Python sample](#python-sample) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit the code sample for custom situations<br/><br/>The following file is included:<br/><br/>**analytics-example.py**: Preconfigured code to query data |
+| [PHP samples](#php-samples) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit code samples for custom situations<br/><br/>The following relevant files are included:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;[**analytics-example.php**](#php-samples): Preconfigured code to make API calls and write the report to a .csv file<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;[**enriched-videos.php**](#php-samples-enriched-videos) Preconfigured code to create an enriched report with an Enterprise or Developer license|
+| [Python sample](#python-sample) | &bull; Minimal coding knowledge needed<br/>&bull; Ability to edit the code sample for custom situations<br/><br/>The following file is included:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;**analytics-example.py**: Preconfigured code to query data |
 
 <br/>
 
@@ -31,7 +31,7 @@ You can also [query the API](../run-a-report) directly to run a report or run a 
 Use the following steps to query your data:
 
 1. Copy the <a href="https://docs.google.com/spreadsheets/d/1eCeaeolhxn66mX2bmGChgoeDUi-lttru8WPNENvCwoE/edit?usp=sharing" target="_blank">JW Analytics Active Sheet</a> to your Google Drive.
-2. In the <strong>Account Info</strong> section, enter your key for the <strong>Property Key</strong> in cell <C6.
+2. In the <strong>Account Info</strong> section, enter your key for the <strong>Property Key</strong> in cell C6.
 3. Enter your <strong>Secret</strong> cell C7.
 4. In the <strong>Filters</strong> section, select your dimensions and metrics from the drop-down menus. The order of your selections determines the column order in the query results.<br/><br/>If you select more filters than are permitted by your JW Player account license, you will receive an error when running the query. For Enterprise and Developer license customers, additional dimension information is returned in the query results.
 5. In the <strong>Date Range</strong> section, enter a <strong>Start Date</strong> and <strong>End Date</strong>.
