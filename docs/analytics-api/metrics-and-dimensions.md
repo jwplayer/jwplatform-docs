@@ -356,7 +356,7 @@ A *dimension* is an attribute of your metrics.  For example, each Play Event has
     <td><strong>Platform*</strong></td>
     <td><code>platform_id</code></td> 
     <td>String</td>
-    <td>SDK platform in which the player was embeddedbr/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>0</code>: Web<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>1</code>: Android<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>2</code>: iOS<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>3</code>: Roku<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>4</code>: tvOS<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>5</code>: Chromecast Receiver<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>6</code>: Fire OS<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>999</code>: Unknown</td>
+    <td>SDK platform in which the player was embeddedbr/><br/>Possible values include:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>android</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>chromecast</code> (Chromecast Receiver)<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>fireos</code> (Fire OS)<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>ios</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>roku</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>tvos</code> (tvOS)<br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>unknown</code><br/>&nbsp;&nbsp;&nbsp;&nbsp;<code>web</code></td>
   </tr>
 </table>
 
