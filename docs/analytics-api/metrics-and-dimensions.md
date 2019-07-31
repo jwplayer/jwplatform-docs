@@ -1,6 +1,6 @@
 # Metrics and dimensions
 
-<sup>Last Updated: June 12, 2019</sup>
+<sup>Last Updated: August 6, 2019</sup>
 
 !!!important
 Premium metrics and dimensions denoted in the following tables require a JW Player [Enterprise](https://www.jwplayer.com/pricing/?utm_source=developer&utm_medium=CTA) or [Developer](https://developer.jwplayer.com/sign-up/) license.
