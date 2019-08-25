@@ -17,8 +17,6 @@ The [/v2/media/](https://developer.jwplayer.com/jw-platform/docs/delivery-api-re
 !!!
 	* Video height based sources can be specified using the height in pixels followed by a 'p' for example: `1080p`
 	* Video width based sources can be specified by using the width in pixels followed by 'px' for example `1920px`
-* Transcoding template id source specification.
-	*  For publishers needing continued access to legacy generated sources (e.g. flv, ogg, webm) a legacy 8 character template id can be used. These ids are property specific and can be found with an [/v1/accounts/templates/list](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/templates/list.html) call to the Management API.
 
 
 ## Filtering Behavior and the `default_source_fallback` option
