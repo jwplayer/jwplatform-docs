@@ -1,5 +1,7 @@
 # Using the sources parameter in the Delivery API
 
+Last Updated: August 25, 2019
+
 By default the Delivery API includes all our recommended sources in the order best suited for JW Player playback. In order to give publishers more control of source selection and ordering, v2 of the Delivery API allows customize which source(s) you would like to include when serving or syndicating video. This allows publishers to restrict streaming to adaptive formats only, or ensure that only a specific quality level in included when syndicating content via RSS.
 
 ## Specifying Sources
@@ -17,8 +19,6 @@ The [/v2/media/](https://developer.jwplayer.com/jw-platform/docs/delivery-api-re
 !!!
 	* Video height based sources can be specified using the height in pixels followed by a 'p' for example: `1080p`
 	* Video width based sources can be specified by using the width in pixels followed by 'px' for example `1920px`
-* Transcoding template id source specification.
-	*  For publishers needing continued access to legacy generated sources (e.g. flv, ogg, webm) a legacy 8 character template id can be used. These ids are property specific and can be found with an [/v1/accounts/templates/list](https://developer.jwplayer.com/jw-platform/reference/v1/methods/accounts/templates/list.html) call to the Management API.
 
 
 ## Filtering Behavior and the `default_source_fallback` option
