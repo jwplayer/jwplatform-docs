@@ -1,5 +1,7 @@
 # Using the sources parameter in the Delivery API
 
+Last Updated: August 25, 2019
+
 By default the Delivery API includes all our recommended sources in the order best suited for JW Player playback. In order to give publishers more control of source selection and ordering, v2 of the Delivery API allows customize which source(s) you would like to include when serving or syndicating video. This allows publishers to restrict streaming to adaptive formats only, or ensure that only a specific quality level in included when syndicating content via RSS.
 
 ## Specifying Sources
